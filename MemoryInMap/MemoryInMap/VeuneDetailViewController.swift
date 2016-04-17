@@ -22,7 +22,6 @@ class VenueDetailViewController: UIViewController {
     var halfHeight:CGFloat?
     var height:CGFloat?
 
-
     
     convenience init(){
         self.init(nibName: nil, bundle: nil)

@@ -46,16 +46,16 @@ class VenuesTableView: UITableViewController {
         
         let venue = self.venues[indexPath.row] as Venue
         cell.textLabel!.text = venue.name
-        print("venue category: \(venue.categoryName)")
+        debugPrint ("venue category: \(venue.categoryName)")
     //    cell.detailTextLabel!.text = venue.categoryName
         return cell
     }
     
    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print(indexPath.row)
+        debugPrint (indexPath.row)
         let cell = self.tableView.cellForRowAtIndexPath(indexPath) as UITableViewCell?
-        print(cell?.textLabel?.text)
+        debugPrint (cell?.textLabel?.text)
         NSNotificationCenter.defaultCenter().postNotificationName("mapViewTapped", object: nil)
         let venue:Venue = self.venues[indexPath.row] as Venue
         NSNotificationCenter.defaultCenter().postNotificationName("selectAnnotation", object: venue)
