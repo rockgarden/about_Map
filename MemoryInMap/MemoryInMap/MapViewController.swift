@@ -80,7 +80,7 @@ class MapViewController: UIViewController, MKMapViewDelegate{
             pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             pinView!.canShowCallout = true
             pinView!.animatesDrop = true
-            pinView!.pinColor = .Purple
+            pinView!.pinTintColor = UIColor.purpleColor()
             if self.rightButton == nil {
                 self.rightButton = UIButton(type: UIButtonType.DetailDisclosure)
             }
