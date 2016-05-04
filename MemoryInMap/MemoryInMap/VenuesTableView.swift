@@ -13,8 +13,6 @@ class VenuesTableView: UITableViewController {
     var venues: [Venue] = []
     var rightButton:UIButton?
     let cellId = "cell"
-
-    
      
     convenience init(frame:CGRect){
         self.init(style:.Plain)
@@ -50,7 +48,6 @@ class VenuesTableView: UITableViewController {
     //    cell.detailTextLabel!.text = venue.categoryName
         return cell
     }
-    
    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         debugPrint (indexPath.row)
