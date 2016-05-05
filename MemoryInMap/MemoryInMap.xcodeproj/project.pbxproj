@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		101050EC96C9970583524CD3 /* Pods_MemoryInMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDDE6D72843CB51AB1FCB5E /* Pods_MemoryInMap.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4433DE471CDB93B5005B6A3D /* TodayViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4433DE461CDB93B5005B6A3D /* TodayViewExt.swift */; };
 		44EF57F81CDA351700183B47 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EF57F71CDA351700183B47 /* UserDefault.swift */; };
 		C25E76031CBF7EF6000ECACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E76021CBF7EF6000ECACE /* AppDelegate.swift */; };
 		C25E76051CBF7EF6000ECACE /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E76041CBF7EF6000ECACE /* MasterViewController.swift */; };
@@ -52,6 +53,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4433DE461CDB93B5005B6A3D /* TodayViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewExt.swift; sourceTree = "<group>"; };
 		44EF57F71CDA351700183B47 /* UserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		615774368A2DE55C0131EA91 /* Pods-MemoryInMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryInMap.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-MemoryInMap/Pods-MemoryInMap.debug.xcconfig"; sourceTree = "<group>"; };
 		6FDDE6D72843CB51AB1FCB5E /* Pods_MemoryInMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoryInMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				C2CE89DD1CC0D21800CDEF77 /* TodayViewController.swift */,
+				4433DE461CDB93B5005B6A3D /* TodayViewExt.swift */,
 				C2CE89DF1CC0D21800CDEF77 /* MainInterface.storyboard */,
 				C2CE89E21CC0D21800CDEF77 /* Info.plist */,
 			);
@@ -336,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4433DE471CDB93B5005B6A3D /* TodayViewExt.swift in Sources */,
 				C2CE89DE1CC0D21800CDEF77 /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

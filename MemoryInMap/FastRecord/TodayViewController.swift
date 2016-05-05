@@ -10,7 +10,18 @@ import UIKit
 import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
-        
+
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var leftConstraint: NSLayoutConstraint!
+
+    private var complitionHandler: (NCUpdateResult -> Void)?
+
+    var marginLeft: CGFloat = 0 {
+        didSet {
+            self.leftConstraint.constant = marginLeft
+            self.view.setNeedsUpdateConstraints()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
@@ -29,6 +40,17 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         // If there's an update, use NCUpdateResult.NewData
 
         completionHandler(NCUpdateResult.NewData)
+    }
+
+    // MARK: - Open App
+
+    func didLongPress(gesture: UITapGestureRecognizer) {
+        didTapAdd()
+    }
+
+    func didTapAdd() {
+        let appURL = NSURL(string: "memoryInMap://")!
+        extensionContext?.openURL(appURL, completionHandler: nil)
     }
     
 }
