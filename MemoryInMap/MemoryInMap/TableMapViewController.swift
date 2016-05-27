@@ -23,19 +23,9 @@ class TableMapViewController: UIViewController {
     var bigMap = false
     var detailVenue:VenueDetailViewController?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    convenience init(frame:CGRect){
+    convenience init(frame:CGRect ) {
         self.init(nibName: nil, bundle: nil)
+//        let frame = UIScreen.mainScreen().bounds
         navHeight = 0.0
         width = frame.size.width
         mapHeight = (frame.size.height - navHeight!)/5*3
@@ -56,6 +46,16 @@ class TableMapViewController: UIViewController {
         view.addSubview(tableController!.view)
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TableMapViewController.navigateToDetail(_:)), name: "navigateToDetail", object: nil)
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationController?.navigationBar.mSetBackgroundColor(UIColor.clearColor())
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 
     func mapViewTapped() {
@@ -127,6 +127,5 @@ class TableMapViewController: UIViewController {
         }
         self.navigationController?.pushViewController(self.detailVenue!, animated: true)
     }
-
 
 }

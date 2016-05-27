@@ -26,8 +26,8 @@ class VenueDetailViewController: UIViewController {
     convenience init(){
         self.init(nibName: nil, bundle: nil)
         
-        self.view.backgroundColor = UIColor.whiteColor()
-        
+        view.backgroundColor = UIColor.whiteColor()
+
         navHeight = 0.0
         width = self.view.frame.size.width
         halfHeight = (self.view.frame.size.height - navHeight!)/2
@@ -64,6 +64,10 @@ class VenueDetailViewController: UIViewController {
         self.view.addSubview(self.lblName!)
         self.view.addSubview(self.lblAddress!)
         self.view.addSubview(self.lblCity!)
+    }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationController?.navigationBar.resetBackgroundColor()
     }
 }

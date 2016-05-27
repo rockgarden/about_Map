@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		101050EC96C9970583524CD3 /* Pods_MemoryInMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDDE6D72843CB51AB1FCB5E /* Pods_MemoryInMap.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4433DE471CDB93B5005B6A3D /* TodayViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4433DE461CDB93B5005B6A3D /* TodayViewExt.swift */; };
+		44BEA3061CF746400099DE89 /* Ext_NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEA3051CF746400099DE89 /* Ext_NavBar.swift */; };
+		44BEA3081CF754550099DE89 /* NavigationBarColorSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BEA3071CF754550099DE89 /* NavigationBarColorSource.swift */; };
 		44DBD9041CDF783800529904 /* FoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DBD9031CDF783800529904 /* FoldingCell.swift */; };
 		44DBD9071CDF805B00529904 /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DBD9061CDF805B00529904 /* MapCell.swift */; };
 		44EF57F81CDA351700183B47 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EF57F71CDA351700183B47 /* UserDefault.swift */; };
+		44F73BF01CF76731001839B1 /* TableMap.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44F73BEF1CF76731001839B1 /* TableMap.xib */; };
 		C25E76031CBF7EF6000ECACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E76021CBF7EF6000ECACE /* AppDelegate.swift */; };
-		C25E76051CBF7EF6000ECACE /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E76041CBF7EF6000ECACE /* MasterViewController.swift */; };
 		C25E76071CBF7EF6000ECACE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E76061CBF7EF6000ECACE /* DetailViewController.swift */; };
 		C25E760A1CBF7EF6000ECACE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25E76081CBF7EF6000ECACE /* Main.storyboard */; };
 		C25E760C1CBF7EF6000ECACE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C25E760B1CBF7EF6000ECACE /* Assets.xcassets */; };
@@ -56,14 +58,16 @@
 
 /* Begin PBXFileReference section */
 		4433DE461CDB93B5005B6A3D /* TodayViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewExt.swift; sourceTree = "<group>"; };
+		44BEA3051CF746400099DE89 /* Ext_NavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_NavBar.swift; sourceTree = "<group>"; };
+		44BEA3071CF754550099DE89 /* NavigationBarColorSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarColorSource.swift; sourceTree = "<group>"; };
 		44DBD9031CDF783800529904 /* FoldingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldingCell.swift; sourceTree = "<group>"; };
 		44DBD9061CDF805B00529904 /* MapCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
 		44EF57F71CDA351700183B47 /* UserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		44F73BEF1CF76731001839B1 /* TableMap.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableMap.xib; sourceTree = "<group>"; };
 		615774368A2DE55C0131EA91 /* Pods-MemoryInMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryInMap.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-MemoryInMap/Pods-MemoryInMap.debug.xcconfig"; sourceTree = "<group>"; };
 		6FDDE6D72843CB51AB1FCB5E /* Pods_MemoryInMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoryInMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25E75FF1CBF7EF5000ECACE /* MemoryInMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryInMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25E76021CBF7EF6000ECACE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C25E76041CBF7EF6000ECACE /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		C25E76061CBF7EF6000ECACE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C25E76091CBF7EF6000ECACE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C25E760B1CBF7EF6000ECACE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				44DBD9031CDF783800529904 /* FoldingCell.swift */,
+				44BEA3051CF746400099DE89 /* Ext_NavBar.swift */,
+				44BEA3071CF754550099DE89 /* NavigationBarColorSource.swift */,
 			);
 			name = Widget;
 			sourceTree = "<group>";
@@ -141,7 +147,6 @@
 				44DBD9061CDF805B00529904 /* MapCell.swift */,
 				C25E76381CBF8014000ECACE /* Venue.swift */,
 				C25E763C1CBF8026000ECACE /* VeuneDetailViewController.swift */,
-				C25E76041CBF7EF6000ECACE /* MasterViewController.swift */,
 				C25E763A1CBF801D000ECACE /* TableMapViewController.swift */,
 				C25E76061CBF7EF6000ECACE /* DetailViewController.swift */,
 				C25E76081CBF7EF6000ECACE /* Main.storyboard */,
@@ -150,6 +155,7 @@
 				C25E76101CBF7EF6000ECACE /* Info.plist */,
 				44EF57F71CDA351700183B47 /* UserDefault.swift */,
 				44DBD9051CDF7A8500529904 /* Widget */,
+				44F73BEF1CF76731001839B1 /* TableMap.xib */,
 			);
 			path = MemoryInMap;
 			sourceTree = "<group>";
@@ -270,6 +276,7 @@
 				C25E760F1CBF7EF6000ECACE /* LaunchScreen.storyboard in Resources */,
 				C25E760C1CBF7EF6000ECACE /* Assets.xcassets in Resources */,
 				C25E760A1CBF7EF6000ECACE /* Main.storyboard in Resources */,
+				44F73BF01CF76731001839B1 /* TableMap.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,9 +348,10 @@
 				44DBD9071CDF805B00529904 /* MapCell.swift in Sources */,
 				44EF57F81CDA351700183B47 /* UserDefault.swift in Sources */,
 				C25E763D1CBF8026000ECACE /* VeuneDetailViewController.swift in Sources */,
-				C25E76051CBF7EF6000ECACE /* MasterViewController.swift in Sources */,
+				44BEA3061CF746400099DE89 /* Ext_NavBar.swift in Sources */,
 				C25E76391CBF8014000ECACE /* Venue.swift in Sources */,
 				C25E763B1CBF801D000ECACE /* TableMapViewController.swift in Sources */,
+				44BEA3081CF754550099DE89 /* NavigationBarColorSource.swift in Sources */,
 				C25E76371CBF800F000ECACE /* VenuesTableView.swift in Sources */,
 				C25E76031CBF7EF6000ECACE /* AppDelegate.swift in Sources */,
 				44DBD9041CDF783800529904 /* FoldingCell.swift in Sources */,

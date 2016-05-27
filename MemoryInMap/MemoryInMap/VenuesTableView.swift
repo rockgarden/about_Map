@@ -29,18 +29,18 @@ class VenuesTableView: UITableViewController {
     
     func loadVenues(array: [Venue]) {
         self.venues = array
+        createCellHeightsArray()
         tableView.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        createCellHeightsArray()
         self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
     }
 
     // MARK: configure
     func createCellHeightsArray() {
-        for _ in 0...venues.count {
+        for _ in 0..<venues.count {
             cellHeights.append(kCloseCellHeight)
         }
     }
