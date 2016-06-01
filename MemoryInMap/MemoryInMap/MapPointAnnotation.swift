@@ -11,9 +11,8 @@ import MapKit
 
 class MapPointAnnotation : MKPointAnnotation {
     
-    var venue:Venue?
-    
-    
+    var venue: Photo?
+
 }
 
 

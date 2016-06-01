@@ -8,9 +8,9 @@
 
 import UIKit
 
-class VenuesTableView: UITableViewController {
+class PhotosTableView: UITableViewController {
     
-    var venues: [Venue] = []
+    var photos: [Photo] = []
     var rightButton:UIButton?
     let cellId = "cell"
 
@@ -27,8 +27,8 @@ class VenuesTableView: UITableViewController {
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: self.cellId)
     }
     
-    func loadVenues(array: [Venue]) {
-        self.venues = array
+    func loadPhotos(array: [Photo]) {
+        self.photos = array
         createCellHeightsArray()
         tableView.reloadData()
     }
@@ -40,7 +40,7 @@ class VenuesTableView: UITableViewController {
 
     // MARK: configure
     func createCellHeightsArray() {
-        for _ in 0..<venues.count {
+        for _ in 0..<photos.count {
             cellHeights.append(kCloseCellHeight)
         }
     }
@@ -48,7 +48,7 @@ class VenuesTableView: UITableViewController {
     // MARK: - Table view data source
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return self.venues.count as Int
+        return self.photos.count as Int
     }
 
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -69,10 +69,10 @@ class VenuesTableView: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(self.cellId, forIndexPath: indexPath)
         // TODO:使用FoldingCell
 //        let cell = tableView.dequeueReusableCellWithIdentifier("FoldingCell", forIndexPath: indexPath)
-        let venue = self.venues[indexPath.row] as Venue
-        cell.textLabel!.text = venue.name
-        debugPrint ("venue category: \(venue.categoryName)")
-//        cell.detailTextLabel!.text = venue.categoryName
+        let photo = self.photos[indexPath.row] as Photo
+        cell.textLabel!.text = photo.name
+        debugPrint ("venue category: \(photo.categoryName)")
+//        cell.detailTextLabel!.text = photo.categoryName
         return cell
     }
 
@@ -86,7 +86,7 @@ class VenuesTableView: UITableViewController {
         let cell = self.tableView.cellForRowAtIndexPath(indexPath) as UITableViewCell?
         debugPrint (cell?.textLabel?.text)
         NSNotificationCenter.defaultCenter().postNotificationName("mapViewTapped", object: nil)
-        let venue:Venue = self.venues[indexPath.row] as Venue
+        let venue = self.photos[indexPath.row] as Photo
         NSNotificationCenter.defaultCenter().postNotificationName("selectAnnotation", object: venue)
     }
 

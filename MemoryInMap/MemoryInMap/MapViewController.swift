@@ -11,11 +11,15 @@ import MapKit
 
 class MapViewController: UIViewController, MKMapViewDelegate{
 
-    var venuePoints:[Int: MapPointAnnotation] = [Int:MapPointAnnotation]()
+    var photoPoints:[Int: MapPointAnnotation] = [Int:MapPointAnnotation]()
     var map:MKMapView?
-    var venues: [Venue]?
+    var photos: [Photo]?
     var rightButton: UIButton?
-    var selectedVenue:Venue?
+    var selectedVenue: Photo? {
+        didSet {
+            
+        }
+    }
 
 
     convenience init(frame:CGRect){
@@ -39,26 +43,26 @@ class MapViewController: UIViewController, MKMapViewDelegate{
         self.map!.setRegion(region, animated: true)
     }
 
-    func loadPointsWithArray(someVenues:[Venue]){
+    func loadPointsWithArray(somePhotos:[Photo]){
         map!.removeAnnotations(map!.annotations)
-        for i in 0..<someVenues.count {
+        for i in 0..<somePhotos.count {
             let point:MapPointAnnotation = MapPointAnnotation()
-            let v = someVenues[i] as Venue
+            let v = somePhotos[i] as Photo
             point.venue = v
             let latitude = (v.lat as NSString).doubleValue
             let longitude = (v.lng as NSString).doubleValue
             point.coordinate = CLLocationCoordinate2DMake(latitude,longitude);
             point.title =  v.name
             point.subtitle = v.categoryName
-            venuePoints[v.ident] = point
+            photoPoints[v.ident] = point
             map!.addAnnotation(point)
         }
     }
 
     // select venue from tableview
     func selectAnnotation(notification :NSNotification)  {
-        self.selectedVenue = notification.object as? Venue
-        let point:MKPointAnnotation = venuePoints[self.selectedVenue!.ident]!
+        self.selectedVenue = notification.object as? Photo
+        let point:MKPointAnnotation = photoPoints[self.selectedVenue!.ident]!
         map!.selectAnnotation(point, animated: true)
     }
 
@@ -99,11 +103,11 @@ class MapViewController: UIViewController, MKMapViewDelegate{
 
 
     func rightButtonTapped(sender: UIButton!){
-        if let venue:Venue = selectedVenue{
-            debugPrint("venue name:\(venue.name)")
-            NSNotificationCenter.defaultCenter().postNotificationName("navigateToDetail", object: venue)
+        if let photo: Photo = selectedVenue{
+            debugPrint("venue name:\(photo.name)")
+            NSNotificationCenter.defaultCenter().postNotificationName("navigateToDetail", object: photo)
         } else {
-            debugPrint("no venue")
+            debugPrint("no photo")
         }
     }
     

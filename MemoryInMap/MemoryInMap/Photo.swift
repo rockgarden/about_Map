@@ -1,15 +1,14 @@
 //
-//  Venue.swift
-//  MapTable-Swift
+//  Photo.swift
 //
-//  Created by Gazolla on 18/07/14.
-//  Copyright (c) 2014 Gazolla. All rights reserved.
+//  Created by Wangkan on 18/07/16.
+//  Copyright (c) 2016 Rockgarden. All rights reserved.
 //
 
 import Foundation
 
-class Venue {
-    
+class Photo {
+
     var ident: Int
     var name: String
     var lat: String
@@ -17,7 +16,7 @@ class Venue {
     var city: String
     var address: String
     var categoryName: String
-    
+
     init(aIdent:Int, aName: String, aAddress: String,  aCity: String, aCategoryName: String, aLat: String, aLng: String){
         ident = aIdent
         name = aName
@@ -27,5 +26,5 @@ class Venue {
         lat = aLat
         lng = aLng
     }
-    
+
 }

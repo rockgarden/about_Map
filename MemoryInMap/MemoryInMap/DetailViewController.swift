@@ -11,8 +11,30 @@ import AEXML
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    var wearther: String? {
+        didSet {
+            let url = NSURL(string: "http://www.weather.com.cn/data/sk/101210101.html")
 
+            let data = try? NSData(contentsOfURL: url!, options: NSDataReadingOptions.DataReadingUncached)
+
+            //var str = NSString(data: data, encoding: NSUTF8StringEncoding)
+
+            let json : AnyObject! = try? NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments)
+            let weatherInfo : AnyObject! = json.objectForKey("weatherinfo")
+            let city : AnyObject! = weatherInfo.objectForKey("city")
+            let temp : AnyObject! = weatherInfo.objectForKey("temp")
+            let wind : AnyObject! = weatherInfo.objectForKey("WD")
+            let ws : AnyObject! = weatherInfo.objectForKey("WS")
+                
+            self.wearther = "城市：\(city)\n温度：\(temp)\n风：\(wind)\n风级：\(ws)"
+        }
+    }
+
+    @IBOutlet weak var detailDescriptionLabel: UILabel! {
+        didSet {
+            detailDescriptionLabel.textColor = UIColor.purpleColor()
+        }
+    }
 
     var detailItem: AnyObject? {
         didSet {
@@ -25,7 +47,7 @@ class DetailViewController: UIViewController {
         // Update the user interface for the detail item.
         if let detail = self.detailItem {
             if let label = self.detailDescriptionLabel {
-                label.text = detail.description
+                label.text = detail.description + wearther!
             }
         }
     }
@@ -51,23 +73,6 @@ class DetailViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    func loadWeather(){
-        let url = NSURL(string: "http://www.weather.com.cn/data/sk/101210101.html")
-
-        let data = try? NSData(contentsOfURL: url!, options: NSDataReadingOptions.DataReadingUncached)
-
-        //var str = NSString(data: data, encoding: NSUTF8StringEncoding)
-
-        let json : AnyObject! = try? NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments)
-        let weatherInfo : AnyObject! = json.objectForKey("weatherinfo")
-        let city : AnyObject! = weatherInfo.objectForKey("city")
-        let temp : AnyObject! = weatherInfo.objectForKey("temp")
-        let wind : AnyObject! = weatherInfo.objectForKey("WD")
-        let ws : AnyObject! = weatherInfo.objectForKey("WS")
-
-        //tv!.text = "城市：\(city)\n温度：\(temp)\n风：\(wind)\n风级：\(ws)"
     }
 }
 

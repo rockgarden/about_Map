@@ -10,18 +10,19 @@ import UIKit
 import MapKit
 
 class TableMapViewController: UIViewController {
+    
     var navHeight:CGFloat?
     var width:CGFloat?
     var mapHeight:CGFloat?
     var tableHeight:CGFloat?
     var height:CGFloat?
     var firstPosition = true
-    var tableController:VenuesTableView?
-    var venues: Array<Venue> = [Venue]()
+    var tableController: PhotosTableView?
+    var photos: Array<Photo> = [Photo]()
     var mapView:MapViewController?
     var tapFirstView:UIGestureRecognizer?
     var bigMap = false
-    var detailVenue:VenueDetailViewController?
+    var detailPhoto: PhotoDetailViewController?
 
     convenience init(frame:CGRect ) {
         self.init(nibName: nil, bundle: nil)
@@ -42,7 +43,7 @@ class TableMapViewController: UIViewController {
         mapView!.view.addGestureRecognizer(tapFirstView!)
         self.view.addSubview(self.mapView!.view)
 
-        tableController = VenuesTableView(frame: CGRectMake(0.0, mapHeight!, width!, tableHeight!))
+        tableController = PhotosTableView(frame: CGRectMake(0.0, mapHeight!, width!, tableHeight!))
         view.addSubview(tableController!.view)
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TableMapViewController.navigateToDetail(_:)), name: "navigateToDetail", object: nil)
@@ -106,26 +107,26 @@ class TableMapViewController: UIViewController {
 
     }
 
-    func setVenueCollection(array: [Venue]!) {
+    func setVenueCollection(array: [Photo]!) {
         if (array != nil) {
-            venues = array!
-            tableController!.loadVenues(array!)
+            photos = array!
+            tableController!.loadPhotos(array!)
             mapView!.loadPointsWithArray(array!)
         }
     }
 
     func navigateToDetail(notification:NSNotification){
-        if self.detailVenue == nil {
-            self.detailVenue = VenueDetailViewController()
+        if self.detailPhoto == nil {
+            self.detailPhoto = PhotoDetailViewController()
         }
-        if let venue:Venue = notification.object as? Venue {
-            self.detailVenue?.lblName?.text = venue.name
-            self.detailVenue?.lblAddress?.text = venue.address
-            self.detailVenue?.lblCity?.text = venue.city
+        if let photo = notification.object as? Photo {
+            self.detailPhoto?.lblName?.text = photo.name
+            self.detailPhoto?.lblAddress?.text = photo.address
+            self.detailPhoto?.lblCity?.text = photo.city
         } else {
             debugPrint ("no venue at TableMapController")
         }
-        self.navigationController?.pushViewController(self.detailVenue!, animated: true)
+        self.navigationController?.pushViewController(self.detailPhoto!, animated: true)
     }
 
 }
