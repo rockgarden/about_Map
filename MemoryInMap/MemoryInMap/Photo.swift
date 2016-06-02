@@ -17,7 +17,7 @@ class Photo {
     var address: String
     var categoryName: String
 
-    init(aIdent:Int, aName: String, aAddress: String,  aCity: String, aCategoryName: String, aLat: String, aLng: String){
+    init(aIdent:Int, aName: String, aAddress: String,  aCity: String, aCategoryName: String, aLat: String, aLng: String) {
         ident = aIdent
         name = aName
         address = aAddress

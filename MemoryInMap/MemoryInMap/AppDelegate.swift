@@ -15,11 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var photosArr : Array<Photo> = []
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
         initData()
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        let vtv:TableMapViewController = TableMapViewController(frame: self.window?.frame as CGRect!)
-        vtv.setVenueCollection(photosArr)
+        let vtv: TableMapViewController = TableMapViewController()
+        vtv.photos = photosArr
         self.window!.rootViewController = UINavigationController(rootViewController: vtv)
         self.window!.backgroundColor = UIColor.clearColor()
         self.window!.makeKeyAndVisible()

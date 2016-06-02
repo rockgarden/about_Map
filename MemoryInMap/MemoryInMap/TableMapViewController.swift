@@ -24,9 +24,12 @@ class TableMapViewController: UIViewController {
     var bigMap = false
     var detailPhoto: PhotoDetailViewController?
 
-    convenience init(frame:CGRect ) {
-        self.init(nibName: nil, bundle: nil)
-//        let frame = UIScreen.mainScreen().bounds
+//    convenience init(frame: CGRect) {
+//        self.init(nibName: nil, bundle: nil)
+//    }
+
+    func initView() {
+        let frame = UIScreen.mainScreen().bounds
         navHeight = 0.0
         width = frame.size.width
         mapHeight = (frame.size.height - navHeight!)/5*3
@@ -52,6 +55,12 @@ class TableMapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.mSetBackgroundColor(UIColor.clearColor())
+        initView()
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        setPhotosCollection()
     }
 
     override func didReceiveMemoryWarning() {
@@ -107,12 +116,11 @@ class TableMapViewController: UIViewController {
 
     }
 
-    func setVenueCollection(array: [Photo]!) {
-        if (array != nil) {
-            photos = array!
-            tableController!.loadPhotos(array!)
-            mapView!.loadPointsWithArray(array!)
-        }
+    func setPhotosCollection() {
+
+            tableController!.loadPhotos(photos)
+            mapView!.loadPointsWithArray(photos)
+
     }
 
     func navigateToDetail(notification:NSNotification){
