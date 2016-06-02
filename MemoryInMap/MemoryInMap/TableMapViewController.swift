@@ -1,9 +1,8 @@
 //
 //  TableMapViewController.swift
-//  MapTable-Swift
 //
-//  Created by Gazolla on 18/07/14.
-//  Copyright (c) 2014 Gazolla. All rights reserved.
+//  Created by Wangkan on 01/06/16.
+//  Copyright (c) 2016 Rockgarden. All rights reserved.
 //
 
 import UIKit
