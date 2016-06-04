@@ -13,6 +13,7 @@
 		44B7B0081D0284060030EC8D /* ImageResizingMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B0031D0284060030EC8D /* ImageResizingMethods.swift */; };
 		44B7B0091D0284060030EC8D /* FoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B0051D0284060030EC8D /* FoldingCell.swift */; };
 		44B7B00A1D0284060030EC8D /* NavigationBarColorSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B0061D0284060030EC8D /* NavigationBarColorSource.swift */; };
+		44B7B00E1D0299370030EC8D /* ICanHas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B00D1D0299370030EC8D /* ICanHas.swift */; };
 		44DBD9071CDF805B00529904 /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DBD9061CDF805B00529904 /* MapCell.swift */; };
 		44EF57F81CDA351700183B47 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EF57F71CDA351700183B47 /* UserDefault.swift */; };
 		44F73BF01CF76731001839B1 /* TableMapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44F73BEF1CF76731001839B1 /* TableMapVC.xib */; };
@@ -63,6 +64,7 @@
 		44B7B0031D0284060030EC8D /* ImageResizingMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageResizingMethods.swift; sourceTree = "<group>"; };
 		44B7B0051D0284060030EC8D /* FoldingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldingCell.swift; sourceTree = "<group>"; };
 		44B7B0061D0284060030EC8D /* NavigationBarColorSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarColorSource.swift; sourceTree = "<group>"; };
+		44B7B00D1D0299370030EC8D /* ICanHas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICanHas.swift; sourceTree = "<group>"; };
 		44DBD9061CDF805B00529904 /* MapCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
 		44EF57F71CDA351700183B47 /* UserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		44F73BEF1CF76731001839B1 /* TableMapVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableMapVC.xib; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		44B7B0021D0284060030EC8D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				44B7B00D1D0299370030EC8D /* ICanHas.swift */,
 				44B7B0031D0284060030EC8D /* ImageResizingMethods.swift */,
 			);
 			name = Utils;
@@ -368,6 +371,7 @@
 				C25E76351CBF8006000ECACE /* MapPointAnnotation.swift in Sources */,
 				44B7B0091D0284060030EC8D /* FoldingCell.swift in Sources */,
 				C25E76071CBF7EF6000ECACE /* DetailViewController.swift in Sources */,
+				44B7B00E1D0299370030EC8D /* ICanHas.swift in Sources */,
 				44DBD9071CDF805B00529904 /* MapCell.swift in Sources */,
 				44EF57F81CDA351700183B47 /* UserDefault.swift in Sources */,
 				C25E763D1CBF8026000ECACE /* PhotoDetailViewController.swift in Sources */,
