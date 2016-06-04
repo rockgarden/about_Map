@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		101050EC96C9970583524CD3 /* Pods_MemoryInMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDDE6D72843CB51AB1FCB5E /* Pods_MemoryInMap.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4433DE471CDB93B5005B6A3D /* TodayViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4433DE461CDB93B5005B6A3D /* TodayViewExt.swift */; };
+		44B7B0071D0284060030EC8D /* Ext_NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B0011D0284060030EC8D /* Ext_NavBar.swift */; };
+		44B7B0081D0284060030EC8D /* ImageResizingMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B0031D0284060030EC8D /* ImageResizingMethods.swift */; };
+		44B7B0091D0284060030EC8D /* FoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B0051D0284060030EC8D /* FoldingCell.swift */; };
+		44B7B00A1D0284060030EC8D /* NavigationBarColorSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B0061D0284060030EC8D /* NavigationBarColorSource.swift */; };
 		44DBD9071CDF805B00529904 /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DBD9061CDF805B00529904 /* MapCell.swift */; };
 		44EF57F81CDA351700183B47 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EF57F71CDA351700183B47 /* UserDefault.swift */; };
 		44F73BF01CF76731001839B1 /* TableMapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44F73BEF1CF76731001839B1 /* TableMapVC.xib */; };
@@ -55,6 +59,10 @@
 
 /* Begin PBXFileReference section */
 		4433DE461CDB93B5005B6A3D /* TodayViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewExt.swift; sourceTree = "<group>"; };
+		44B7B0011D0284060030EC8D /* Ext_NavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_NavBar.swift; sourceTree = "<group>"; };
+		44B7B0031D0284060030EC8D /* ImageResizingMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageResizingMethods.swift; sourceTree = "<group>"; };
+		44B7B0051D0284060030EC8D /* FoldingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldingCell.swift; sourceTree = "<group>"; };
+		44B7B0061D0284060030EC8D /* NavigationBarColorSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarColorSource.swift; sourceTree = "<group>"; };
 		44DBD9061CDF805B00529904 /* MapCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
 		44EF57F71CDA351700183B47 /* UserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		44F73BEF1CF76731001839B1 /* TableMapVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableMapVC.xib; sourceTree = "<group>"; };
@@ -101,6 +109,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44B7B0001D0284060030EC8D /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				44B7B0011D0284060030EC8D /* Ext_NavBar.swift */,
+			);
+			name = Ext;
+			path = ../../SimpleLib/Ext;
+			sourceTree = "<group>";
+		};
+		44B7B0021D0284060030EC8D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				44B7B0031D0284060030EC8D /* ImageResizingMethods.swift */,
+			);
+			name = Utils;
+			path = ../../SimpleLib/Utils;
+			sourceTree = "<group>";
+		};
+		44B7B0041D0284060030EC8D /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				44B7B0051D0284060030EC8D /* FoldingCell.swift */,
+				44B7B0061D0284060030EC8D /* NavigationBarColorSource.swift */,
+			);
+			name = Widget;
+			path = ../../SimpleLib/Widget;
+			sourceTree = "<group>";
+		};
 		C25E75F61CBF7EF5000ECACE = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +175,9 @@
 				C25E760D1CBF7EF6000ECACE /* LaunchScreen.storyboard */,
 				C25E76101CBF7EF6000ECACE /* Info.plist */,
 				44EF57F71CDA351700183B47 /* UserDefault.swift */,
+				44B7B0001D0284060030EC8D /* Ext */,
+				44B7B0021D0284060030EC8D /* Utils */,
+				44B7B0041D0284060030EC8D /* Widget */,
 			);
 			path = MemoryInMap;
 			sourceTree = "<group>";
@@ -327,11 +366,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C25E76351CBF8006000ECACE /* MapPointAnnotation.swift in Sources */,
+				44B7B0091D0284060030EC8D /* FoldingCell.swift in Sources */,
 				C25E76071CBF7EF6000ECACE /* DetailViewController.swift in Sources */,
 				44DBD9071CDF805B00529904 /* MapCell.swift in Sources */,
 				44EF57F81CDA351700183B47 /* UserDefault.swift in Sources */,
 				C25E763D1CBF8026000ECACE /* PhotoDetailViewController.swift in Sources */,
+				44B7B00A1D0284060030EC8D /* NavigationBarColorSource.swift in Sources */,
 				C25E76391CBF8014000ECACE /* Photo.swift in Sources */,
+				44B7B0071D0284060030EC8D /* Ext_NavBar.swift in Sources */,
+				44B7B0081D0284060030EC8D /* ImageResizingMethods.swift in Sources */,
 				C25E763B1CBF801D000ECACE /* TableMapViewController.swift in Sources */,
 				C25E76371CBF800F000ECACE /* PhotosTableView.swift in Sources */,
 				C25E76031CBF7EF6000ECACE /* AppDelegate.swift in Sources */,
