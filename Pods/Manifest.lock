@@ -1,10 +1,13 @@
 PODS:
   - AEXML (3.0.0)
+  - KMNavigationBarTransition (0.0.8)
 
 DEPENDENCIES:
   - AEXML
+  - KMNavigationBarTransition
 
 SPEC CHECKSUMS:
   AEXML: 716fb0a8decba4a3517324a71fee3685b30233d2
+  KMNavigationBarTransition: e87fb2b3a194b0d7fded5fd560df83c6f43b942f
 
 COCOAPODS: 0.38.2

@@ -10,7 +10,18 @@
 		101050EC96C9970583524CD3 /* Pods_MemoryInMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDDE6D72843CB51AB1FCB5E /* Pods_MemoryInMap.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4433DE471CDB93B5005B6A3D /* TodayViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4433DE461CDB93B5005B6A3D /* TodayViewExt.swift */; };
 		4438DD401D040E350056967B /* TransparentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4438DD3F1D040E350056967B /* TransparentTableViewController.swift */; };
-		44B7B0071D0284060030EC8D /* Ext_NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B0011D0284060030EC8D /* Ext_NavBar.swift */; };
+		44587F821D04603D00A1C0CF /* Ext_UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44587F811D04603D00A1C0CF /* Ext_UIViewController.swift */; };
+		44587FA01D04620900A1C0CF /* MethodSwizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44587F971D04620900A1C0CF /* MethodSwizzling.swift */; };
+		44587FA21D04620900A1C0CF /* KMWeakObjectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44587F9A1D04620900A1C0CF /* KMWeakObjectContainer.swift */; };
+		44587FA71D04626E00A1C0CF /* NavigationBarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44587FA61D04626E00A1C0CF /* NavigationBarData.swift */; };
+		44587FA91D0462E100A1C0CF /* Ext_UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44587FA81D0462E100A1C0CF /* Ext_UIImage.swift */; };
+		44587FB31D04676A00A1C0CF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44587FAB1D04676A00A1C0CF /* Info.plist */; };
+		44587FB41D04676A00A1C0CF /* RainbowColorSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44587FAC1D04676A00A1C0CF /* RainbowColorSource.swift */; };
+		44587FB51D04676A00A1C0CF /* RainbowDragPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44587FAD1D04676A00A1C0CF /* RainbowDragPop.swift */; };
+		44587FB61D04676A00A1C0CF /* RainbowNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44587FAF1D04676A00A1C0CF /* RainbowNavigation.swift */; };
+		44587FB71D04676A00A1C0CF /* RainbowPopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44587FB01D04676A00A1C0CF /* RainbowPopAnimator.swift */; };
+		44587FB81D04676A00A1C0CF /* RainbowPushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44587FB11D04676A00A1C0CF /* RainbowPushAnimator.swift */; };
+		44B7B0071D0284060030EC8D /* Ext_UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B0011D0284060030EC8D /* Ext_UINavigationBar.swift */; };
 		44B7B0081D0284060030EC8D /* ImageResizingMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B0031D0284060030EC8D /* ImageResizingMethods.swift */; };
 		44B7B0091D0284060030EC8D /* FoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B0051D0284060030EC8D /* FoldingCell.swift */; };
 		44B7B00A1D0284060030EC8D /* NavigationBarColorSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B0061D0284060030EC8D /* NavigationBarColorSource.swift */; };
@@ -62,7 +73,19 @@
 /* Begin PBXFileReference section */
 		4433DE461CDB93B5005B6A3D /* TodayViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewExt.swift; sourceTree = "<group>"; };
 		4438DD3F1D040E350056967B /* TransparentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentTableViewController.swift; sourceTree = "<group>"; };
-		44B7B0011D0284060030EC8D /* Ext_NavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_NavBar.swift; sourceTree = "<group>"; };
+		44587F811D04603D00A1C0CF /* Ext_UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UIViewController.swift; sourceTree = "<group>"; };
+		44587F971D04620900A1C0CF /* MethodSwizzling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodSwizzling.swift; sourceTree = "<group>"; };
+		44587F9A1D04620900A1C0CF /* KMWeakObjectContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMWeakObjectContainer.swift; sourceTree = "<group>"; };
+		44587FA61D04626E00A1C0CF /* NavigationBarData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarData.swift; sourceTree = "<group>"; };
+		44587FA81D0462E100A1C0CF /* Ext_UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UIImage.swift; sourceTree = "<group>"; };
+		44587FAB1D04676A00A1C0CF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44587FAC1D04676A00A1C0CF /* RainbowColorSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainbowColorSource.swift; sourceTree = "<group>"; };
+		44587FAD1D04676A00A1C0CF /* RainbowDragPop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainbowDragPop.swift; sourceTree = "<group>"; };
+		44587FAE1D04676A00A1C0CF /* RainbowNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RainbowNavigation.h; sourceTree = "<group>"; };
+		44587FAF1D04676A00A1C0CF /* RainbowNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainbowNavigation.swift; sourceTree = "<group>"; };
+		44587FB01D04676A00A1C0CF /* RainbowPopAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainbowPopAnimator.swift; sourceTree = "<group>"; };
+		44587FB11D04676A00A1C0CF /* RainbowPushAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainbowPushAnimator.swift; sourceTree = "<group>"; };
+		44B7B0011D0284060030EC8D /* Ext_UINavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UINavigationBar.swift; sourceTree = "<group>"; };
 		44B7B0031D0284060030EC8D /* ImageResizingMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageResizingMethods.swift; sourceTree = "<group>"; };
 		44B7B0051D0284060030EC8D /* FoldingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldingCell.swift; sourceTree = "<group>"; };
 		44B7B0061D0284060030EC8D /* NavigationBarColorSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarColorSource.swift; sourceTree = "<group>"; };
@@ -113,10 +136,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44587F941D04620900A1C0CF /* KMNavigationBarTransition */ = {
+			isa = PBXGroup;
+			children = (
+				44587F971D04620900A1C0CF /* MethodSwizzling.swift */,
+				44587F9A1D04620900A1C0CF /* KMWeakObjectContainer.swift */,
+			);
+			name = KMNavigationBarTransition;
+			path = ../../SimpleLib/KMNavigationBarTransition;
+			sourceTree = "<group>";
+		};
+		44587FA51D04626E00A1C0CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				44587FA61D04626E00A1C0CF /* NavigationBarData.swift */,
+			);
+			name = Model;
+			path = ../../SimpleLib/Model;
+			sourceTree = "<group>";
+		};
+		44587FAA1D04676A00A1C0CF /* RainbowNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				44587FAB1D04676A00A1C0CF /* Info.plist */,
+				44587FAC1D04676A00A1C0CF /* RainbowColorSource.swift */,
+				44587FAD1D04676A00A1C0CF /* RainbowDragPop.swift */,
+				44587FAE1D04676A00A1C0CF /* RainbowNavigation.h */,
+				44587FAF1D04676A00A1C0CF /* RainbowNavigation.swift */,
+				44587FB01D04676A00A1C0CF /* RainbowPopAnimator.swift */,
+				44587FB11D04676A00A1C0CF /* RainbowPushAnimator.swift */,
+			);
+			name = RainbowNavigation;
+			path = ../../SimpleLib/RainbowNavigation;
+			sourceTree = "<group>";
+		};
 		44B7B0001D0284060030EC8D /* Ext */ = {
 			isa = PBXGroup;
 			children = (
-				44B7B0011D0284060030EC8D /* Ext_NavBar.swift */,
+				44B7B0011D0284060030EC8D /* Ext_UINavigationBar.swift */,
+				44587F811D04603D00A1C0CF /* Ext_UIViewController.swift */,
+				44587FA81D0462E100A1C0CF /* Ext_UIImage.swift */,
 			);
 			name = Ext;
 			path = ../../SimpleLib/Ext;
@@ -181,6 +240,9 @@
 				C25E760D1CBF7EF6000ECACE /* LaunchScreen.storyboard */,
 				C25E76101CBF7EF6000ECACE /* Info.plist */,
 				44EF57F71CDA351700183B47 /* UserDefault.swift */,
+				44587F941D04620900A1C0CF /* KMNavigationBarTransition */,
+				44587FAA1D04676A00A1C0CF /* RainbowNavigation */,
+				44587FA51D04626E00A1C0CF /* Model */,
 				44B7B0001D0284060030EC8D /* Ext */,
 				44B7B0021D0284060030EC8D /* Utils */,
 				44B7B0041D0284060030EC8D /* Widget */,
@@ -267,7 +329,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = wangkan;
+				ORGANIZATIONNAME = Rockgarden;
 				TargetAttributes = {
 					C25E75FE1CBF7EF5000ECACE = {
 						CreatedOnToolsVersion = 7.3;
@@ -304,6 +366,7 @@
 				C25E760F1CBF7EF6000ECACE /* LaunchScreen.storyboard in Resources */,
 				C25E760C1CBF7EF6000ECACE /* Assets.xcassets in Resources */,
 				C25E760A1CBF7EF6000ECACE /* Main.storyboard in Resources */,
+				44587FB31D04676A00A1C0CF /* Info.plist in Resources */,
 				44F73BF01CF76731001839B1 /* TableMapVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,16 +439,26 @@
 				C25E76071CBF7EF6000ECACE /* DetailViewController.swift in Sources */,
 				44B7B00E1D0299370030EC8D /* ICanHas.swift in Sources */,
 				44DBD9071CDF805B00529904 /* MapCell.swift in Sources */,
+				44587FB51D04676A00A1C0CF /* RainbowDragPop.swift in Sources */,
+				44587F821D04603D00A1C0CF /* Ext_UIViewController.swift in Sources */,
+				44587FB61D04676A00A1C0CF /* RainbowNavigation.swift in Sources */,
 				44EF57F81CDA351700183B47 /* UserDefault.swift in Sources */,
+				44587FB71D04676A00A1C0CF /* RainbowPopAnimator.swift in Sources */,
 				C25E763D1CBF8026000ECACE /* PhotoDetailViewController.swift in Sources */,
 				44B7B00A1D0284060030EC8D /* NavigationBarColorSource.swift in Sources */,
+				44587FA01D04620900A1C0CF /* MethodSwizzling.swift in Sources */,
 				4438DD401D040E350056967B /* TransparentTableViewController.swift in Sources */,
 				C25E76391CBF8014000ECACE /* Photo.swift in Sources */,
-				44B7B0071D0284060030EC8D /* Ext_NavBar.swift in Sources */,
+				44B7B0071D0284060030EC8D /* Ext_UINavigationBar.swift in Sources */,
+				44587FA91D0462E100A1C0CF /* Ext_UIImage.swift in Sources */,
+				44587FA21D04620900A1C0CF /* KMWeakObjectContainer.swift in Sources */,
 				44B7B0081D0284060030EC8D /* ImageResizingMethods.swift in Sources */,
+				44587FA71D04626E00A1C0CF /* NavigationBarData.swift in Sources */,
 				C25E763B1CBF801D000ECACE /* TableMapViewController.swift in Sources */,
 				C25E76371CBF800F000ECACE /* PhotosTableView.swift in Sources */,
 				C25E76031CBF7EF6000ECACE /* AppDelegate.swift in Sources */,
+				44587FB41D04676A00A1C0CF /* RainbowColorSource.swift in Sources */,
+				44587FB81D04676A00A1C0CF /* RainbowPushAnimator.swift in Sources */,
 				C25E76331CBF7FF1000ECACE /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

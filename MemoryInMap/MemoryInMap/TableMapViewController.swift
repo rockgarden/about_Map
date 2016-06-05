@@ -22,6 +22,8 @@ class TableMapViewController: UIViewController, NavigationBarColorSource {
 	var tapFirstView: UIGestureRecognizer?
 	var bigMap = false
 	var detailPhoto: PhotoDetailViewController?
+    var currentNavigationBarData: NavigationBarData!
+    var nextNavigationBarData: NavigationBarData!
 
     // FIXME:用init方法时无法重置navigationBar的背景
 	// convenience init(frame: CGRect) {
@@ -36,7 +38,7 @@ class TableMapViewController: UIViewController, NavigationBarColorSource {
 		tableHeight = (frame.size.height - navHeight!) / 4 * 1
 		height = frame.size.height
 
-		title = "Map & Table"
+		title = "Map & Table" + "\(navigationController!.viewControllers.count)"
 
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TableMapViewController.mapViewTapped), name: "mapViewTapped", object: nil)
 
@@ -54,12 +56,19 @@ class TableMapViewController: UIViewController, NavigationBarColorSource {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        if currentNavigationBarData == nil {
+            currentNavigationBarData = NavigationBarData()
+        }
+        nextNavigationBarData = currentNavigationBarData
+        navigationController?.navigationBar.barTintColor = currentNavigationBarData.barTintColor.toUIColor
+        navigationController?.navigationBar.setBackgroundImage(currentNavigationBarData.backgroundImageColor.toUIImage, forBarMetrics: .Default)
+        navigationController?.navigationBar.shadowImage = (currentNavigationBarData.prefersShadowImageHidden) ? UIImage() : nil
 		initView()
 	}
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        self.navigationController?.setNavigationBarHidden(currentNavigationBarData.prefersHidden, animated: animated)
     }
 
 	override func viewDidAppear(animated: Bool) {
