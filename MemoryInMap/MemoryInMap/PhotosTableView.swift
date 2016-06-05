@@ -14,7 +14,7 @@ class PhotosTableView: UITableViewController {
     var rightButton:UIButton?
     let cellId = "cell"
 
-    let kCloseCellHeight: CGFloat = 179
+    let kCloseCellHeight: CGFloat = 20
     let kOpenCellHeight: CGFloat = 488
     var cellHeights = [CGFloat]()
      

@@ -1,8 +1,7 @@
 //
-//  FoldingCell.swift
-//  MemoryInMap
-//
-//  Modified by wangkan on 16/5/8.
+// FoldingCell.swift
+// 
+// Modified by wangkan on 16/5/8.
 //
 // Copyright (c) 21/12/15. Ramotion Inc. (http://ramotion.com)
 //

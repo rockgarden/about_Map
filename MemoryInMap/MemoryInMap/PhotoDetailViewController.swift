@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotoDetailViewController: UIViewController {
+class PhotoDetailViewController: UIViewController, NavigationBarColorSource {
 
     var lblName:UILabel?
     var lblLatitude:UILabel?
@@ -78,7 +78,6 @@ class PhotoDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.resetBackgroundColor()
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -100,5 +99,10 @@ class PhotoDetailViewController: UIViewController {
         let ws : AnyObject! = weatherInfo.objectForKey("WS")
         
         self.lblWeather?.text = "城市：\(city)\n温度：\(temp)\n风：\(wind)\n风级：\(ws)"
+    }
+
+    // MARK: - RainbowColorSource
+    func navigationBarInColor() -> UIColor {
+        return UIColor.grayColor()
     }
 }

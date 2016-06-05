@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let vtv: TableMapViewController = TableMapViewController()
         vtv.photos = photosArr
         self.window!.rootViewController = UINavigationController(rootViewController: vtv)
-        self.window!.backgroundColor = UIColor.clearColor()
         self.window!.makeKeyAndVisible()
+        customStyle()
         return true
     }
 
@@ -37,12 +37,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         photosArr = [v,v2,v3,v4,v5,v6,v7]
     }
 
-    func requestsUserPermission() {
-        ICanHas.Location { (authorized, status) -> Void in
-
-            self.locationLabel.text = authorized ? "YES" : "NO"
-
-        }
+    // App样式设定
+    func customStyle() {
+        self.window!.backgroundColor = UIColor.clearColor()
+        UINavigationBar.appearance().barTintColor = UIColor(red: 0.0, green: 0.549, blue: 0.89, alpha: 1.0)
+        UINavigationBar.appearance().tintColor = .whiteColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+        self.window?.rootViewController?.navigationController?.navigationBar.mSetBackgroundColor(UIColor.redColor())
+        //(.LightContent, animated: false)
     }
 
     func applicationWillResignActive(application: UIApplication) {
