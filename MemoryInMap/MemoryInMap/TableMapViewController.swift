@@ -22,13 +22,12 @@ class TableMapViewController: UIViewController, NavigationBarColorSource {
 	var tapFirstView: UIGestureRecognizer?
 	var bigMap = false
 	var detailPhoto: PhotoDetailViewController?
-    var currentNavigationBarData: NavigationBarData!
-    var nextNavigationBarData: NavigationBarData!
 
     // FIXME:用init方法时无法重置navigationBar的背景
-	// convenience init(frame: CGRect) {
-	// self.init(nibName: nil, bundle: nil)
-	// }
+	 convenience init(frame: CGRect) {
+	 self.init(nibName: nil, bundle: nil)
+        initView()
+	 }
 
 	func initView() {
 		let frame = UIScreen.mainScreen().bounds
@@ -37,8 +36,6 @@ class TableMapViewController: UIViewController, NavigationBarColorSource {
 		mapHeight = (frame.size.height - navHeight!) / 4 * 3
 		tableHeight = (frame.size.height - navHeight!) / 4 * 1
 		height = frame.size.height
-
-		title = "Map & Table" + "\(navigationController!.viewControllers.count)"
 
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TableMapViewController.mapViewTapped), name: "mapViewTapped", object: nil)
 
@@ -56,19 +53,15 @@ class TableMapViewController: UIViewController, NavigationBarColorSource {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        if currentNavigationBarData == nil {
-            currentNavigationBarData = NavigationBarData()
-        }
-        nextNavigationBarData = currentNavigationBarData
-        navigationController?.navigationBar.barTintColor = currentNavigationBarData.barTintColor.toUIColor
-        navigationController?.navigationBar.setBackgroundImage(currentNavigationBarData.backgroundImageColor.toUIImage, forBarMetrics: .Default)
-        navigationController?.navigationBar.shadowImage = (currentNavigationBarData.prefersShadowImageHidden) ? UIImage() : nil
-		initView()
+        //title = "Map & Table" + "\(navigationController!.viewControllers.count)"
+		//initView()
+        self.interactiveNavigationBarHidden = true
 	}
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(currentNavigationBarData.prefersHidden, animated: animated)
+        //self.interactiveNavigationBarHidden = true
+        //self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
 	override func viewDidAppear(animated: Bool) {

@@ -78,26 +78,28 @@ class PhotoDetailViewController: UIViewController, NavigationBarColorSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.interactiveNavigationBarHidden = false
     }
 
     override func viewDidAppear(animated: Bool) {
         loadWeather()
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        //self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
 
     func loadWeather() {
         let url = NSURL(string: "http://www.weather.com.cn/data/sk/101210101.html")
-
         let data = try? NSData(contentsOfURL: url!, options: NSDataReadingOptions.DataReadingUncached)
-
         //var str = NSString(data: data, encoding: NSUTF8StringEncoding)
-
         let json : AnyObject! = try? NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments)
         let weatherInfo : AnyObject! = json.objectForKey("weatherinfo")
         let city : AnyObject! = weatherInfo.objectForKey("city")
         let temp : AnyObject! = weatherInfo.objectForKey("temp")
         let wind : AnyObject! = weatherInfo.objectForKey("WD")
         let ws : AnyObject! = weatherInfo.objectForKey("WS")
-        
         self.lblWeather?.text = "城市：\(city)\n温度：\(temp)\n风：\(wind)\n风级：\(ws)"
     }
 
