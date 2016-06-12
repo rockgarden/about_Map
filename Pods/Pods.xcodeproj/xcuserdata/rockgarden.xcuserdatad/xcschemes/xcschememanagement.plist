@@ -8,16 +8,22 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>KMNavigationBarTransition.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>Pods-MemoryInMap.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -27,7 +33,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>66644B1EA317A637AFC7693EBC602BAE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B9813D7E7E5E2BAC2903B82EC58E643</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>88A544171ABA6A2B0F8FE0114626F0D4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B97CCCFB494EE38C0AB47157309A9EF3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

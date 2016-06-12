@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		101050EC96C9970583524CD3 /* Pods_MemoryInMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDDE6D72843CB51AB1FCB5E /* Pods_MemoryInMap.framework */; };
+		4412AC9C1D0DA740000E0C33 /* AddPhotoGeotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4412AC9B1D0DA740000E0C33 /* AddPhotoGeotificationViewController.swift */; };
+		4412ACA01D0DA81A000E0C33 /* GeotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4412AC9D1D0DA81A000E0C33 /* GeotificationsViewController.swift */; };
+		4412ACA11D0DA81A000E0C33 /* Geotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4412AC9E1D0DA81A000E0C33 /* Geotification.swift */; };
+		4412ACA21D0DA81A000E0C33 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4412AC9F1D0DA81A000E0C33 /* Utilities.swift */; };
 		4433DE471CDB93B5005B6A3D /* TodayViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4433DE461CDB93B5005B6A3D /* TodayViewExt.swift */; };
 		4438DD401D040E350056967B /* TransparentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4438DD3F1D040E350056967B /* TransparentTableViewController.swift */; };
 		44587F821D04603D00A1C0CF /* Ext_UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44587F811D04603D00A1C0CF /* Ext_UIViewController.swift */; };
@@ -74,6 +78,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4412AC9B1D0DA740000E0C33 /* AddPhotoGeotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoGeotificationViewController.swift; sourceTree = "<group>"; };
+		4412AC9D1D0DA81A000E0C33 /* GeotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeotificationsViewController.swift; sourceTree = "<group>"; };
+		4412AC9E1D0DA81A000E0C33 /* Geotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geotification.swift; sourceTree = "<group>"; };
+		4412AC9F1D0DA81A000E0C33 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		4433DE461CDB93B5005B6A3D /* TodayViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewExt.swift; sourceTree = "<group>"; };
 		4438DD3F1D040E350056967B /* TransparentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentTableViewController.swift; sourceTree = "<group>"; };
 		44587F811D04603D00A1C0CF /* Ext_UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UIViewController.swift; sourceTree = "<group>"; };
@@ -233,6 +241,10 @@
 		C25E76011CBF7EF5000ECACE /* MemoryInMap */ = {
 			isa = PBXGroup;
 			children = (
+				4412AC9D1D0DA81A000E0C33 /* GeotificationsViewController.swift */,
+				4412AC9E1D0DA81A000E0C33 /* Geotification.swift */,
+				4412AC9F1D0DA81A000E0C33 /* Utilities.swift */,
+				4412AC9B1D0DA740000E0C33 /* AddPhotoGeotificationViewController.swift */,
 				C25E76021CBF7EF6000ECACE /* AppDelegate.swift */,
 				C25E76321CBF7FF1000ECACE /* MapViewController.swift */,
 				C25E76341CBF8006000ECACE /* MapPointAnnotation.swift */,
@@ -461,9 +473,13 @@
 				4438DD401D040E350056967B /* TransparentTableViewController.swift in Sources */,
 				C25E76391CBF8014000ECACE /* Photo.swift in Sources */,
 				44B7B0071D0284060030EC8D /* Ext_UINavigationBar.swift in Sources */,
+				4412ACA01D0DA81A000E0C33 /* GeotificationsViewController.swift in Sources */,
+				4412ACA11D0DA81A000E0C33 /* Geotification.swift in Sources */,
+				4412AC9C1D0DA740000E0C33 /* AddPhotoGeotificationViewController.swift in Sources */,
 				44587FA91D0462E100A1C0CF /* Ext_UIImage.swift in Sources */,
 				C2CBD3331D0554C200E594AA /* Ext_UINavigationController.swift in Sources */,
 				44587FA21D04620900A1C0CF /* KMWeakObjectContainer.swift in Sources */,
+				4412ACA21D0DA81A000E0C33 /* Utilities.swift in Sources */,
 				44B7B0081D0284060030EC8D /* ImageResizingMethods.swift in Sources */,
 				44587FA71D04626E00A1C0CF /* NavigationBarData.swift in Sources */,
 				C25E763B1CBF801D000ECACE /* TableMapViewController.swift in Sources */,
