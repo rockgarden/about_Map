@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		initData()
 		self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-		let vtv: TableMapViewController = TableMapViewController(frame: self.window!.bounds)
+		let vtv: TableMapViewController = TableMapViewController()
 		vtv.photos = photosArr
 		self.window!.rootViewController = UINavigationController(rootViewController: vtv)
 		self.window!.makeKeyAndVisible()
@@ -45,6 +45,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		self.window?.rootViewController?.navigationController?.navigationBar.mSetBackgroundColor(UIColor.redColor())
 		// (.LightContent, animated: false)
 	}
+
+    func requestsUserPermission() {
+        ICanHas.Location { (authorized, status, denied) -> Void in
+        }
+    }
 
 	func applicationWillResignActive(application: UIApplication) {
 		// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

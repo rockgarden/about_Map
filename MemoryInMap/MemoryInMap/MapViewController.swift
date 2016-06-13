@@ -58,10 +58,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         //map!.setRegion(zoomRegion, animated: true)
     }
 
-    // User changed the authorization to use location
+    // User changed the authorization to use location, The location manager calls locationManager(_:didChangeAuthorizationStatus:) whenever the authorization status changes. If the user has already granted the app permission to use Location Services, this method will be called by the location manager after you’ve initialized the location manager and set its delegate.
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         // Request user authorization
         locationManager.requestWhenInUseAuthorization()
+        map!.showsUserLocation = (status == .AuthorizedWhenInUse)
     }
 
     // Error locating the user
