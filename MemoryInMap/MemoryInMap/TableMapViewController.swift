@@ -24,7 +24,7 @@ class TableMapViewController: UIViewController, NavigationBarColorSource {
     var detailPhoto: PhotoDetailViewController?
     
     // FIXME:用init方法时无法重置navigationBar的背景
-    convenience init(frame: CGRect) {
+    convenience init() {
         self.init(nibName: nil, bundle: nil)
         initView()
     }
@@ -50,15 +50,14 @@ class TableMapViewController: UIViewController, NavigationBarColorSource {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TableMapViewController.navigateToDetail(_:)), name: "navigateToDetail", object: nil)
         
-        let rightBarButtonItem: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "AddPin"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(TableMapViewController.reverse))
+        let rightBarButtonItem  = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(TableMapViewController.reverse))
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //title = "Map & Table" + "\(navigationController!.viewControllers.count)"
-        //initView()
-        self.interactiveNavigationBarHidden = true
+        self.interactiveNavigationBarHidden = false
+        title = "Map & Table"
     }
     
     override func viewWillAppear(animated: Bool) {
