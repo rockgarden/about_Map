@@ -12,6 +12,8 @@
 		4412ACA01D0DA81A000E0C33 /* GeotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4412AC9D1D0DA81A000E0C33 /* GeotificationsViewController.swift */; };
 		4412ACA11D0DA81A000E0C33 /* Geotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4412AC9E1D0DA81A000E0C33 /* Geotification.swift */; };
 		4412ACA21D0DA81A000E0C33 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4412AC9F1D0DA81A000E0C33 /* Utilities.swift */; };
+		442337AF1D10713C006B2CBD /* Ext_CCLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442337AE1D10713C006B2CBD /* Ext_CCLocation.swift */; };
+		442337B11D10714E006B2CBD /* LocationMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442337B01D10714E006B2CBD /* LocationMethods.swift */; };
 		4433DE471CDB93B5005B6A3D /* TodayViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4433DE461CDB93B5005B6A3D /* TodayViewExt.swift */; };
 		4438DD401D040E350056967B /* TransparentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4438DD3F1D040E350056967B /* TransparentTableViewController.swift */; };
 		44587F821D04603D00A1C0CF /* Ext_UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44587F811D04603D00A1C0CF /* Ext_UIViewController.swift */; };
@@ -82,6 +84,8 @@
 		4412AC9D1D0DA81A000E0C33 /* GeotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeotificationsViewController.swift; sourceTree = "<group>"; };
 		4412AC9E1D0DA81A000E0C33 /* Geotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geotification.swift; sourceTree = "<group>"; };
 		4412AC9F1D0DA81A000E0C33 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		442337AE1D10713C006B2CBD /* Ext_CCLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_CCLocation.swift; sourceTree = "<group>"; };
+		442337B01D10714E006B2CBD /* LocationMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMethods.swift; sourceTree = "<group>"; };
 		4433DE461CDB93B5005B6A3D /* TodayViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewExt.swift; sourceTree = "<group>"; };
 		4438DD3F1D040E350056967B /* TransparentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentTableViewController.swift; sourceTree = "<group>"; };
 		44587F811D04603D00A1C0CF /* Ext_UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UIViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 		44B7B0001D0284060030EC8D /* Ext */ = {
 			isa = PBXGroup;
 			children = (
+				442337AE1D10713C006B2CBD /* Ext_CCLocation.swift */,
 				44B7B0011D0284060030EC8D /* Ext_UINavigationBar.swift */,
 				C2CBD3321D0554C200E594AA /* Ext_UINavigationController.swift */,
 				44587F811D04603D00A1C0CF /* Ext_UIViewController.swift */,
@@ -200,6 +205,7 @@
 		44B7B0021D0284060030EC8D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				442337B01D10714E006B2CBD /* LocationMethods.swift */,
 				44B7B00D1D0299370030EC8D /* ICanHas.swift */,
 				44B7B0031D0284060030EC8D /* ImageResizingMethods.swift */,
 			);
@@ -461,12 +467,14 @@
 				C25E76071CBF7EF6000ECACE /* DetailViewController.swift in Sources */,
 				44B7B00E1D0299370030EC8D /* ICanHas.swift in Sources */,
 				44DBD9071CDF805B00529904 /* MapCell.swift in Sources */,
+				442337AF1D10713C006B2CBD /* Ext_CCLocation.swift in Sources */,
 				44587FB51D04676A00A1C0CF /* RainbowDragPop.swift in Sources */,
 				44587F821D04603D00A1C0CF /* Ext_UIViewController.swift in Sources */,
 				44587FB61D04676A00A1C0CF /* RainbowNavigation.swift in Sources */,
 				44EF57F81CDA351700183B47 /* UserDefault.swift in Sources */,
 				44587FB71D04676A00A1C0CF /* RainbowPopAnimator.swift in Sources */,
 				C25E763D1CBF8026000ECACE /* PhotoDetailViewController.swift in Sources */,
+				442337B11D10714E006B2CBD /* LocationMethods.swift in Sources */,
 				44B7B00A1D0284060030EC8D /* NavigationBarColorSource.swift in Sources */,
 				44587FA01D04620900A1C0CF /* MethodSwizzling.swift in Sources */,
 				C2CBD3351D0555B900E594AA /* KDInteractiveNavigationController.swift in Sources */,
