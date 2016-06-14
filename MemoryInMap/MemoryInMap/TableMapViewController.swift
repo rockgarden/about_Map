@@ -22,6 +22,7 @@ class TableMapViewController: UIViewController, NavigationBarColorSource {
 	var tapFirstView: UIGestureRecognizer?
 	var bigMap = false
 	var detailPhoto: PhotoDetailViewController?
+    var leftBarButton: UIBarButtonItem?
 
 	// FIXME:用init方法时无法重置navigationBar的背景
 	convenience init() {
@@ -49,8 +50,8 @@ class TableMapViewController: UIViewController, NavigationBarColorSource {
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TableMapViewController.navigateToDetail(_:)), name: "navigateToDetail", object: nil)
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TableMapViewController.mapViewTapped), name: "mapViewTapped", object: nil)
 
-		let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(TableMapViewController.reverse))
-		self.navigationItem.rightBarButtonItem = rightBarButtonItem
+        leftBarButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(TableMapViewController.reverse))
+		self.navigationItem.rightBarButtonItem = leftBarButton
 
 		let leftBarButtonItem: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "CurrentLocation"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(TableMapViewController.zoomToCurrentLocation(_:)))
 		self.navigationItem.leftBarButtonItem = leftBarButtonItem
@@ -91,8 +92,8 @@ class TableMapViewController: UIViewController, NavigationBarColorSource {
 					self.tableController!.view.center = CGPointMake(self.tableController!.view.center.x, self.tableController!.view.center.y + self.tableHeight!);
 				},
 				completion: { (Bool) in
-					let leftBarButtonItem: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(TableMapViewController.reverse))
-					self.navigationItem.leftBarButtonItem = leftBarButtonItem
+					let leftBarButtonBack: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(TableMapViewController.reverse))
+					self.navigationItem.leftBarButtonItem = leftBarButtonBack
 					self.bigMap = true
 			})
 		} else {
@@ -113,7 +114,7 @@ class TableMapViewController: UIViewController, NavigationBarColorSource {
 					self.tableController!.view.center = CGPointMake(self.tableController!.view.center.x, self.tableController!.view.center.y - self.tableHeight!);
 				},
 				completion: { (Bool) in
-					self.navigationItem.leftBarButtonItem = nil
+					self.navigationItem.leftBarButtonItem = self.leftBarButton
 					self.bigMap = false
 
 					if let selectedAnnotations = self.mapView!.map!.selectedAnnotations as? [MapPointAnnotation] {

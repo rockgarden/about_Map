@@ -218,8 +218,8 @@ extension CLLocation {
 		self.init(latitude: dest.y, longitude: dest.x)
 	}
 
-	public convenience init (lat: Double, lon: Double) {
-		if (outOfChina(lat, lon: lon)) {
+    public convenience init (lat: Double, lon: Double, country: Int) {
+		if (outOfChina(lat, lon: lon) || country != 86) {
 			MarsLat = lat
 			MarsLon = lon
 		} else {
