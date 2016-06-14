@@ -11,78 +11,81 @@ import MapKit
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
-    /// Main variables
+	/// Main variables
 	var photoPoints: [Int: MapPointAnnotation] = [Int: MapPointAnnotation]()
-	var map: MKMapView?
-    let locationManager = CLLocationManager()
-    var currentLocation : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)
+	var map: MKMapView? // 定义MKMapView
+	let locationManager = CLLocationManager() // 创建CLLocationManager对象
+	var currentLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)
 	var photos: [Photo]?
 	var rightButton: UIButton?
 	var selectedVenue: Photo? {
 		didSet {
-
 		}
 	}
 
 	convenience init(frame: CGRect) {
 		self.init(nibName: nil, bundle: nil)
 		self.view.frame = frame
+
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MapViewController.selectAnnotation(_:)), name: "selectAnnotation", object: nil)
+
 		self.map = MKMapView(frame: frame)
 		self.map!.delegate = self
 		self.view.addSubview(self.map!)
-        self.map!.showsUserLocation = true
-        locationManager.delegate = self
-        showUserLocation(self)
+
+		self.map!.showsUserLocation = true // 调用setShowUserLocation来获得当前位置
+		self.map!.hidden = false // 是否隐藏MKMapView
+
+		locationManager.delegate = self // 设置CLLocationManagerDelegate委托对象
+		locationManager.distanceFilter = kCLDistanceFilterNone // CLLocationManager对象返回全部结果
+		locationManager.desiredAccuracy = kCLLocationAccuracyBest // CLLocationManager对象的返回结果尽可能的精准
+		showUserLocation(self)
+
 		adjustRegion(37.3175, aLongitude: -122.0419)
 	}
 
-    /// Showing the user location
-    func showUserLocation(sender : AnyObject) {
-        let status = CLLocationManager.authorizationStatus()
-        //Asking for authorization to display current location
-        if status == CLAuthorizationStatus.NotDetermined {
-            locationManager.requestWhenInUseAuthorization()
-        } else {
-            locationManager.startUpdatingLocation()
-        }
-    }
+	/// Showing the user location
+	func showUserLocation(sender: AnyObject) {
+		let status = CLLocationManager.authorizationStatus()
+		// Asking for authorization to display current location
+		if status == CLAuthorizationStatus.NotDetermined {
+			locationManager.requestWhenInUseAuthorization()
+		} else {
+			locationManager.startUpdatingLocation() // CLLocationManager对象开始定位
+		}
+	}
 
-    // User authorized to show his current location
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])  {
-        // Getting the user coordinates
-        currentLocation = locationManager.location!.coordinate
-        // Setting the zoom region
-        //let zoomRegion : MKCoordinateRegion = MKCoordinateRegionMakeWithDistance(currentLocation, 500, 500)
-        // Zoom the map to the current user location
-        //map!.setRegion(zoomRegion, animated: true)
-    }
+	// User authorized to show his current location
+	func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+		// zoomToUserLocationInMapView(map!)
+		// zoomToUserLocationInMapView(manager, mapView: map!)
+	}
 
-    // User changed the authorization to use location, The location manager calls locationManager(_:didChangeAuthorizationStatus:) whenever the authorization status changes. If the user has already granted the app permission to use Location Services, this method will be called by the location manager after you’ve initialized the location manager and set its delegate.
-    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        // Request user authorization
-        locationManager.requestWhenInUseAuthorization()
-        map!.showsUserLocation = (status == .AuthorizedWhenInUse)
-    }
+	// User changed the authorization to use location, The location manager calls locationManager(_:didChangeAuthorizationStatus:) whenever the authorization status changes. If the user has already granted the app permission to use Location Services, this method will be called by the location manager after you’ve initialized the location manager and set its delegate.
+	func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+		// Request user authorization
+		locationManager.requestWhenInUseAuthorization()
+		map!.showsUserLocation = (status == .AuthorizedWhenInUse)
+	}
 
-    // Error locating the user
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        print("Error locating the user: \(error)")
-    }
+	// Error locating the user
+	func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+		print("Error locating the user: \(error)")
+	}
 
-    // Drop pin using curret user location
-    func dropPhotoPinInCurrentLocation(sender : AnyObject) {
-        // Creating new annotation (pin)
-        let currentAnnotation : MKPointAnnotation = MKPointAnnotation()
-        // Annotation coordinates
-        currentAnnotation.coordinate = currentLocation
-        // Annotation title
-        currentAnnotation.title = "Your Are Here!"
-        // Adding the annotation to the map
-        map!.addAnnotation(currentAnnotation)
-        // Displaying the pin title on drop
-        map!.selectAnnotation(currentAnnotation, animated: true)
-    }
+	// Drop pin using curret user location
+	func dropPhotoPinInCurrentLocation(sender: AnyObject) {
+		// Creating new annotation (pin)
+		let currentAnnotation: MKPointAnnotation = MKPointAnnotation()
+		// Annotation coordinates
+		currentAnnotation.coordinate = currentLocation
+		// Annotation title
+		currentAnnotation.title = "Your Are Here!"
+		// Adding the annotation to the map
+		map!.addAnnotation(currentAnnotation)
+		// Displaying the pin title on drop
+		map!.selectAnnotation(currentAnnotation, animated: true)
+	}
 
 	func adjustRegion(aLatitude: CLLocationDegrees, aLongitude: CLLocationDegrees) {
 		let latitude: CLLocationDegrees = aLatitude
