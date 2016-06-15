@@ -30,7 +30,7 @@ extension UINavigationBar {
 	// TODO:判断statusBar有否隐藏
 	public func mSetBackgroundColor(color: UIColor) {
 		if backgroundView == nil {
-			setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+			setBackgroundImage(UIImage(), forBarMetrics: .Default)
 			shadowImage = UIImage()
 			backgroundView = UIView(frame: CGRect(x: 0, y: -20, width: UIScreen.mainScreen().bounds.width, height: 64))
 			backgroundView?.userInteractionEnabled = false

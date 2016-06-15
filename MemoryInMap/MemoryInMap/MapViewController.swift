@@ -13,7 +13,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 
 	/// Main variables
 	var photoPoints: [Int: MapPointAnnotation] = [Int: MapPointAnnotation]()
-	var map: MKMapView? // 定义MKMapView
+	var mapView: MKMapView? // 定义MKMapView
 	let locationManager = CLLocationManager() // 创建CLLocationManager对象
 	var currentLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)
 	var photos: [Photo]?
@@ -29,12 +29,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MapViewController.selectAnnotation(_:)), name: "selectAnnotation", object: nil)
 
-		self.map = MKMapView(frame: frame)
-		self.map!.delegate = self
-		self.view.addSubview(self.map!)
+		self.mapView = MKMapView(frame: frame)
+		self.mapView!.delegate = self
+		self.view.addSubview(self.mapView!)
 
-		self.map!.showsUserLocation = true // 调用setShowUserLocation来获得当前位置
-		self.map!.hidden = false // 是否隐藏MKMapView
+		self.mapView!.showsUserLocation = true // 调用setShowUserLocation来获得当前位置
+		self.mapView!.hidden = false // 是否隐藏MKMapView
 
 		locationManager.delegate = self // 设置CLLocationManagerDelegate委托对象
 		locationManager.distanceFilter = kCLDistanceFilterNone // CLLocationManager对象返回全部结果
@@ -65,7 +65,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 	func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
 		// Request user authorization
 		locationManager.requestWhenInUseAuthorization()
-		map!.showsUserLocation = (status == .AuthorizedWhenInUse)
+		mapView!.showsUserLocation = (status == .AuthorizedWhenInUse)
 	}
 
 	// Error locating the user
@@ -82,9 +82,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 		// Annotation title
 		currentAnnotation.title = "Your Are Here!"
 		// Adding the annotation to the map
-		map!.addAnnotation(currentAnnotation)
+		mapView!.addAnnotation(currentAnnotation)
 		// Displaying the pin title on drop
-		map!.selectAnnotation(currentAnnotation, animated: true)
+		mapView!.selectAnnotation(currentAnnotation, animated: true)
 	}
 
 	func adjustRegion(aLatitude: CLLocationDegrees, aLongitude: CLLocationDegrees) {
@@ -95,11 +95,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 		let aSpan: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: longDelta)
 		let Center: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
 		let region: MKCoordinateRegion = MKCoordinateRegionMake(Center, aSpan)
-		self.map!.setRegion(region, animated: true)
+		self.mapView!.setRegion(region, animated: true)
 	}
 
 	func loadPointsWithArray(somePhotos: [Photo]) {
-		map!.removeAnnotations(map!.annotations)
+		mapView!.removeAnnotations(mapView!.annotations)
 		for i in 0..<somePhotos.count {
 			let point: MapPointAnnotation = MapPointAnnotation()
 			let v = somePhotos[i] as Photo
@@ -110,7 +110,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 			point.title = v.name
 			point.subtitle = v.categoryName
 			photoPoints[v.ident] = point
-			map!.addAnnotation(point)
+			mapView!.addAnnotation(point)
 		}
 	}
 
@@ -118,7 +118,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 	func selectAnnotation(notification: NSNotification) {
 		self.selectedVenue = notification.object as? Photo
 		let point: MKPointAnnotation = photoPoints[self.selectedVenue!.ident]!
-		map!.selectAnnotation(point, animated: true)
+		mapView!.selectAnnotation(point, animated: true)
 	}
 
 	// select venue from mapview
@@ -132,28 +132,29 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 		if annotation is MKUserLocation {
 			// return nil so map view draws "blue dot" for standard user location
 			return nil
-		}
-		let reuseId = "pin"
-		var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
-		if pinView == nil {
-			pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-			pinView!.canShowCallout = true
-			pinView!.animatesDrop = true
-			pinView!.pinTintColor = UIColor.purpleColor()
-			if self.rightButton == nil {
-				self.rightButton = UIButton(type: UIButtonType.DetailDisclosure)
-			}
-			// let point:MapPointAnnotation = pinView!.annotation as! MapPointAnnotation
-			// println("point.venue.name = \(point.venue?.name)")
-			// self.rightButton!.venue = point.venue
-			self.rightButton!.titleForState(UIControlState.Normal)
-			self.rightButton!.addTarget(self, action: #selector(MapViewController.rightButtonTapped(_:)), forControlEvents: UIControlEvents.TouchUpInside)
-			pinView!.rightCalloutAccessoryView = self.rightButton! as UIView
-		}
-		else {
-			pinView!.annotation = annotation
-		}
-		return pinView
+        } else {
+            let reuseId = "pin"
+            var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
+            if pinView == nil {
+                pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                pinView!.canShowCallout = true
+                pinView!.animatesDrop = true
+                pinView!.pinTintColor = UIColor.purpleColor()
+                if self.rightButton == nil {
+                    self.rightButton = UIButton(type: UIButtonType.DetailDisclosure)
+                }
+                // let point:MapPointAnnotation = pinView!.annotation as! MapPointAnnotation
+                // println("point.venue.name = \(point.venue?.name)")
+                // self.rightButton!.venue = point.venue
+                self.rightButton!.titleForState(UIControlState.Normal)
+                self.rightButton!.addTarget(self, action: #selector(MapViewController.rightButtonTapped(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+                pinView!.rightCalloutAccessoryView = self.rightButton! as UIView
+            }
+            else {
+                pinView!.annotation = annotation
+            }
+            return pinView
+        }
 	}
 
 	func rightButtonTapped(sender: UIButton!) {
