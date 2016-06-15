@@ -26,7 +26,7 @@
 		44587FB61D04676A00A1C0CF /* RainbowNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44587FAF1D04676A00A1C0CF /* RainbowNavigation.swift */; };
 		44587FB71D04676A00A1C0CF /* RainbowPopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44587FB01D04676A00A1C0CF /* RainbowPopAnimator.swift */; };
 		44587FB81D04676A00A1C0CF /* RainbowPushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44587FB11D04676A00A1C0CF /* RainbowPushAnimator.swift */; };
-		44ABB4D21D119FE500D307B2 /* BaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABB4D11D119FE500D307B2 /* BaseUIViewController.swift */; };
+		44ABB4D21D119FE500D307B2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABB4D11D119FE500D307B2 /* BaseViewController.swift */; };
 		44B7B0071D0284060030EC8D /* Ext_UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B0011D0284060030EC8D /* Ext_UINavigationBar.swift */; };
 		44B7B0081D0284060030EC8D /* ImageResizingMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B0031D0284060030EC8D /* ImageResizingMethods.swift */; };
 		44B7B0091D0284060030EC8D /* FoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B0051D0284060030EC8D /* FoldingCell.swift */; };
@@ -98,7 +98,7 @@
 		44587FAF1D04676A00A1C0CF /* RainbowNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainbowNavigation.swift; sourceTree = "<group>"; };
 		44587FB01D04676A00A1C0CF /* RainbowPopAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainbowPopAnimator.swift; sourceTree = "<group>"; };
 		44587FB11D04676A00A1C0CF /* RainbowPushAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainbowPushAnimator.swift; sourceTree = "<group>"; };
-		44ABB4D11D119FE500D307B2 /* BaseUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUIViewController.swift; sourceTree = "<group>"; };
+		44ABB4D11D119FE500D307B2 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		44B7B0011D0284060030EC8D /* Ext_UINavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UINavigationBar.swift; sourceTree = "<group>"; };
 		44B7B0031D0284060030EC8D /* ImageResizingMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageResizingMethods.swift; sourceTree = "<group>"; };
 		44B7B0051D0284060030EC8D /* FoldingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldingCell.swift; sourceTree = "<group>"; };
@@ -269,7 +269,7 @@
 				44B7B0001D0284060030EC8D /* Ext */,
 				44B7B0021D0284060030EC8D /* Utils */,
 				44B7B0041D0284060030EC8D /* Widget */,
-				44ABB4D11D119FE500D307B2 /* BaseUIViewController.swift */,
+				44ABB4D11D119FE500D307B2 /* BaseViewController.swift */,
 			);
 			path = MemoryInMap;
 			sourceTree = "<group>";
@@ -482,7 +482,7 @@
 				4412AC9C1D0DA740000E0C33 /* AddPhotoGeotificationViewController.swift in Sources */,
 				44587FA91D0462E100A1C0CF /* Ext_UIImage.swift in Sources */,
 				C2CBD3331D0554C200E594AA /* Ext_UINavigationController.swift in Sources */,
-				44ABB4D21D119FE500D307B2 /* BaseUIViewController.swift in Sources */,
+				44ABB4D21D119FE500D307B2 /* BaseViewController.swift in Sources */,
 				44587FA21D04620900A1C0CF /* KMWeakObjectContainer.swift in Sources */,
 				44B7B0081D0284060030EC8D /* ImageResizingMethods.swift in Sources */,
 				44587FA71D04626E00A1C0CF /* NavigationBarData.swift in Sources */,

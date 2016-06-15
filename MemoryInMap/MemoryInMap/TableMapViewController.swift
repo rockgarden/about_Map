@@ -110,6 +110,7 @@ class TableMapViewController: UIViewController, NavigationBarColorSource {
 				completion: { (Bool) in
 					self.navigationItem.leftBarButtonItem = self.backButton
                     self.navigationController?.setNavigationBarHidden(true, animated: true)
+                    self.showStatusBar(false)
 					self.bigMap = true
 			})
 		} else {
@@ -175,4 +176,18 @@ class TableMapViewController: UIViewController, NavigationBarColorSource {
 	func zoomToCurrentLocation(sender: AnyObject) {
 		zoomToUserLocationInMapView(mapVC!.mapView!)
 	}
+
+    var showStatusBar = true
+
+    override func prefersStatusBarHidden() -> Bool {
+        if showStatusBar {
+            return false
+        }
+        return true
+    }
+
+    private func showStatusBar(enabled: Bool) {
+        showStatusBar = enabled
+        prefersStatusBarHidden()
+    }
 }
