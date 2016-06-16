@@ -246,6 +246,8 @@
 			isa = PBXGroup;
 			children = (
 				C25E76021CBF7EF6000ECACE /* AppDelegate.swift */,
+				44ABB4D11D119FE500D307B2 /* BaseViewController.swift */,
+				C25E763A1CBF801D000ECACE /* TableMapViewController.swift */,
 				4412AC9D1D0DA81A000E0C33 /* GeotificationsViewController.swift */,
 				4412AC9E1D0DA81A000E0C33 /* Geotification.swift */,
 				4412AC9B1D0DA740000E0C33 /* AddPhotoGeotificationViewController.swift */,
@@ -255,7 +257,6 @@
 				44DBD9061CDF805B00529904 /* MapCell.swift */,
 				C25E76381CBF8014000ECACE /* Photo.swift */,
 				C25E763C1CBF8026000ECACE /* PhotoDetailViewController.swift */,
-				C25E763A1CBF801D000ECACE /* TableMapViewController.swift */,
 				C25E76061CBF7EF6000ECACE /* DetailViewController.swift */,
 				4438DD3F1D040E350056967B /* TransparentTableViewController.swift */,
 				C25E76081CBF7EF6000ECACE /* Main.storyboard */,
@@ -269,7 +270,6 @@
 				44B7B0001D0284060030EC8D /* Ext */,
 				44B7B0021D0284060030EC8D /* Utils */,
 				44B7B0041D0284060030EC8D /* Widget */,
-				44ABB4D11D119FE500D307B2 /* BaseViewController.swift */,
 			);
 			path = MemoryInMap;
 			sourceTree = "<group>";

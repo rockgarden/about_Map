@@ -18,13 +18,13 @@ public class BaseViewController: UIViewController {
     }
     
     override public func prefersStatusBarHidden() -> Bool {
-        if self.showStatusBar {
+        if showStatusBar {
             return false
         }
         return true
     }
     
-    private func showStatusBar(bool: Bool) {
+    func showStatusBar(bool: Bool) {
         showStatusBar = bool
         prefersStatusBarHidden()
     }
