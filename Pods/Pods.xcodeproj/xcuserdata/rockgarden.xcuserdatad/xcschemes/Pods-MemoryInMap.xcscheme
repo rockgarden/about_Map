@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EE3369975D0B8AD17256D9DA"
+               BlueprintIdentifier = "77DFDAC78C85F72659E9FF31"
                BuildableName = "Pods_MemoryInMap.framework"
                BlueprintName = "Pods-MemoryInMap"
                ReferencedContainer = "container:Pods.xcodeproj">
