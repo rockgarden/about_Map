@@ -12,15 +12,22 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
+	var mask: CALayer?
+	var maskBgView: UIView?
+	lazy var rootVC: TableMapViewController = TableMapViewController()
 	var photosArr: Array<Photo> = []
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		initData()
+		rootVC.photos = photosArr
+
 		self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-		let vtv: TableMapViewController = TableMapViewController()
-		vtv.photos = photosArr
-		self.window!.rootViewController = UINavigationController(rootViewController: vtv)
+		self.window!.rootViewController = UINavigationController(rootViewController: rootVC)
 		self.window!.makeKeyAndVisible()
+
+		AddSplashMask()
+		animateMask()
+
 		return true
 	}
 
@@ -46,10 +53,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// (.LightContent, animated: false)
 	}
 
-    func requestsUserPermission() {
-        ICanHas.Location { (authorized, status, denied) -> Void in
-        }
-    }
+	func requestsUserPermission() {
+		ICanHas.Location { (authorized, status, denied) -> Void in
+		}
+	}
 
 	func applicationWillResignActive(application: UIApplication) {
 		// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -71,6 +78,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func applicationWillTerminate(application: UIApplication) {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+	}
+
+	func AddSplashMask() {
+		// 最好是一张图片,确保与launcScreen一至
+		self.window!.backgroundColor = UIColor(hexString: "#EA80FC")
+		mask = CALayer()
+		mask!.contents = UIImage(named: "ic_camera_enhance_white")?.CGImage
+		mask!.contentsGravity = kCAGravityResizeAspect
+		mask!.bounds = CGRect(x: 0, y: 0, width: 48, height: 48)
+		mask!.anchorPoint = CGPoint(x: 0.5, y: 0.5) // center
+		mask!.position = rootVC.view.center
+		rootVC.view.layer.mask = mask
+	}
+
+	/**
+	 CAKeyframeAnimation bounds -> mask
+	 */
+	func animateMask() {
+		let maskAnimation = CAKeyframeAnimation(keyPath: "bounds") // 获取默认的bounds动画
+		maskAnimation.delegate = self
+		maskAnimation.duration = 2
+		maskAnimation.beginTime = CACurrentMediaTime() + 0.5 // delay second
+		maskAnimation.timingFunctions = [CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut), CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)]
+		let initalBounds = NSValue(CGRect: mask!.bounds)
+		let secondBounds = NSValue(CGRect: CGRect(x: 0, y: 0, width: 64, height: 64))
+		let finalBounds = NSValue(CGRect: CGRect(x: 0, y: 0, width: mask!.bounds.width * 200, height: mask!.bounds.height * 200))
+		maskAnimation.values = [initalBounds, secondBounds, finalBounds]
+		maskAnimation.keyTimes = [0, 0.3, 1]
+		maskAnimation.removedOnCompletion = false
+		maskAnimation.fillMode = kCAFillModeForwards
+		self.mask!.addAnimation(maskAnimation, forKey: "mask") // 加入自定的mask动画
+	}
+
+	override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
+		rootVC.view.layer.mask = nil // remove mask when animation completes
 	}
 
 }

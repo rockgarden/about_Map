@@ -15,7 +15,16 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_camera_enhance_white" translatesAutoresizingMaskIntoConstraints="NO" id="WKW-62-N9T">
+                                <rect key="frame" x="276" y="276" width="48" height="48"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91764705882352937" green="0.50196078431372548" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="WKW-62-N9T" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="a2b-7l-MUb"/>
+                            <constraint firstItem="WKW-62-N9T" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rwn-iH-2QS"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -23,4 +32,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_camera_enhance_white" width="48" height="48"/>
+    </resources>
 </document>
