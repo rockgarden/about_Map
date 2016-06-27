@@ -1,6 +1,7 @@
 //
+//  ExtKIT
 //  Ext_NavBar.swift
-//  MemoryInMap
+//
 //
 //  Created by wangkan on 16/5/26.
 //  Copyright © 2016年 wangkan. All rights reserved.
@@ -65,7 +66,5 @@ extension UINavigationBar {
 			objc_setAssociatedObject(self, &kStatusBarMaskKey, newValue, .OBJC_ASSOCIATION_RETAIN)
 		}
 	}
-    
-    
-    
+
 }
