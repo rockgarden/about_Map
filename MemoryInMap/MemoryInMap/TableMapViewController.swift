@@ -62,6 +62,7 @@ class TableMapViewController: BaseViewController, NavigationBarColorSource {
         
         self.navigationItem.rightBarButtonItem = newButton
         self.navigationItem.leftBarButtonItem = locationButton
+        self.showStatusBar(false)
     }
     
     override func viewDidLoad() {
@@ -106,8 +107,6 @@ class TableMapViewController: BaseViewController, NavigationBarColorSource {
                     self.mapVC!.view.frame = CGRectMake(0.0, self.navHeight!, self.width!, self.height!)
                     self.mapVC!.mapView!.frame = CGRectMake(0.0, self.navHeight!, self.width!, self.height!)
                     self.tableController!.view.center = CGPointMake(self.tableController!.view.center.x, self.tableController!.view.center.y + self.tableHeight!);
-                    // FIXME: hidden is error
-                    self.showStatusBar(true)
                     self.navigationController?.setNavigationBarHidden(true, animated: true)
                 },
                 completion: { (Bool) in
@@ -131,7 +130,6 @@ class TableMapViewController: BaseViewController, NavigationBarColorSource {
                                         self.mapVC!.mapView!.frame = CGRectMake(0.0, self.navHeight!, self.width!, self.mapHeight!)
                                         self.tableController!.view.center = CGPointMake(self.tableController!.view.center.x, self.tableController!.view.center.y - self.tableHeight!);
                                         self.navigationController?.setNavigationBarHidden(false, animated: true)
-                                        self.showStatusBar(false)
                 },
                                        completion: { (Bool) in
                                         self.navigationItem.leftBarButtonItem = self.locationButton
