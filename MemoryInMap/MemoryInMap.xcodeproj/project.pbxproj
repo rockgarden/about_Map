@@ -11,6 +11,8 @@
 		4412AC9C1D0DA740000E0C33 /* AddPhotoGeotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4412AC9B1D0DA740000E0C33 /* AddPhotoGeotificationViewController.swift */; };
 		4412ACA01D0DA81A000E0C33 /* GeotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4412AC9D1D0DA81A000E0C33 /* GeotificationsViewController.swift */; };
 		4412ACA11D0DA81A000E0C33 /* Geotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4412AC9E1D0DA81A000E0C33 /* Geotification.swift */; };
+		441C50A11D295B7D00D120F6 /* KCSelectionDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441C509F1D295B7D00D120F6 /* KCSelectionDialog.swift */; };
+		441C50A21D295B7D00D120F6 /* KCSelectionDialogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441C50A01D295B7D00D120F6 /* KCSelectionDialogItem.swift */; };
 		441F02771D21559300035E2C /* Ext_UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F02761D21559300035E2C /* Ext_UITableView.swift */; };
 		442337AF1D10713C006B2CBD /* Ext_CCLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442337AE1D10713C006B2CBD /* Ext_CCLocation.swift */; };
 		442337B11D10714E006B2CBD /* LocationMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442337B01D10714E006B2CBD /* LocationMethods.swift */; };
@@ -86,6 +88,8 @@
 		4412AC9B1D0DA740000E0C33 /* AddPhotoGeotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoGeotificationViewController.swift; sourceTree = "<group>"; };
 		4412AC9D1D0DA81A000E0C33 /* GeotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeotificationsViewController.swift; sourceTree = "<group>"; };
 		4412AC9E1D0DA81A000E0C33 /* Geotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geotification.swift; sourceTree = "<group>"; };
+		441C509F1D295B7D00D120F6 /* KCSelectionDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KCSelectionDialog.swift; sourceTree = "<group>"; };
+		441C50A01D295B7D00D120F6 /* KCSelectionDialogItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KCSelectionDialogItem.swift; sourceTree = "<group>"; };
 		441F02761D21559300035E2C /* Ext_UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UITableView.swift; sourceTree = "<group>"; };
 		442337AE1D10713C006B2CBD /* Ext_CCLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_CCLocation.swift; sourceTree = "<group>"; };
 		442337B01D10714E006B2CBD /* LocationMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMethods.swift; sourceTree = "<group>"; };
@@ -224,6 +228,8 @@
 		44B7B0041D0284060030EC8D /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				441C509F1D295B7D00D120F6 /* KCSelectionDialog.swift */,
+				441C50A01D295B7D00D120F6 /* KCSelectionDialogItem.swift */,
 				442FAA521D267DDD00BB3569 /* AnimatedSegmentSwitch.swift */,
 				446F09631D201D4A0023FE12 /* JTSplashView.swift */,
 				C2CBD3341D0555B900E594AA /* KDInteractiveNavigationController.swift */,
@@ -491,6 +497,7 @@
 				441F02771D21559300035E2C /* Ext_UITableView.swift in Sources */,
 				C25E76391CBF8014000ECACE /* Photo.swift in Sources */,
 				44B7B0071D0284060030EC8D /* Ext_UINavigationBar.swift in Sources */,
+				441C50A11D295B7D00D120F6 /* KCSelectionDialog.swift in Sources */,
 				4412ACA01D0DA81A000E0C33 /* GeotificationsViewController.swift in Sources */,
 				442FAA531D267DDD00BB3569 /* AnimatedSegmentSwitch.swift in Sources */,
 				4412ACA11D0DA81A000E0C33 /* Geotification.swift in Sources */,
@@ -508,6 +515,7 @@
 				44587FB41D04676A00A1C0CF /* RainbowColorSource.swift in Sources */,
 				44587FB81D04676A00A1C0CF /* RainbowPushAnimator.swift in Sources */,
 				C25E76331CBF7FF1000ECACE /* MapViewController.swift in Sources */,
+				441C50A21D295B7D00D120F6 /* KCSelectionDialogItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
