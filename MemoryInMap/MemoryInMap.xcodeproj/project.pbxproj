@@ -32,6 +32,12 @@
 		44587FB81D04676A00A1C0CF /* RainbowPushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44587FB11D04676A00A1C0CF /* RainbowPushAnimator.swift */; };
 		446F09621D1FCEB40023FE12 /* Ext_UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446F09611D1FCEB40023FE12 /* Ext_UIColor.swift */; };
 		446F09641D201D4A0023FE12 /* JTSplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446F09631D201D4A0023FE12 /* JTSplashView.swift */; };
+		448942011D2BF43100A043AE /* AnyCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448941FB1D2BF43100A043AE /* AnyCache.swift */; };
+		448942021D2BF43100A043AE /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448941FC1D2BF43100A043AE /* Box.swift */; };
+		448942031D2BF43100A043AE /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448941FD1D2BF43100A043AE /* Cache.swift */; };
+		448942041D2BF43100A043AE /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448941FE1D2BF43100A043AE /* DiskCache.swift */; };
+		448942051D2BF43100A043AE /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448941FF1D2BF43100A043AE /* MemoryCache.swift */; };
+		448942061D2BF43100A043AE /* MultiCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448942001D2BF43100A043AE /* MultiCache.swift */; };
 		44ABB4D21D119FE500D307B2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABB4D11D119FE500D307B2 /* BaseViewController.swift */; };
 		44B7B0071D0284060030EC8D /* Ext_UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B0011D0284060030EC8D /* Ext_UINavigationBar.swift */; };
 		44B7B0081D0284060030EC8D /* ImageResizingMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7B0031D0284060030EC8D /* ImageResizingMethods.swift */; };
@@ -110,6 +116,12 @@
 		44587FB11D04676A00A1C0CF /* RainbowPushAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainbowPushAnimator.swift; sourceTree = "<group>"; };
 		446F09611D1FCEB40023FE12 /* Ext_UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UIColor.swift; sourceTree = "<group>"; };
 		446F09631D201D4A0023FE12 /* JTSplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTSplashView.swift; sourceTree = "<group>"; };
+		448941FB1D2BF43100A043AE /* AnyCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyCache.swift; sourceTree = "<group>"; };
+		448941FC1D2BF43100A043AE /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		448941FD1D2BF43100A043AE /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		448941FE1D2BF43100A043AE /* DiskCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskCache.swift; sourceTree = "<group>"; };
+		448941FF1D2BF43100A043AE /* MemoryCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCache.swift; sourceTree = "<group>"; };
+		448942001D2BF43100A043AE /* MultiCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiCache.swift; sourceTree = "<group>"; };
 		44ABB4D11D119FE500D307B2 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		44B7B0011D0284060030EC8D /* Ext_UINavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UINavigationBar.swift; sourceTree = "<group>"; };
 		44B7B0031D0284060030EC8D /* ImageResizingMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageResizingMethods.swift; sourceTree = "<group>"; };
@@ -198,6 +210,19 @@
 			path = ../../SimpleLib/RainbowNavigation;
 			sourceTree = "<group>";
 		};
+		448941FA1D2BF43100A043AE /* CacheHelper */ = {
+			isa = PBXGroup;
+			children = (
+				448941FB1D2BF43100A043AE /* AnyCache.swift */,
+				448941FC1D2BF43100A043AE /* Box.swift */,
+				448941FD1D2BF43100A043AE /* Cache.swift */,
+				448941FE1D2BF43100A043AE /* DiskCache.swift */,
+				448941FF1D2BF43100A043AE /* MemoryCache.swift */,
+				448942001D2BF43100A043AE /* MultiCache.swift */,
+			);
+			path = CacheHelper;
+			sourceTree = "<group>";
+		};
 		44B7B0001D0284060030EC8D /* Ext */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +242,7 @@
 		44B7B0021D0284060030EC8D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				448941FA1D2BF43100A043AE /* CacheHelper */,
 				442337B01D10714E006B2CBD /* LocationMethods.swift */,
 				44B7B00D1D0299370030EC8D /* ICanHas.swift */,
 				44B7B0031D0284060030EC8D /* ImageResizingMethods.swift */,
@@ -477,7 +503,9 @@
 			files = (
 				C25E76351CBF8006000ECACE /* MapPointAnnotation.swift in Sources */,
 				C2CBD3311D05475F00E594AA /* Ext_NSCoding.swift in Sources */,
+				448942061D2BF43100A043AE /* MultiCache.swift in Sources */,
 				44B7B0091D0284060030EC8D /* FoldingCell.swift in Sources */,
+				448942011D2BF43100A043AE /* AnyCache.swift in Sources */,
 				C25E76071CBF7EF6000ECACE /* DetailViewController.swift in Sources */,
 				44B7B00E1D0299370030EC8D /* ICanHas.swift in Sources */,
 				44DBD9071CDF805B00529904 /* MapCell.swift in Sources */,
@@ -488,17 +516,21 @@
 				44587FB61D04676A00A1C0CF /* RainbowNavigation.swift in Sources */,
 				44EF57F81CDA351700183B47 /* UserDefault.swift in Sources */,
 				44587FB71D04676A00A1C0CF /* RainbowPopAnimator.swift in Sources */,
+				448942041D2BF43100A043AE /* DiskCache.swift in Sources */,
 				C25E763D1CBF8026000ECACE /* PhotoDetailViewController.swift in Sources */,
 				442337B11D10714E006B2CBD /* LocationMethods.swift in Sources */,
 				44B7B00A1D0284060030EC8D /* NavigationBarColorSource.swift in Sources */,
 				44587FA01D04620900A1C0CF /* MethodSwizzling.swift in Sources */,
+				448942051D2BF43100A043AE /* MemoryCache.swift in Sources */,
 				C2CBD3351D0555B900E594AA /* KDInteractiveNavigationController.swift in Sources */,
 				4438DD401D040E350056967B /* TransparentTableViewController.swift in Sources */,
 				441F02771D21559300035E2C /* Ext_UITableView.swift in Sources */,
 				C25E76391CBF8014000ECACE /* Photo.swift in Sources */,
 				44B7B0071D0284060030EC8D /* Ext_UINavigationBar.swift in Sources */,
+				448942021D2BF43100A043AE /* Box.swift in Sources */,
 				441C50A11D295B7D00D120F6 /* KCSelectionDialog.swift in Sources */,
 				4412ACA01D0DA81A000E0C33 /* GeotificationsViewController.swift in Sources */,
+				448942031D2BF43100A043AE /* Cache.swift in Sources */,
 				442FAA531D267DDD00BB3569 /* AnimatedSegmentSwitch.swift in Sources */,
 				4412ACA11D0DA81A000E0C33 /* Geotification.swift in Sources */,
 				446F09641D201D4A0023FE12 /* JTSplashView.swift in Sources */,
