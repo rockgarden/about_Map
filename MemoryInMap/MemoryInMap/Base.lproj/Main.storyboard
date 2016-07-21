@@ -50,7 +50,7 @@
         <!--Detail-->
         <scene sceneID="yUG-lL-AsK">
             <objects>
-                <viewController title="Detail" id="JEX-9P-axG" customClass="DetailViewController" customModule="MemoryInMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailVC" title="Detail" id="JEX-9P-axG" customClass="DetailViewController" customModule="MemoryInMap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SYR-Wa-9uf"/>
                         <viewControllerLayoutGuide type="bottom" id="GAO-Cl-Wes"/>
@@ -87,7 +87,7 @@
         <!--Navigation Controller-->
         <scene sceneID="r7l-gg-dq7">
             <objects>
-                <navigationController id="vC3-pB-5Vb" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="temp" id="vC3-pB-5Vb" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="DjV-YW-jjY">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -760,7 +760,7 @@
         <!--Add Geotification-->
         <scene sceneID="txU-cx-art">
             <objects>
-                <tableViewController id="ylI-KT-X1N" customClass="AddGeotificationViewController" customModule="MemoryInMap" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AddGeotificationVC" id="ylI-KT-X1N" customClass="AddGeotificationViewController" customModule="MemoryInMap" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="UE5-jq-efg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -913,7 +913,7 @@
         <!--Table Map View Controller-->
         <scene sceneID="jKp-wa-7Fi">
             <objects>
-                <viewController storyboardIdentifier="GridViewController" id="07d-ev-UyQ" customClass="TableMapViewController" customModule="MemoryInMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TableMapVC" id="07d-ev-UyQ" customClass="TableMapViewController" customModule="MemoryInMap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XNl-PE-qGe"/>
                         <viewControllerLayoutGuide type="bottom" id="gdp-wM-rgB"/>

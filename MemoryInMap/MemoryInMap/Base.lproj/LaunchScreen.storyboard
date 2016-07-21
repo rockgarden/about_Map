@@ -22,8 +22,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.91764705882352937" green="0.50196078431372548" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="WKW-62-N9T" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="a2b-7l-MUb"/>
-                            <constraint firstItem="WKW-62-N9T" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rwn-iH-2QS"/>
+                            <constraint firstItem="WKW-62-N9T" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="2Ou-Qk-VkH"/>
+                            <constraint firstItem="WKW-62-N9T" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="tib-5c-gbI"/>
                         </constraints>
                     </view>
                 </viewController>
