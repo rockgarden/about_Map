@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		rootVC.photos = photosArr
 
 		self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+		self.window!.backgroundColor = UIColor.clearColor()
 		self.window!.rootViewController = UINavigationController(rootViewController: rootVC)
 		self.window!.makeKeyAndVisible()
 
@@ -41,16 +42,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		let v6 = Photo(aIdent: 6, aName: "Denny's", aAddress: "1015 Blossom Hill Rd", aCity: "San Jose", aCategoryName: "American Restaurant", aLat: "37.2384776", aLng: "-121.8007709")
 		let v7 = Photo(aIdent: 7, aName: "Refuge", aAddress: "963 Laurel St", aCity: "San Carlos", aCategoryName: "Restaurant", aLat: "37.5041949", aLng: "-122.2695079")
 		photosArr = [v, v2, v3, v4, v5, v6, v7]
-	}
-
-	// App样式设定
-	func customStyle() {
-		self.window!.backgroundColor = UIColor.clearColor()
-		UINavigationBar.appearance().barTintColor = UIColor(red: 0.0, green: 0.549, blue: 0.89, alpha: 1.0)
-		UINavigationBar.appearance().tintColor = .whiteColor()
-		UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-		self.window?.rootViewController?.navigationController?.navigationBar.mSetBackgroundColor(UIColor.redColor())
-		// (.LightContent, animated: false)
 	}
 
 	func requestsUserPermission() {
@@ -80,8 +71,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	}
 
+}
+
+// MARK: - UI设定
+extension AppDelegate {
+
+	/**
+	 设定UINavigationBar appearance
+
+	 - author: wangkan
+	 - date: 16-07-26 14:07:24
+	 */
+	private func configureNavigationTabBar() {
+		// transparent background
+		UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: .Default)
+		UINavigationBar.appearance().shadowImage = UIImage()
+		UINavigationBar.appearance().translucent = true
+
+		UINavigationBar.appearance().barTintColor = UIColor(red: 0.0, green: 0.549, blue: 0.89, alpha: 1.0)
+		UINavigationBar.appearance().tintColor = .whiteColor()
+
+		let shadow = NSShadow()
+		shadow.shadowOffset = CGSize(width: 0, height: 2)
+		shadow.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1)
+
+		UINavigationBar.appearance().titleTextAttributes = [
+			NSForegroundColorAttributeName: UIColor.whiteColor(),
+			NSShadowAttributeName: shadow
+		]
+	}
+
+	/**
+	 为rootVC增加mask
+	 最好是一张图片,确保与launcScreen一至
+	 - author: wangkan
+	 - date: 16-07-26 14:07:04
+	 */
 	func AddSplashMask() {
-		// 最好是一张图片,确保与launcScreen一至
 		self.window!.backgroundColor = UIColor(hexString: "#EA80FC")
 		mask = CALayer()
 		mask!.contents = UIImage(named: "ic_camera_enhance_white")?.CGImage
@@ -93,7 +119,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	}
 
 	/**
+	 给rootVC.mask增加动画
 	 CAKeyframeAnimation bounds -> mask
+
+	 - author: wangkan
+	 - date: 16-07-26 14:07:29
 	 */
 	func animateMask() {
 		let maskAnimation = CAKeyframeAnimation(keyPath: "bounds") // 获取默认的bounds动画
@@ -114,6 +144,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
 		rootVC.view.layer.mask = nil // remove mask when animation completes
 	}
-
 }
 

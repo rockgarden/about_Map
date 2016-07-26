@@ -57,6 +57,25 @@
 		C25E76391CBF8014000ECACE /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E76381CBF8014000ECACE /* Photo.swift */; };
 		C25E763B1CBF801D000ECACE /* TableMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E763A1CBF801D000ECACE /* TableMapViewController.swift */; };
 		C25E763D1CBF8026000ECACE /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E763C1CBF8026000ECACE /* PhotoDetailViewController.swift */; };
+		C2C925F41D47389B0022066B /* PhotoExpandingCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C925F31D47389B0022066B /* PhotoExpandingCollection.storyboard */; };
+		C2C925FA1D4739C90022066B /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C925F71D4739C90022066B /* PhotoCollectionViewCell.swift */; };
+		C2C925FB1D4739C90022066B /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C925F81D4739C90022066B /* PhotoCollectionViewCell.xib */; };
+		C2C925FC1D4739C90022066B /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C925F91D4739C90022066B /* PhotoViewController.swift */; };
+		C2C926251D473CFF0022066B /* PhotoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C926241D473CFF0022066B /* PhotoTableViewController.swift */; };
+		C2C926281D473D400022066B /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C926271D473D400022066B /* Images.swift */; };
+		C2C9262B1D473E480022066B /* ExpandingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C9262A1D473E480022066B /* ExpandingTableViewController.swift */; };
+		C2C926341D473E570022066B /* BasePageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C9262F1D473E570022066B /* BasePageCollectionCell.swift */; };
+		C2C926351D473E570022066B /* PageCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C926311D473E570022066B /* PageCollectionLayout.swift */; };
+		C2C926361D473E570022066B /* PageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C926321D473E570022066B /* PageCollectionView.swift */; };
+		C2C926371D473E570022066B /* ExpandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C926331D473E570022066B /* ExpandingViewController.swift */; };
+		C2C926461D473E710022066B /* CornerAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C9263B1D473E710022066B /* CornerAnimatable.swift */; };
+		C2C926471D473E710022066B /* ConfigurationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C9263D1D473E710022066B /* ConfigurationHelper.swift */; };
+		C2C926481D473E710022066B /* ConstraintsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C9263F1D473E710022066B /* ConstraintsHelper.swift */; };
+		C2C926491D473E710022066B /* ScreenShotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C926411D473E710022066B /* ScreenShotHelper.swift */; };
+		C2C9264A1D473E710022066B /* SubviewsForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C926431D473E710022066B /* SubviewsForEach.swift */; };
+		C2C9264B1D473E710022066B /* TransitionDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C926451D473E710022066B /* TransitionDriver.swift */; };
+		C2C926501D473EA30022066B /* AnimationBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C9264D1D473EA30022066B /* AnimationBarButton.swift */; };
+		C2C926511D473EA30022066B /* Rotatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C9264F1D473EA30022066B /* Rotatable.swift */; };
 		C2CBD3311D05475F00E594AA /* Ext_NSCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBD3301D05475F00E594AA /* Ext_NSCoding.swift */; };
 		C2CBD3331D0554C200E594AA /* Ext_UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBD3321D0554C200E594AA /* Ext_UINavigationController.swift */; };
 		C2CBD3351D0555B900E594AA /* KDInteractiveNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBD3341D0555B900E594AA /* KDInteractiveNavigationController.swift */; };
@@ -145,6 +164,25 @@
 		C25E76381CBF8014000ECACE /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		C25E763A1CBF801D000ECACE /* TableMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableMapViewController.swift; sourceTree = "<group>"; };
 		C25E763C1CBF8026000ECACE /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		C2C925F31D47389B0022066B /* PhotoExpandingCollection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PhotoExpandingCollection.storyboard; sourceTree = "<group>"; };
+		C2C925F71D4739C90022066B /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		C2C925F81D4739C90022066B /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		C2C925F91D4739C90022066B /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		C2C926241D473CFF0022066B /* PhotoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTableViewController.swift; sourceTree = "<group>"; };
+		C2C926271D473D400022066B /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		C2C9262A1D473E480022066B /* ExpandingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingTableViewController.swift; sourceTree = "<group>"; };
+		C2C9262F1D473E570022066B /* BasePageCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePageCollectionCell.swift; sourceTree = "<group>"; };
+		C2C926311D473E570022066B /* PageCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCollectionLayout.swift; sourceTree = "<group>"; };
+		C2C926321D473E570022066B /* PageCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCollectionView.swift; sourceTree = "<group>"; };
+		C2C926331D473E570022066B /* ExpandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingViewController.swift; sourceTree = "<group>"; };
+		C2C9263B1D473E710022066B /* CornerAnimatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerAnimatable.swift; sourceTree = "<group>"; };
+		C2C9263D1D473E710022066B /* ConfigurationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationHelper.swift; sourceTree = "<group>"; };
+		C2C9263F1D473E710022066B /* ConstraintsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsHelper.swift; sourceTree = "<group>"; };
+		C2C926411D473E710022066B /* ScreenShotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenShotHelper.swift; sourceTree = "<group>"; };
+		C2C926431D473E710022066B /* SubviewsForEach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubviewsForEach.swift; sourceTree = "<group>"; };
+		C2C926451D473E710022066B /* TransitionDriver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionDriver.swift; sourceTree = "<group>"; };
+		C2C9264D1D473EA30022066B /* AnimationBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationBarButton.swift; sourceTree = "<group>"; };
+		C2C9264F1D473EA30022066B /* Rotatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rotatable.swift; sourceTree = "<group>"; };
 		C2CBD3301D05475F00E594AA /* Ext_NSCoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_NSCoding.swift; sourceTree = "<group>"; };
 		C2CBD3321D0554C200E594AA /* Ext_UINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UINavigationController.swift; sourceTree = "<group>"; };
 		C2CBD3341D0555B900E594AA /* KDInteractiveNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDInteractiveNavigationController.swift; sourceTree = "<group>"; };
@@ -183,7 +221,7 @@
 				44587F9A1D04620900A1C0CF /* KMWeakObjectContainer.swift */,
 			);
 			name = KMNavigationBarTransition;
-			path = ../../SimpleLib/KMNavigationBarTransition;
+			path = ../SimpleLib/KMNavigationBarTransition;
 			sourceTree = "<group>";
 		};
 		44587FA51D04626E00A1C0CF /* Model */ = {
@@ -192,7 +230,7 @@
 				44587FA61D04626E00A1C0CF /* NavigationBarData.swift */,
 			);
 			name = Model;
-			path = ../../SimpleLib/Model;
+			path = ../SimpleLib/Model;
 			sourceTree = "<group>";
 		};
 		44587FAA1D04676A00A1C0CF /* RainbowNavigation */ = {
@@ -207,7 +245,7 @@
 				44587FB11D04676A00A1C0CF /* RainbowPushAnimator.swift */,
 			);
 			name = RainbowNavigation;
-			path = ../../SimpleLib/RainbowNavigation;
+			path = ../SimpleLib/RainbowNavigation;
 			sourceTree = "<group>";
 		};
 		448941FA1D2BF43100A043AE /* CacheHelper */ = {
@@ -236,7 +274,7 @@
 				446F09611D1FCEB40023FE12 /* Ext_UIColor.swift */,
 			);
 			name = Ext;
-			path = ../../SimpleLib/Ext;
+			path = ../SimpleLib/Ext;
 			sourceTree = "<group>";
 		};
 		44B7B0021D0284060030EC8D /* Utils */ = {
@@ -248,7 +286,7 @@
 				44B7B0031D0284060030EC8D /* ImageResizingMethods.swift */,
 			);
 			name = Utils;
-			path = ../../SimpleLib/Utils;
+			path = ../SimpleLib/Utils;
 			sourceTree = "<group>";
 		};
 		44B7B0041D0284060030EC8D /* Widget */ = {
@@ -263,13 +301,14 @@
 				44B7B0061D0284060030EC8D /* NavigationBarColorSource.swift */,
 			);
 			name = Widget;
-			path = ../../SimpleLib/Widget;
+			path = ../SimpleLib/Widget;
 			sourceTree = "<group>";
 		};
 		C25E75F61CBF7EF5000ECACE = {
 			isa = PBXGroup;
 			children = (
 				C25E76011CBF7EF5000ECACE /* MemoryInMap */,
+				C2C925FD1D473AC90022066B /* SimpleLib */,
 				C2CE89DC1CC0D21800CDEF77 /* FastRecord */,
 				C25E76001CBF7EF5000ECACE /* Products */,
 				D3C18017D23808F180F58B1F /* Frameworks */,
@@ -297,6 +336,9 @@
 				4412AC9B1D0DA740000E0C33 /* AddPhotoGeotificationViewController.swift */,
 				C25E76321CBF7FF1000ECACE /* MapViewController.swift */,
 				C25E76341CBF8006000ECACE /* MapPointAnnotation.swift */,
+				C2C925F31D47389B0022066B /* PhotoExpandingCollection.storyboard */,
+				C2C926261D473D400022066B /* Constants */,
+				C2C925F51D4739C90022066B /* PhotoViewController */,
 				C25E76361CBF800F000ECACE /* PhotosTableView.swift */,
 				44DBD9061CDF805B00529904 /* MapCell.swift */,
 				C25E76381CBF8014000ECACE /* Photo.swift */,
@@ -308,14 +350,186 @@
 				C25E760D1CBF7EF6000ECACE /* LaunchScreen.storyboard */,
 				C25E76101CBF7EF6000ECACE /* Info.plist */,
 				44EF57F71CDA351700183B47 /* UserDefault.swift */,
+			);
+			path = MemoryInMap;
+			sourceTree = "<group>";
+		};
+		C2C925F51D4739C90022066B /* PhotoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C2C925F61D4739C90022066B /* Cells */,
+				C2C926241D473CFF0022066B /* PhotoTableViewController.swift */,
+				C2C925F91D4739C90022066B /* PhotoViewController.swift */,
+			);
+			path = PhotoViewController;
+			sourceTree = "<group>";
+		};
+		C2C925F61D4739C90022066B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C2C925F71D4739C90022066B /* PhotoCollectionViewCell.swift */,
+				C2C925F81D4739C90022066B /* PhotoCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C2C925FD1D473AC90022066B /* SimpleLib */ = {
+			isa = PBXGroup;
+			children = (
+				C2C9264C1D473EA30022066B /* AnimatingBarButton */,
+				C2C926381D473E710022066B /* Helpers */,
+				C2C926441D473E710022066B /* TransitionDriver */,
+				C2C9262C1D473E570022066B /* ExpandingViewController */,
+				C2C926291D473E480022066B /* ExpandingTableViewController */,
 				44587F941D04620900A1C0CF /* KMNavigationBarTransition */,
 				44587FAA1D04676A00A1C0CF /* RainbowNavigation */,
 				44587FA51D04626E00A1C0CF /* Model */,
 				44B7B0001D0284060030EC8D /* Ext */,
-				44B7B0021D0284060030EC8D /* Utils */,
 				44B7B0041D0284060030EC8D /* Widget */,
+				44B7B0021D0284060030EC8D /* Utils */,
 			);
-			path = MemoryInMap;
+			name = SimpleLib;
+			sourceTree = "<group>";
+		};
+		C2C926261D473D400022066B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C2C926271D473D400022066B /* Images.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		C2C926291D473E480022066B /* ExpandingTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C2C9262A1D473E480022066B /* ExpandingTableViewController.swift */,
+			);
+			name = ExpandingTableViewController;
+			path = ../SimpleLib/ExpandingTableViewController;
+			sourceTree = "<group>";
+		};
+		C2C9262C1D473E570022066B /* ExpandingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C2C9262D1D473E570022066B /* CollectionView */,
+				C2C926331D473E570022066B /* ExpandingViewController.swift */,
+			);
+			name = ExpandingViewController;
+			path = ../SimpleLib/ExpandingViewController;
+			sourceTree = "<group>";
+		};
+		C2C9262D1D473E570022066B /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				C2C9262E1D473E570022066B /* Cells */,
+				C2C926301D473E570022066B /* Layout */,
+				C2C926321D473E570022066B /* PageCollectionView.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		C2C9262E1D473E570022066B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C2C9262F1D473E570022066B /* BasePageCollectionCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C2C926301D473E570022066B /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				C2C926311D473E570022066B /* PageCollectionLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		C2C926381D473E710022066B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C2C926391D473E710022066B /* Animations */,
+				C2C9263C1D473E710022066B /* ConfigurationHelper */,
+				C2C9263E1D473E710022066B /* Constraints Helpers */,
+				C2C926401D473E710022066B /* ScreenShot */,
+				C2C926421D473E710022066B /* SubviewsForEach */,
+			);
+			name = Helpers;
+			path = ../SimpleLib/Helpers;
+			sourceTree = "<group>";
+		};
+		C2C926391D473E710022066B /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				C2C9263A1D473E710022066B /* CornerAnimatable */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		C2C9263A1D473E710022066B /* CornerAnimatable */ = {
+			isa = PBXGroup;
+			children = (
+				C2C9263B1D473E710022066B /* CornerAnimatable.swift */,
+			);
+			path = CornerAnimatable;
+			sourceTree = "<group>";
+		};
+		C2C9263C1D473E710022066B /* ConfigurationHelper */ = {
+			isa = PBXGroup;
+			children = (
+				C2C9263D1D473E710022066B /* ConfigurationHelper.swift */,
+			);
+			path = ConfigurationHelper;
+			sourceTree = "<group>";
+		};
+		C2C9263E1D473E710022066B /* Constraints Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C2C9263F1D473E710022066B /* ConstraintsHelper.swift */,
+			);
+			path = "Constraints Helpers";
+			sourceTree = "<group>";
+		};
+		C2C926401D473E710022066B /* ScreenShot */ = {
+			isa = PBXGroup;
+			children = (
+				C2C926411D473E710022066B /* ScreenShotHelper.swift */,
+			);
+			path = ScreenShot;
+			sourceTree = "<group>";
+		};
+		C2C926421D473E710022066B /* SubviewsForEach */ = {
+			isa = PBXGroup;
+			children = (
+				C2C926431D473E710022066B /* SubviewsForEach.swift */,
+			);
+			path = SubviewsForEach;
+			sourceTree = "<group>";
+		};
+		C2C926441D473E710022066B /* TransitionDriver */ = {
+			isa = PBXGroup;
+			children = (
+				C2C926451D473E710022066B /* TransitionDriver.swift */,
+			);
+			name = TransitionDriver;
+			path = ../SimpleLib/TransitionDriver;
+			sourceTree = "<group>";
+		};
+		C2C9264C1D473EA30022066B /* AnimatingBarButton */ = {
+			isa = PBXGroup;
+			children = (
+				C2C9264D1D473EA30022066B /* AnimationBarButton.swift */,
+				C2C9264E1D473EA30022066B /* Animations */,
+			);
+			name = AnimatingBarButton;
+			path = ../SimpleLib/AnimatingBarButton;
+			sourceTree = "<group>";
+		};
+		C2C9264E1D473EA30022066B /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				C2C9264F1D473EA30022066B /* Rotatable.swift */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 		C2CE89DC1CC0D21800CDEF77 /* FastRecord */ = {
@@ -433,8 +647,10 @@
 			files = (
 				C25E760F1CBF7EF6000ECACE /* LaunchScreen.storyboard in Resources */,
 				C25E760C1CBF7EF6000ECACE /* Assets.xcassets in Resources */,
+				C2C925F41D47389B0022066B /* PhotoExpandingCollection.storyboard in Resources */,
 				C25E760A1CBF7EF6000ECACE /* Main.storyboard in Resources */,
 				44587FB31D04676A00A1C0CF /* Info.plist in Resources */,
+				C2C925FB1D4739C90022066B /* PhotoCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,26 +721,37 @@
 				C2CBD3311D05475F00E594AA /* Ext_NSCoding.swift in Sources */,
 				448942061D2BF43100A043AE /* MultiCache.swift in Sources */,
 				44B7B0091D0284060030EC8D /* FoldingCell.swift in Sources */,
+				C2C926361D473E570022066B /* PageCollectionView.swift in Sources */,
 				448942011D2BF43100A043AE /* AnyCache.swift in Sources */,
+				C2C926471D473E710022066B /* ConfigurationHelper.swift in Sources */,
 				C25E76071CBF7EF6000ECACE /* DetailViewController.swift in Sources */,
+				C2C926511D473EA30022066B /* Rotatable.swift in Sources */,
 				44B7B00E1D0299370030EC8D /* ICanHas.swift in Sources */,
 				44DBD9071CDF805B00529904 /* MapCell.swift in Sources */,
 				442337AF1D10713C006B2CBD /* Ext_CCLocation.swift in Sources */,
 				44587FB51D04676A00A1C0CF /* RainbowDragPop.swift in Sources */,
 				44587F821D04603D00A1C0CF /* Ext_UIViewController.swift in Sources */,
 				446F09621D1FCEB40023FE12 /* Ext_UIColor.swift in Sources */,
+				C2C926371D473E570022066B /* ExpandingViewController.swift in Sources */,
 				44587FB61D04676A00A1C0CF /* RainbowNavigation.swift in Sources */,
+				C2C926251D473CFF0022066B /* PhotoTableViewController.swift in Sources */,
 				44EF57F81CDA351700183B47 /* UserDefault.swift in Sources */,
 				44587FB71D04676A00A1C0CF /* RainbowPopAnimator.swift in Sources */,
+				C2C926351D473E570022066B /* PageCollectionLayout.swift in Sources */,
 				448942041D2BF43100A043AE /* DiskCache.swift in Sources */,
+				C2C926281D473D400022066B /* Images.swift in Sources */,
+				C2C9264B1D473E710022066B /* TransitionDriver.swift in Sources */,
 				C25E763D1CBF8026000ECACE /* PhotoDetailViewController.swift in Sources */,
 				442337B11D10714E006B2CBD /* LocationMethods.swift in Sources */,
 				44B7B00A1D0284060030EC8D /* NavigationBarColorSource.swift in Sources */,
+				C2C925FA1D4739C90022066B /* PhotoCollectionViewCell.swift in Sources */,
 				44587FA01D04620900A1C0CF /* MethodSwizzling.swift in Sources */,
 				448942051D2BF43100A043AE /* MemoryCache.swift in Sources */,
+				C2C926461D473E710022066B /* CornerAnimatable.swift in Sources */,
 				C2CBD3351D0555B900E594AA /* KDInteractiveNavigationController.swift in Sources */,
 				4438DD401D040E350056967B /* TransparentTableViewController.swift in Sources */,
 				441F02771D21559300035E2C /* Ext_UITableView.swift in Sources */,
+				C2C925FC1D4739C90022066B /* PhotoViewController.swift in Sources */,
 				C25E76391CBF8014000ECACE /* Photo.swift in Sources */,
 				44B7B0071D0284060030EC8D /* Ext_UINavigationBar.swift in Sources */,
 				448942021D2BF43100A043AE /* Box.swift in Sources */,
@@ -534,8 +761,11 @@
 				442FAA531D267DDD00BB3569 /* AnimatedSegmentSwitch.swift in Sources */,
 				4412ACA11D0DA81A000E0C33 /* Geotification.swift in Sources */,
 				446F09641D201D4A0023FE12 /* JTSplashView.swift in Sources */,
+				C2C926341D473E570022066B /* BasePageCollectionCell.swift in Sources */,
 				4412AC9C1D0DA740000E0C33 /* AddPhotoGeotificationViewController.swift in Sources */,
+				C2C9262B1D473E480022066B /* ExpandingTableViewController.swift in Sources */,
 				44587FA91D0462E100A1C0CF /* Ext_UIImage.swift in Sources */,
+				C2C9264A1D473E710022066B /* SubviewsForEach.swift in Sources */,
 				C2CBD3331D0554C200E594AA /* Ext_UINavigationController.swift in Sources */,
 				44ABB4D21D119FE500D307B2 /* BaseViewController.swift in Sources */,
 				44587FA21D04620900A1C0CF /* KMWeakObjectContainer.swift in Sources */,
@@ -545,9 +775,12 @@
 				C25E76371CBF800F000ECACE /* PhotosTableView.swift in Sources */,
 				C25E76031CBF7EF6000ECACE /* AppDelegate.swift in Sources */,
 				44587FB41D04676A00A1C0CF /* RainbowColorSource.swift in Sources */,
+				C2C926491D473E710022066B /* ScreenShotHelper.swift in Sources */,
 				44587FB81D04676A00A1C0CF /* RainbowPushAnimator.swift in Sources */,
 				C25E76331CBF7FF1000ECACE /* MapViewController.swift in Sources */,
 				441C50A21D295B7D00D120F6 /* KCSelectionDialogItem.swift in Sources */,
+				C2C926501D473EA30022066B /* AnimationBarButton.swift in Sources */,
+				C2C926481D473E710022066B /* ConstraintsHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
