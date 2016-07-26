@@ -147,7 +147,7 @@ public class KCSelectionDialog: UIView {
             itemTitleLabel.textColor = UIColor.blackColor()
             itemButton.addSubview(itemTitleLabel)
             itemButton.setBackgroundImage(UIImage.createImageWithColor(UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1)), forState: .Highlighted)
-            itemButton.addTarget(item, action: Selector("handlerTap"), forControlEvents: .TouchUpInside)
+            itemButton.addTarget(item, action: #selector(KCSelectionDialogItem.handlerTap), forControlEvents: .TouchUpInside)
             
             if item.icon != nil {
                 itemTitleLabel.frame.origin.x = 54
@@ -160,7 +160,7 @@ public class KCSelectionDialog: UIView {
             let divider = UIView(frame: CGRectMake(0, CGFloat(index * 40) + 40, widthDialog, 0.5))
             divider.backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1)
             containerView.addSubview(divider)
-            //            containerView.frame.size.height += 40
+            // containerView.frame.size.height += 40
         }
         containerView.contentSize = CGSizeMake(widthDialog, CGFloat(items.count) * CGFloat(40))
         return containerView
