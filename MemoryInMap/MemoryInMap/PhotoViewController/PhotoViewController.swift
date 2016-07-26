@@ -22,7 +22,7 @@ class PhotoViewController: ExpandingViewController {
 extension PhotoViewController {
 
 	override func viewDidLoad() {
-		itemSize = CGSize(width: 256, height: 335)
+		itemSize = CGSize(width: SCREEN_WIDTH*4/5, height: SCREEN_HEIGHT*4/5)
 		super.viewDidLoad()
 
 		registerCell()

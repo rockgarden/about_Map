@@ -23,9 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 		self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
 		self.window!.backgroundColor = UIColor.clearColor()
-		self.window!.rootViewController = UINavigationController(rootViewController: rootVC)
+		self.window!.rootViewController = UINavigationController(rootViewController: getViewController())
 		self.window!.makeKeyAndVisible()
-
+        configureNavigationTabBar()
 		AddSplashMask()
 		animateMask()
 
@@ -49,9 +49,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		}
 	}
     
-    private func getViewController() -> ExpandingTableViewController {
+    private func getViewController() -> ExpandingViewController {
         let storyboard = UIStoryboard(storyboardName: "PhotoExpandingCollection")
-        let toViewController: PhotoTableViewController = storyboard.instantiateViewController()
+        let toViewController: PhotoViewController = storyboard.instantiateViewController()
         return toViewController
     }
 

@@ -6,7 +6,6 @@
 //  Copyright © 2016年 Rockgarden. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 public extension UIImage {
