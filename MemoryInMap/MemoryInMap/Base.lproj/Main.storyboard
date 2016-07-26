@@ -935,7 +935,7 @@
         <image name="arrow" width="16" height="25"/>
         <image name="burger" width="38" height="29"/>
         <image name="dots" width="14" height="84"/>
-        <image name="image" width="14" height="84"/>
+        <image name="image" width="375" height="382"/>
         <image name="photo" width="14" height="84"/>
         <image name="stars" width="97" height="17"/>
     </resources>

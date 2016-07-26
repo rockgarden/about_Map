@@ -8,7 +8,7 @@
         <!--Photo View Controller-->
         <scene sceneID="7vj-xm-Mde">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="owA-8G-88G" customClass="PhotoViewController" customModule="MemoryInMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotoViewController" automaticallyAdjustsScrollViewInsets="NO" id="owA-8G-88G" customClass="PhotoViewController" customModule="MemoryInMap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CpK-wn-s3i"/>
                         <viewControllerLayoutGuide type="bottom" id="mRg-Mx-OVI"/>
@@ -80,7 +80,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ECt-UZ-ruI">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L1n-Ia-Jrw" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="rootPhotoExpandingCollection" automaticallyAdjustsScrollViewInsets="NO" id="L1n-Ia-Jrw" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5hs-Ir-kRn">
@@ -96,10 +96,10 @@
             </objects>
             <point key="canvasLocation" x="530" y="428"/>
         </scene>
-        <!--Demo Table View Controller-->
+        <!--Photo Table View Controller-->
         <scene sceneID="7Xk-ar-e7L">
             <objects>
-                <tableViewController storyboardIdentifier="DemoTableViewController" automaticallyAdjustsScrollViewInsets="NO" id="7RW-i0-HfN" customClass="DemoTableViewController" customModule="MemoryInMap" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="PhotoTableViewController" automaticallyAdjustsScrollViewInsets="NO" id="7RW-i0-HfN" customClass="PhotoTableViewController" customModule="MemoryInMap" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2SU-lJ-2AP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
