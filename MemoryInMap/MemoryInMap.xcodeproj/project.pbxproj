@@ -75,7 +75,6 @@
 		C2C9264B1D473E710022066B /* TransitionDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C926451D473E710022066B /* TransitionDriver.swift */; };
 		C2C926501D473EA30022066B /* AnimationBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C9264D1D473EA30022066B /* AnimationBarButton.swift */; };
 		C2C926511D473EA30022066B /* Rotatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C9264F1D473EA30022066B /* Rotatable.swift */; };
-		C2C926531D4744720022066B /* PhotoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C926521D4744720022066B /* PhotoTableViewController.swift */; };
 		C2C926551D4748090022066B /* Ext_UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C926541D4748090022066B /* Ext_UIStoryboard.swift */; };
 		C2CBD3311D05475F00E594AA /* Ext_NSCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBD3301D05475F00E594AA /* Ext_NSCoding.swift */; };
 		C2CBD3331D0554C200E594AA /* Ext_UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBD3321D0554C200E594AA /* Ext_UINavigationController.swift */; };
@@ -183,7 +182,6 @@
 		C2C926451D473E710022066B /* TransitionDriver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionDriver.swift; sourceTree = "<group>"; };
 		C2C9264D1D473EA30022066B /* AnimationBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationBarButton.swift; sourceTree = "<group>"; };
 		C2C9264F1D473EA30022066B /* Rotatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rotatable.swift; sourceTree = "<group>"; };
-		C2C926521D4744720022066B /* PhotoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoTableViewController.swift; path = "../../../../expanding-collection/DemoExpandingCollection/DemoExpandingCollection/ViewControllers/PhotoTableViewController.swift"; sourceTree = "<group>"; };
 		C2C926541D4748090022066B /* Ext_UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UIStoryboard.swift; sourceTree = "<group>"; };
 		C2CBD3301D05475F00E594AA /* Ext_NSCoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_NSCoding.swift; sourceTree = "<group>"; };
 		C2CBD3321D0554C200E594AA /* Ext_UINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UINavigationController.swift; sourceTree = "<group>"; };
@@ -360,7 +358,6 @@
 		C2C925F51D4739C90022066B /* PhotoViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C2C926521D4744720022066B /* PhotoTableViewController.swift */,
 				C2C925F61D4739C90022066B /* Cells */,
 				C2C925F91D4739C90022066B /* PhotoViewController.swift */,
 			);
@@ -757,7 +754,6 @@
 				C25E76391CBF8014000ECACE /* Photo.swift in Sources */,
 				C2C926551D4748090022066B /* Ext_UIStoryboard.swift in Sources */,
 				44B7B0071D0284060030EC8D /* Ext_UINavigationBar.swift in Sources */,
-				C2C926531D4744720022066B /* PhotoTableViewController.swift in Sources */,
 				448942021D2BF43100A043AE /* Box.swift in Sources */,
 				441C50A11D295B7D00D120F6 /* KCSelectionDialog.swift in Sources */,
 				4412ACA01D0DA81A000E0C33 /* GeotificationsViewController.swift in Sources */,
