@@ -103,7 +103,7 @@ extension BasePageCollectionCell {
             return
         }
         // frontContainerView open状态Y轴向上的偏移
-        let open_front_yOffset: CGFloat = 5 //frontContainerView.bounds.size.height
+        let open_front_yOffset: CGFloat = 10 //frontContainerView.bounds.size.height
         // backContainerView open状态Y轴向下的偏移
         let open_back_yOffset: CGFloat = 25 //frontContainerView.bounds.size.height
 		frontConstraintY.constant = isOpen == true ? -open_front_yOffset : 0

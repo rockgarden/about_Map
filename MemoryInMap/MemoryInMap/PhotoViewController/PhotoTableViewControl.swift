@@ -48,7 +48,7 @@ extension PhotoTableViewController {
 // MARK: UIScrollViewDelegate
 
 extension PhotoTableViewController {
-
+    
     override func scrollViewDidScroll(scrollView: UIScrollView) {
         //    if scrollView.contentOffset.y < -25 {
         //      // buttonAnimation

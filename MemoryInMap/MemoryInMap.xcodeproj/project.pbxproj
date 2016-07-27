@@ -24,7 +24,6 @@
 		44587FA21D04620900A1C0CF /* KMWeakObjectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44587F9A1D04620900A1C0CF /* KMWeakObjectContainer.swift */; };
 		44587FA71D04626E00A1C0CF /* NavigationBarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44587FA61D04626E00A1C0CF /* NavigationBarData.swift */; };
 		44587FA91D0462E100A1C0CF /* Ext_UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44587FA81D0462E100A1C0CF /* Ext_UIImage.swift */; };
-		44587FB31D04676A00A1C0CF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44587FAB1D04676A00A1C0CF /* Info.plist */; };
 		44587FB41D04676A00A1C0CF /* RainbowColorSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44587FAC1D04676A00A1C0CF /* RainbowColorSource.swift */; };
 		44587FB51D04676A00A1C0CF /* RainbowDragPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44587FAD1D04676A00A1C0CF /* RainbowDragPop.swift */; };
 		44587FB61D04676A00A1C0CF /* RainbowNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44587FAF1D04676A00A1C0CF /* RainbowNavigation.swift */; };
@@ -130,7 +129,6 @@
 		44587F9A1D04620900A1C0CF /* KMWeakObjectContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMWeakObjectContainer.swift; sourceTree = "<group>"; };
 		44587FA61D04626E00A1C0CF /* NavigationBarData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarData.swift; sourceTree = "<group>"; };
 		44587FA81D0462E100A1C0CF /* Ext_UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UIImage.swift; sourceTree = "<group>"; };
-		44587FAB1D04676A00A1C0CF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44587FAC1D04676A00A1C0CF /* RainbowColorSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainbowColorSource.swift; sourceTree = "<group>"; };
 		44587FAD1D04676A00A1C0CF /* RainbowDragPop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainbowDragPop.swift; sourceTree = "<group>"; };
 		44587FAE1D04676A00A1C0CF /* RainbowNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RainbowNavigation.h; sourceTree = "<group>"; };
@@ -245,7 +243,6 @@
 		44587FAA1D04676A00A1C0CF /* RainbowNavigation */ = {
 			isa = PBXGroup;
 			children = (
-				44587FAB1D04676A00A1C0CF /* Info.plist */,
 				44587FAC1D04676A00A1C0CF /* RainbowColorSource.swift */,
 				44587FAD1D04676A00A1C0CF /* RainbowDragPop.swift */,
 				44587FAE1D04676A00A1C0CF /* RainbowNavigation.h */,
@@ -663,7 +660,6 @@
 				C25E760C1CBF7EF6000ECACE /* Assets.xcassets in Resources */,
 				C2C925F41D47389B0022066B /* PhotoExpandingCollection.storyboard in Resources */,
 				C25E760A1CBF7EF6000ECACE /* Main.storyboard in Resources */,
-				44587FB31D04676A00A1C0CF /* Info.plist in Resources */,
 				C2C925FB1D4739C90022066B /* PhotoCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
