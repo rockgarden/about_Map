@@ -17,12 +17,12 @@ class PhotoViewController: ExpandingViewController {
 	@IBOutlet weak var pageLabel: UILabel!
 }
 
-// MARK: life cicle
-
+// MARK: - life cicle
 extension PhotoViewController {
 
 	override func viewDidLoad() {
-		itemSize = CGSize(width: SCREEN_WIDTH*4/5, height: SCREEN_HEIGHT*4/5)
+        // 重定义Collection cell大小
+		itemSize = CGSize(width: SCREEN_WIDTH * 4 / 5, height: SCREEN_HEIGHT * 4 / 5)
 		super.viewDidLoad()
 
 		registerCell()
@@ -32,10 +32,12 @@ extension PhotoViewController {
 	}
 }
 
-// MARK: Helpers
+// MARK: - Helpers
 
 extension PhotoViewController {
-
+	/**
+	 用类名动态注册ReuseIdentifier
+	 */
 	private func registerCell() {
 		let nib = UINib(nibName: String(PhotoCollectionViewCell), bundle: nil)
 		collectionView?.registerNib(nib, forCellWithReuseIdentifier: String(PhotoCollectionViewCell))
@@ -58,7 +60,7 @@ extension PhotoViewController {
 	}
 }
 
-/// MARK: Gesture
+// MARK: - Gesture
 
 extension PhotoViewController {
 
@@ -66,7 +68,6 @@ extension PhotoViewController {
 		let gesutereUp = Init(UISwipeGestureRecognizer(target: self, action: #selector(PhotoViewController.swipeHandler(_:)))) {
 			$0.direction = .Up
 		}
-
 		let gesutereDown = Init(UISwipeGestureRecognizer(target: self, action: #selector(PhotoViewController.swipeHandler(_:)))) {
 			$0.direction = .Down
 		}
@@ -77,31 +78,29 @@ extension PhotoViewController {
 	func swipeHandler(sender: UISwipeGestureRecognizer) {
 		let indexPath = NSIndexPath(forRow: currentIndex, inSection: 0)
 		guard let cell = collectionView?.cellForItemAtIndexPath(indexPath) as? PhotoCollectionViewCell else { return }
-		// double swipe Up transition
+		// TODO: double swipe Up transition
 		if cell.isOpened == true && sender.direction == .Up {
 			pushToViewController(getViewController())
-
 			if let rightButton = navigationItem.rightBarButtonItem as? AnimatingBarButton {
 				rightButton.animationSelected(true)
 			}
 		}
-
 		let open = sender.direction == .Up ? true : false
 		cell.cellIsOpen(open)
 		cellsIsOpen[indexPath.row] = cell.isOpened
 	}
 }
 
-// MARK: UIScrollViewDelegate
+// MARK: - UIScrollViewDelegate
 
 extension PhotoViewController {
 
 	func scrollViewDidScroll(scrollView: UIScrollView) {
-		pageLabel.text = "\(currentIndex+1)/\(items.count)"
+		pageLabel.text = "\(currentIndex+1) / \(items.count)"
 	}
 }
 
-// MARK: UICollectionViewDataSource
+// MARK: - UICollectionViewDataSource
 
 extension PhotoViewController {
 
@@ -122,9 +121,9 @@ extension PhotoViewController {
 
 		if cell.isOpened == false {
 			cell.cellIsOpen(true)
+            pageLabel.hidden = true
 		} else {
 			pushToViewController(getViewController())
-
 			if let rightButton = navigationItem.rightBarButtonItem as? AnimatingBarButton {
 				rightButton.animationSelected(true)
 			}
@@ -132,7 +131,7 @@ extension PhotoViewController {
 	}
 }
 
-// MARK: UICollectionViewDataSource
+// MARK: - UICollectionViewDataSource
 
 extension PhotoViewController {
 

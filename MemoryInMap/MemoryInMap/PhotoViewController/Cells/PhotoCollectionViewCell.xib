@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
@@ -42,8 +42,8 @@
                                 <color key="textColor" red="0.49803921568627452" green="0.51764705882352935" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La Crescenta-Montrose, CA91020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eC4-wU-lTH">
-                                <rect key="frame" x="39" y="240" width="179" height="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eC4-wU-lTH">
+                                <rect key="frame" x="111" y="240" width="36" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" red="0.49803921569999998" green="0.51764705879999995" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -55,14 +55,14 @@
                             <constraint firstItem="pMH-Qa-ClW" firstAttribute="leading" secondItem="rbd-6U-uYZ" secondAttribute="leading" constant="24" id="7zn-VD-NCK"/>
                             <constraint firstAttribute="trailing" secondItem="l9V-6B-rdj" secondAttribute="trailing" constant="20" id="Bx8-Es-m5m"/>
                             <constraint firstAttribute="trailing" secondItem="Au6-h8-xBa" secondAttribute="trailing" constant="24" id="Eiq-Mk-Msj"/>
-                            <constraint firstItem="eC4-wU-lTH" firstAttribute="centerX" secondItem="rbd-6U-uYZ" secondAttribute="centerX" id="GPf-gb-s8O"/>
-                            <constraint firstAttribute="bottom" secondItem="eC4-wU-lTH" secondAttribute="bottom" constant="81" id="IBD-EA-167"/>
                             <constraint firstItem="7zK-Le-Npw" firstAttribute="leading" secondItem="rbd-6U-uYZ" secondAttribute="leading" constant="20" id="TPF-bw-RZD"/>
                             <constraint firstItem="pMH-Qa-ClW" firstAttribute="centerY" secondItem="l9V-6B-rdj" secondAttribute="centerY" id="VJk-xM-6CG"/>
                             <constraint firstAttribute="width" constant="256" id="bOS-YB-1Lf"/>
+                            <constraint firstItem="7zK-Le-Npw" firstAttribute="top" secondItem="eC4-wU-lTH" secondAttribute="bottom" constant="33" id="ffG-22-ylt"/>
                             <constraint firstItem="Au6-h8-xBa" firstAttribute="centerY" secondItem="7zK-Le-Npw" secondAttribute="centerY" id="pmY-wA-X0z"/>
                             <constraint firstAttribute="bottom" secondItem="7zK-Le-Npw" secondAttribute="bottom" constant="8" id="rz8-al-BzK"/>
                             <constraint firstAttribute="height" constant="335" id="uVN-GL-ji7"/>
+                            <constraint firstItem="eC4-wU-lTH" firstAttribute="leading" secondItem="rbd-6U-uYZ" secondAttribute="leading" constant="111" id="wdb-pD-Odo"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4h2-Xv-xjU">
@@ -72,11 +72,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="256" height="335"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATCOASTAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFh-D7-eSl">
-                                <rect key="frame" x="62" y="10" width="132" height="29"/>
+                                <rect key="frame" x="65" y="10" width="127" height="28"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="NO"/>
                                 </accessibility>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.076029349662162168" colorSpace="calibratedRGB"/>
@@ -182,6 +182,8 @@
                 <outlet property="customTitle" destination="XFh-D7-eSl" id="eia-lY-ptu"/>
                 <outlet property="frontConstraintY" destination="0xA-8H-CCG" id="qOL-jY-lrP"/>
                 <outlet property="frontContainerView" destination="4h2-Xv-xjU" id="Mxy-UR-phd"/>
+                <outlet property="frontContainerViewH" destination="Daq-kO-5kx" id="lZP-0T-jxf"/>
+                <outlet property="frontContainerViewW" destination="KpD-0P-bHb" id="bmb-GA-p9T"/>
             </connections>
             <point key="canvasLocation" x="215" y="212.5"/>
         </collectionViewCell>
