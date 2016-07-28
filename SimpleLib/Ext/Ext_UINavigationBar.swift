@@ -15,6 +15,32 @@ private var kStatusBarMaskKey = "kStatusBarMaskKey"
 
 extension UINavigationBar {
     
+    // MARK: - Instance functions -
+    
+    /**
+     Set the UINavigationBar to transparent or not
+     在AppDelegate中要通过appearance()调用:UINavigationBar.appearance().setTransparent(true)
+     相当于
+     // transparent background
+     UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: .Default)
+     UINavigationBar.appearance().shadowImage = UIImage()
+     UINavigationBar.appearance().translucent = true
+     
+     - parameter transparent: true to set it transparent, false to not
+     - parameter translucent: A Boolean value indicating whether the navigation bar is translucent or not
+     */
+    public func setTransparent(transparent: Bool, translucent: Bool = true) {
+        if transparent {
+            self.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+            self.shadowImage = UIImage()
+            self.translucent = translucent
+        } else {
+            self.setBackgroundImage(nil, forBarMetrics: .Default)
+            self.shadowImage = nil
+            self.translucent = translucent
+        }
+    }
+    
     /**
      @deprecated
      StatusBar Background Color 同 NavigationBar
@@ -63,7 +89,7 @@ extension UINavigationBar {
         backgroundView = nil
     }
     
-    // MARK: - MethodSwizzling
+    // MARK: - MethodSwizzling var -
     private var backgroundView: UIView? {
         get {
             return objc_getAssociatedObject(self, &kBackgroundViewKey) as? UIView

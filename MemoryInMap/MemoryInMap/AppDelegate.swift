@@ -8,6 +8,10 @@
 
 import UIKit
 
+func aa() {
+    
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -100,6 +104,7 @@ extension AppDelegate {
      - date: 16-07-26 14:07:24
      */
     private func configureNavigationTabBar() {
+        
         // transparent background
         UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: .Default)
         UINavigationBar.appearance().shadowImage = UIImage()

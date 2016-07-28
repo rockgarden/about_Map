@@ -22,7 +22,7 @@ extension PhotoViewController {
 
 	override func viewDidLoad() {
         // 重定义Collection cell大小
-		itemSize = CGSize(width: SCREEN_WIDTH * 4 / 5, height: SCREEN_HEIGHT * 4 / 5)
+		itemSize = CGSize(width: SCREEN_WIDTH - 40, height: SCREEN_HEIGHT * 4 / 5)
 		super.viewDidLoad()
 
 		registerCell()

@@ -17,12 +17,12 @@ public class BaseViewController: UIViewController {
 		NSNotificationCenter.defaultCenter().removeObserver(self)
 	}
 
-	override public func prefersStatusBarHidden() -> Bool {
-		if showStatusBar {
-			return false
-		}
-		return true
-	}
+//	override public func prefersStatusBarHidden() -> Bool {
+//		if showStatusBar {
+//			return false
+//		}
+//		return true
+//	}
 
 //	override public func preferredStatusBarStyle() -> UIStatusBarStyle {
 //		return UIStatusBarStyle.LightContent

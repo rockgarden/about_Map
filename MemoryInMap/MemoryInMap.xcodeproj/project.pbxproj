@@ -32,7 +32,7 @@
 		4462509C1D47A200005D0B5F /* PhotoTableViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4462509B1D47A200005D0B5F /* PhotoTableViewControl.swift */; };
 		4462509E1D47A64C005D0B5F /* Ext_UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4462509D1D47A64C005D0B5F /* Ext_UIDevice.swift */; };
 		446250A21D47AB08005D0B5F /* PlistUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446250A11D47AB07005D0B5F /* PlistUtil.swift */; };
-		446250A41D47AD12005D0B5F /* PublicVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446250A31D47AD12005D0B5F /* PublicVar.swift */; };
+		446250A41D47AD12005D0B5F /* AppVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446250A31D47AD12005D0B5F /* AppVar.swift */; };
 		446F09621D1FCEB40023FE12 /* Ext_UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446F09611D1FCEB40023FE12 /* Ext_UIColor.swift */; };
 		446F09641D201D4A0023FE12 /* JTSplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446F09631D201D4A0023FE12 /* JTSplashView.swift */; };
 		448942011D2BF43100A043AE /* AnyCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448941FB1D2BF43100A043AE /* AnyCache.swift */; };
@@ -60,6 +60,8 @@
 		C25E76391CBF8014000ECACE /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E76381CBF8014000ECACE /* Photo.swift */; };
 		C25E763B1CBF801D000ECACE /* TableMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E763A1CBF801D000ECACE /* TableMapViewController.swift */; };
 		C25E763D1CBF8026000ECACE /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E763C1CBF8026000ECACE /* PhotoDetailViewController.swift */; };
+		C2816C111D49A77E00738414 /* PublicFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2816C101D49A77E00738414 /* PublicFunc.swift */; };
+		C2816C131D49D5E800738414 /* Ext_UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2816C121D49D5E700738414 /* Ext_UIScreen.swift */; };
 		C2C925F41D47389B0022066B /* PhotoExpandingCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C925F31D47389B0022066B /* PhotoExpandingCollection.storyboard */; };
 		C2C925FA1D4739C90022066B /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C925F71D4739C90022066B /* PhotoCollectionViewCell.swift */; };
 		C2C925FB1D4739C90022066B /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C925F81D4739C90022066B /* PhotoCollectionViewCell.xib */; };
@@ -139,7 +141,7 @@
 		4462509D1D47A64C005D0B5F /* Ext_UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UIDevice.swift; sourceTree = "<group>"; };
 		4462509F1D47A72A005D0B5F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		446250A11D47AB07005D0B5F /* PlistUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistUtil.swift; sourceTree = "<group>"; };
-		446250A31D47AD12005D0B5F /* PublicVar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicVar.swift; sourceTree = "<group>"; };
+		446250A31D47AD12005D0B5F /* AppVar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppVar.swift; sourceTree = "<group>"; };
 		446F09611D1FCEB40023FE12 /* Ext_UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UIColor.swift; sourceTree = "<group>"; };
 		446F09631D201D4A0023FE12 /* JTSplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTSplashView.swift; sourceTree = "<group>"; };
 		448941FB1D2BF43100A043AE /* AnyCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyCache.swift; sourceTree = "<group>"; };
@@ -171,6 +173,8 @@
 		C25E76381CBF8014000ECACE /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		C25E763A1CBF801D000ECACE /* TableMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableMapViewController.swift; sourceTree = "<group>"; };
 		C25E763C1CBF8026000ECACE /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		C2816C101D49A77E00738414 /* PublicFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicFunc.swift; sourceTree = "<group>"; };
+		C2816C121D49D5E700738414 /* Ext_UIScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UIScreen.swift; sourceTree = "<group>"; };
 		C2C925F31D47389B0022066B /* PhotoExpandingCollection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PhotoExpandingCollection.storyboard; path = ../PhotoExpandingCollection.storyboard; sourceTree = "<group>"; };
 		C2C925F71D4739C90022066B /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		C2C925F81D4739C90022066B /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -280,6 +284,7 @@
 				446F09611D1FCEB40023FE12 /* Ext_UIColor.swift */,
 				C2C926541D4748090022066B /* Ext_UIStoryboard.swift */,
 				4462509D1D47A64C005D0B5F /* Ext_UIDevice.swift */,
+				C2816C121D49D5E700738414 /* Ext_UIScreen.swift */,
 			);
 			name = Ext;
 			path = ../SimpleLib/Ext;
@@ -293,6 +298,7 @@
 				44B7B00D1D0299370030EC8D /* ICanHas.swift */,
 				44B7B0031D0284060030EC8D /* ImageResizingMethods.swift */,
 				446250A11D47AB07005D0B5F /* PlistUtil.swift */,
+				C2816C101D49A77E00738414 /* PublicFunc.swift */,
 			);
 			name = Utils;
 			path = ../SimpleLib/Utils;
@@ -404,7 +410,7 @@
 			isa = PBXGroup;
 			children = (
 				C2C926271D473D400022066B /* Images.swift */,
-				446250A31D47AD12005D0B5F /* PublicVar.swift */,
+				446250A31D47AD12005D0B5F /* AppVar.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -741,13 +747,14 @@
 				44DBD9071CDF805B00529904 /* MapCell.swift in Sources */,
 				442337AF1D10713C006B2CBD /* Ext_CCLocation.swift in Sources */,
 				44587FB51D04676A00A1C0CF /* RainbowDragPop.swift in Sources */,
-				446250A41D47AD12005D0B5F /* PublicVar.swift in Sources */,
+				446250A41D47AD12005D0B5F /* AppVar.swift in Sources */,
 				44587F821D04603D00A1C0CF /* Ext_UIViewController.swift in Sources */,
 				446F09621D1FCEB40023FE12 /* Ext_UIColor.swift in Sources */,
 				C2C926371D473E570022066B /* ExpandingViewController.swift in Sources */,
 				44587FB61D04676A00A1C0CF /* RainbowNavigation.swift in Sources */,
 				44EF57F81CDA351700183B47 /* UserDefault.swift in Sources */,
 				44587FB71D04676A00A1C0CF /* RainbowPopAnimator.swift in Sources */,
+				C2816C131D49D5E800738414 /* Ext_UIScreen.swift in Sources */,
 				C2C926351D473E570022066B /* PageCollectionLayout.swift in Sources */,
 				448942041D2BF43100A043AE /* DiskCache.swift in Sources */,
 				C2C926281D473D400022066B /* Images.swift in Sources */,
@@ -760,6 +767,7 @@
 				44587FA01D04620900A1C0CF /* MethodSwizzling.swift in Sources */,
 				448942051D2BF43100A043AE /* MemoryCache.swift in Sources */,
 				C2C926461D473E710022066B /* CornerAnimatable.swift in Sources */,
+				C2816C111D49A77E00738414 /* PublicFunc.swift in Sources */,
 				C2CBD3351D0555B900E594AA /* KDInteractiveNavigationController.swift in Sources */,
 				4438DD401D040E350056967B /* TransparentTableViewController.swift in Sources */,
 				441F02771D21559300035E2C /* Ext_UITableView.swift in Sources */,

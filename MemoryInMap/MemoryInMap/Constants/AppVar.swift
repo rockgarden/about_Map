@@ -12,7 +12,5 @@ public var appID = getDictionaryFromInfoPlist("appID") as! String
 public var appName = getDictionaryFromInfoPlist("appName") as! String
 public var appVersion = NSBundle.mainBundle().objectForInfoDictionaryKey(kCFBundleVersionKey as String) as! String!
 public let modelName = UIDevice.currentDevice().modelName
-public let SCREEN_WIDTH = UIScreen.mainScreen().bounds.width
-public let SCREEN_HEIGHT = UIScreen.mainScreen().bounds.height
 public let tempDirectory = NSTemporaryDirectory()
 public let FileManager = NSFileManager.defaultManager()
