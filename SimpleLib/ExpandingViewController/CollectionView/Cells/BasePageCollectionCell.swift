@@ -15,7 +15,7 @@ public class BasePageCollectionCell: UICollectionViewCell {
 	@IBInspectable public var yOffset: CGFloat = 40
 
 	/**
-	 *  Constants
+	 *  Views Constants for NSCoder
 	 */
 	struct Constants {
 		static let backContainer = "backContainerViewKey"
@@ -83,6 +83,12 @@ extension BasePageCollectionCell {
 		configurationViews()
 		shadowView = createShadowViewOnView(frontContainerView)
 	}
+    
+    //TODO: 用struct存值
+    private func saveInitialConstant() {
+        //backContainerView.getConstraint(.Height)!.constant
+        //backContainerView.getConstraint(.Width)!.constant
+    }
 
 }
 
@@ -97,11 +103,18 @@ extension BasePageCollectionCell {
 	 - parameter animated: Set to true if the change in selection state is animated.
 	 */
 	public func cellIsOpen(isOpen: Bool, animated: Bool = true) {
+        
 		if isOpen == isOpened {
 //            frontContainerViewH.constant = UIScreen.mainScreen().bounds.height * 5 / 6
 //            frontContainerViewW.constant = UIScreen.mainScreen().bounds.width * 5 / 6
             return
         }
+        debugPrint(frontContainerViewH.constant)
+        debugPrint(frontContainerViewW.constant)
+        frontContainerViewH.constant = UIScreen.mainScreen().bounds.height * 4 / 5
+        frontContainerViewW.constant = UIScreen.mainScreen().bounds.width * 4 / 5
+        debugPrint(backContainerView.getConstraint(.Height)!.constant)
+        debugPrint(backContainerView.getConstraint(.Width)!.constant)
         // frontContainerView open状态Y轴向上的偏移
         let open_front_yOffset: CGFloat = 10 //frontContainerView.bounds.size.height
         // backContainerView open状态Y轴向下的偏移
@@ -217,7 +230,7 @@ extension BasePageCollectionCell {
 	}
 }
 
-// MARK: - NSCoding
+// MARK: - NSCoding -
 
 extension BasePageCollectionCell {
 
@@ -266,6 +279,12 @@ extension BasePageCollectionCell {
 		return copyView
 	}
 
+    /**
+     encode Constants
+     保存CollectionCell中的View
+     
+     - parameter coder: NSCoder
+     */
 	public override func encodeWithCoder(coder: NSCoder) {
 		super.encodeWithCoder(coder)
 		coder.encodeObject(backContainerView, forKey: Constants.backContainer)
@@ -275,23 +294,25 @@ extension BasePageCollectionCell {
 		coder.encodeObject(shadowView, forKey: Constants.shadowView)
 	}
 
+    /**
+     decode Constants
+     恢复CollectionCell中的View
+     
+     - parameter coder: NSCoder
+     */
 	private func configureOutletFromDecoder(coder: NSCoder) {
 		if case let shadowView as UIView = coder.decodeObjectForKey(Constants.shadowView) {
 			self.shadowView = shadowView
 		}
-
 		if case let backView as UIView = coder.decodeObjectForKey(Constants.backContainer) {
 			backContainerView = backView
 		}
-
 		if case let frontView as UIView = coder.decodeObjectForKey(Constants.frontContainer) {
 			frontContainerView = frontView
 		}
-
 		if case let constraint as NSLayoutConstraint = coder.decodeObjectForKey(Constants.frontContainerY) {
 			frontConstraintY = constraint
 		}
-
 		if case let constraint as NSLayoutConstraint = coder.decodeObjectForKey(Constants.backContainerY) {
 			backConstraintY = constraint
 		}

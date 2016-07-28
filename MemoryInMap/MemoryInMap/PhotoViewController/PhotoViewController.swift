@@ -21,8 +21,9 @@ class PhotoViewController: ExpandingViewController {
 extension PhotoViewController {
 
 	override func viewDidLoad() {
+        let barHeight = self.navigationController?.getBarHeight()
         // 重定义Collection cell大小
-		itemSize = CGSize(width: SCREEN_WIDTH - 40, height: SCREEN_HEIGHT * 4 / 5)
+		itemSize = CGSize(width: SCREEN_WIDTH - 40, height: SCREEN_HEIGHT - barHeight! * 2)
 		super.viewDidLoad()
 
 		registerCell()
@@ -88,6 +89,7 @@ extension PhotoViewController {
 		let open = sender.direction == .Up ? true : false
 		cell.cellIsOpen(open)
 		cellsIsOpen[indexPath.row] = cell.isOpened
+        pageLabel.hidden = cell.isOpened
 	}
 }
 
@@ -96,7 +98,7 @@ extension PhotoViewController {
 extension PhotoViewController {
 
 	func scrollViewDidScroll(scrollView: UIScrollView) {
-		pageLabel.text = "\(currentIndex+1) / \(items.count)"
+		pageLabel.text = "\(currentIndex+1)/\(items.count)"
 	}
 }
 
@@ -113,6 +115,7 @@ extension PhotoViewController {
 		cell.backgroundImageView?.image = UIImage(named: info.imageName)
 		cell.customTitle.text = info.title
 		cell.cellIsOpen(cellsIsOpen[index], animated: false)
+        pageLabel.hidden = cellsIsOpen[index]
 	}
 
 	func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
@@ -121,7 +124,6 @@ extension PhotoViewController {
 
 		if cell.isOpened == false {
 			cell.cellIsOpen(true)
-            pageLabel.hidden = true
 		} else {
 			pushToViewController(getViewController())
 			if let rightButton = navigationItem.rightBarButtonItem as? AnimatingBarButton {
