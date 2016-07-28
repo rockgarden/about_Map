@@ -23,9 +23,8 @@ extension PhotoViewController {
 	override func viewDidLoad() {
         let barHeight = self.navigationController?.getBarHeight()
         // 重定义Collection cell大小
-		itemSize = CGSize(width: SCREEN_WIDTH - 40, height: SCREEN_HEIGHT - barHeight! * 2)
+		itemSize = CGSize(width: SCREEN_WIDTH - 40, height: SCREEN_HEIGHT - barHeight! * 2 )
 		super.viewDidLoad()
-
 		registerCell()
 		fillCellIsOpeenArry()
 		addGestureToView(collectionView!)

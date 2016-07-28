@@ -8,10 +8,6 @@
 
 import UIKit
 
-func aa() {
-    
-}
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -99,9 +95,6 @@ extension AppDelegate {
     
     /**
      设定UINavigationBar appearance
-     
-     - author: wangkan
-     - date: 16-07-26 14:07:24
      */
     private func configureNavigationTabBar() {
         
