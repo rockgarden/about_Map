@@ -10,10 +10,21 @@ import UIKit
 
 /// Base class for UICollectionViewCell
 public class BasePageCollectionCell: UICollectionViewCell {
-    
+
+    // MARK: - Constants -
+
     /// Animation oposition offset when cell is open
-    @IBInspectable public var yOffset: CGFloat = 40
-    
+    @IBInspectable
+    public var yOffset: CGFloat = 40
+    /// A Boolean value that indicates whether the cell is opened.
+    public var isOpened = false
+    /// frontContainerView open状态 Y轴向上的偏移
+    public var open_front_yOffset: CGFloat = 40
+    /// backContainerView open状态 Y轴向下的偏移
+    public var open_back_yOffset: CGFloat = 20
+    /// frontContainerView open状态 width 缩小偏移
+    public var open_front_wOffset: CGFloat = 30
+
     /**
      *  Views Constants for NSCoder
      */
@@ -26,7 +37,7 @@ public class BasePageCollectionCell: UICollectionViewCell {
     }
     
     /**
-     *  保存外布定义的itemSize初值
+     *  保存外部定义的itemSize初值
      */
     struct itemSize {
         static var height: CGFloat = 0.0
@@ -42,14 +53,13 @@ public class BasePageCollectionCell: UICollectionViewCell {
     @IBOutlet weak var frontContainerViewW: NSLayoutConstraint!
     @IBOutlet public weak var backContainerView: UIView!
     /// constraints for backContainerView must connectid from xib or storyboard
+    @IBOutlet weak var backContainerViewH: NSLayoutConstraint!
+    @IBOutlet weak var backContainerViewW: NSLayoutConstraint!
     @IBOutlet public weak var backConstraintY: NSLayoutConstraint!
     /// constraints for frontContainerView must connectid from xib or storyboard
     @IBOutlet public weak var frontConstraintY: NSLayoutConstraint!
     
     var shadowView: UIView?
-    
-    /// A Boolean value that indicates whether the cell is opened.
-    public var isOpened = false
     
     // MARK: - inits -
     
@@ -105,30 +115,21 @@ extension BasePageCollectionCell {
      - parameter animated: Set to true if the change in selection state is animated.
      */
     public func cellIsOpen(isOpen: Bool, animated: Bool = true) {
-        
         if isOpen == isOpened {
-            frontContainerViewH.constant = itemSize.height
-            frontContainerViewW.constant = itemSize.width
             return
         }
-        frontContainerViewH.constant = UIScreen.mainScreen().bounds.height * 3 / 5
-        frontContainerViewW.constant = UIScreen.mainScreen().bounds.width * 3 / 5
-        // frontContainerView open状态Y轴向上的偏移
-        let open_front_yOffset: CGFloat = 10 //frontContainerView.bounds.size.height
-        // backContainerView open状态Y轴向下的偏移
-        let open_back_yOffset: CGFloat = 25 //frontContainerView.bounds.size.height
-        frontConstraintY.constant = isOpen == true ? -open_front_yOffset : 0
+        frontConstraintY.constant = isOpen == true ? -open_front_yOffset: 0
         backConstraintY.constant = isOpen == true ? open_back_yOffset : 0
         
-        /*
-         if let widthConstant = backContainerView.getConstraint(.Width) {
-         widthConstant.constant = isOpen == true ? frontContainerView.bounds.size.width + yOffset / 4: frontContainerView.bounds.size.width
-         }
-         
-         if let heightConstant = backContainerView.getConstraint(.Height) {
-         heightConstant.constant = isOpen == true ? frontContainerView.bounds.size.height + yOffset: frontContainerView.bounds.size.height
-         }
-         */
+        //		if let widthConstant = backContainerView.getConstraint(.Width) {
+        //			widthConstant.constant = isOpen == true ? frontContainerView.bounds.size.width + yOffset / 4: frontContainerView.bounds.size.width
+        //		}
+        //		if let heightConstant = backContainerView.getConstraint(.Height) {
+        //			heightConstant.constant = isOpen == true ? frontContainerView.bounds.size.height + yOffset: frontContainerView.bounds.size.height
+        //		}
+        
+        frontContainerViewH.constant = isOpen == true ? itemSize.height - open_front_yOffset * 2: itemSize.height
+        frontContainerViewW.constant = isOpen == true ? itemSize.width - open_front_wOffset : itemSize.width
         
         configurationCell()
         
