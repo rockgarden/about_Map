@@ -58,7 +58,8 @@ public class BasePageCollectionCell: UICollectionViewCell {
     @IBOutlet public weak var backConstraintY: NSLayoutConstraint!
     /// constraints for frontContainerView must connectid from xib or storyboard
     @IBOutlet public weak var frontConstraintY: NSLayoutConstraint!
-    
+    /// frontContainerView缩放大小
+    var tempView: UIView?
     var shadowView: UIView?
     
     // MARK: - inits -
@@ -99,6 +100,7 @@ extension BasePageCollectionCell {
     
     private func commonInit() {
         configurationViews()
+        //tempView = CGRect(x: <#T##CGFloat#>, y: <#T##CGFloat#>, width: <#T##CGFloat#>, height: <#T##CGFloat#>)
         shadowView = createShadowViewOnView(frontContainerView)
     }
     
@@ -110,6 +112,7 @@ extension BasePageCollectionCell {
     
     /**
      Open or close cell.
+     frontContainerView.bounds.size.height ?= itemSize
      
      - parameter isOpen: Contains the value true if the cell should display open state, if false should display close state.
      - parameter animated: Set to true if the change in selection state is animated.
@@ -120,17 +123,9 @@ extension BasePageCollectionCell {
         }
         frontConstraintY.constant = isOpen == true ? -open_front_yOffset: 0
         backConstraintY.constant = isOpen == true ? open_back_yOffset : 0
-        
-        //		if let widthConstant = backContainerView.getConstraint(.Width) {
-        //			widthConstant.constant = isOpen == true ? frontContainerView.bounds.size.width + yOffset / 4: frontContainerView.bounds.size.width
-        //		}
-        //		if let heightConstant = backContainerView.getConstraint(.Height) {
-        //			heightConstant.constant = isOpen == true ? frontContainerView.bounds.size.height + yOffset: frontContainerView.bounds.size.height
-        //		}
-        
-        frontContainerViewH.constant = isOpen == true ? itemSize.height - open_front_yOffset * 2: itemSize.height
-        frontContainerViewW.constant = isOpen == true ? itemSize.width - open_front_wOffset : itemSize.width
-        
+        frontContainerViewH.constant = isOpen == true ? itemSize.height - (open_front_yOffset - 5) * 2: itemSize.height
+        frontContainerViewW.constant = isOpen == true ? itemSize.width - open_front_wOffset * 2 : itemSize.width
+
         configurationCell()
         
         if animated == true {
