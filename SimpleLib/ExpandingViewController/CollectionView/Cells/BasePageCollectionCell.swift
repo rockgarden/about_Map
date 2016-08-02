@@ -59,10 +59,7 @@ public class BasePageCollectionCell: UICollectionViewCell {
     @IBOutlet weak var backContainerViewH: NSLayoutConstraint!
     @IBOutlet weak var backContainerViewW: NSLayoutConstraint!
     @IBOutlet public weak var backConstraintY: NSLayoutConstraint!
-    /// constraints for frontContainerView must connectid from xib or storyboard
-    @IBOutlet public weak var frontConstraintY: NSLayoutConstraint!
-    /// frontContainerView缩放大小
-    var tempView: UIView?
+    
     var shadowView: UIView?
     
     // MARK: - inits -
@@ -100,7 +97,6 @@ extension BasePageCollectionCell {
         super.awakeFromNib()
         commonInit()
     }
-    
     private func commonInit() {
         configurationViews()
         //tempView = CGRect(x: <#T##CGFloat#>, y: <#T##CGFloat#>, width: <#T##CGFloat#>, height: <#T##CGFloat#>)
@@ -112,7 +108,7 @@ extension BasePageCollectionCell {
 // MARK: - Control -
 
 extension BasePageCollectionCell {
-    
+
     /**
      Open or close cell.
      frontContainerView.bounds.size.height ?= itemSize
@@ -132,8 +128,9 @@ extension BasePageCollectionCell {
             shadowView?.layer.shadowPath = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: openWidth, height: shadowHeight), cornerRadius: 0).CGPath
             return
         }
-        frontConstraintY.constant = isOpen == true ? -open_front_yOffset: 0
-        backConstraintY.constant = isOpen == true ? open_back_yOffset : 0
+        frontContainerViewH.constant = isOpen == true ? itemSize.height - open_front_yOffset * 2 + open_front_hOffset : itemSize.height
+        frontContainerViewW.constant = isOpen == true ? openWidth : itemSize.width
+        
         frontContainerViewH.constant = isOpen == true ? itemSize.height - (open_front_yOffset - 5) * 2: itemSize.height
         frontContainerViewW.constant = isOpen == true ? itemSize.width - open_front_wOffset * 2 : itemSize.width
 
