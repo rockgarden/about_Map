@@ -359,6 +359,52 @@ public extension UIView {
 
 		self.layer.addAnimation(animation, forKey: "heartbeat")
 	}
+    
+    /**
+     Create a opacity on the UIView
+     创建一个持续的闪烁动画
+     
+     - parameter duration: Seconds of animation
+     */
+    public func opacityAnimation(duration: CGFloat) {
+        let opacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
+        opacityAnimation.duration = 1.0
+        opacityAnimation.values = [1.0, 0.6, 0.3]
+        opacityAnimation.keyTimes = [0.05, 0.55, 1.0]
+        opacityAnimation.removedOnCompletion = false //?
+        self.layer.addAnimation(opacityAnimation, forKey: "opacity")
+    }
+    
+    /**
+     Create a twinkle CAAnimationGroup on the UIView
+     创建一个持续的闪烁动画 by CAAnimationGroup
+     
+     - parameter duration: Seconds of animation
+     */
+    func twinkleViewWithDuration(duration: CGFloat) {
+        let durationPerBeat: CGFloat = 0.5
+        
+        let opaqueAnimate = CABasicAnimation(keyPath: "opacity")
+        opaqueAnimate.fromValue = 1.0
+        opaqueAnimate.toValue = 0.7
+        
+        let alphaAnimation = CABasicAnimation(keyPath: "opacity")
+        alphaAnimation.fromValue = 0.7
+        alphaAnimation.toValue = 0.3
+        
+        let group = CAAnimationGroup()
+        group.duration = 2.0
+        group.repeatCount = Float.infinity
+        group.removedOnCompletion = false
+        group.animations = [opaqueAnimate, alphaAnimation]
+        
+        opaqueAnimate.autoreverses = true
+        opaqueAnimate.repeatCount = Float(duration / durationPerBeat)
+        opaqueAnimate.duration = NSTimeInterval(durationPerBeat)
+        
+        // layer添加动画
+        self.layer.addAnimation(group, forKey: "twinkle")
+    }
 
 	/**
 	 Adds a motion effect to the view
