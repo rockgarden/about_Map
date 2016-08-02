@@ -1,30 +1,31 @@
 //
-//  PageConllectionCell.swift
-//  TestCollectionView
+//  BasePageCollectionCell.swift
 //
 //  Created by Alex K. on 04/05/16.
 //  Copyright © 2016 Alex K. All rights reserved.
+//  Modify by wangkna. on 30/07/16.
 //
 
 import UIKit
 
 /// Base class for UICollectionViewCell
 public class BasePageCollectionCell: UICollectionViewCell {
-
+    
     // MARK: - Constants -
-
+    
     /// Animation oposition offset when cell is open
     @IBInspectable
     public var yOffset: CGFloat = 40
     /// A Boolean value that indicates whether the cell is opened.
     public var isOpened = false
     /// frontContainerView open状态 Y轴向上的偏移
-    public var open_front_yOffset: CGFloat = 40
+    public var open_front_yOffset: CGFloat = 50
+    public var open_front_hOffset: CGFloat = 16
     /// backContainerView open状态 Y轴向下的偏移
     public var open_back_yOffset: CGFloat = 20
     /// frontContainerView open状态 width 缩小偏移
     public var open_front_wOffset: CGFloat = 30
-
+    
     /**
      *  Views Constants for NSCoder
      */
@@ -48,9 +49,11 @@ public class BasePageCollectionCell: UICollectionViewCell {
     
     /// The view used as the face of the cell must connectid from xib or storyboard.
     @IBOutlet public weak var frontContainerView: UIView!
-    /// The view used as the back of the cell must connectid from xib or storyboard.
+    /// constraints for frontContainerView must connectid from xib or storyboard
     @IBOutlet weak var frontContainerViewH: NSLayoutConstraint!
     @IBOutlet weak var frontContainerViewW: NSLayoutConstraint!
+    @IBOutlet public weak var frontConstraintY: NSLayoutConstraint!
+    /// The view used as the back of the cell must connectid from xib or storyboard.
     @IBOutlet public weak var backContainerView: UIView!
     /// constraints for backContainerView must connectid from xib or storyboard
     @IBOutlet weak var backContainerViewH: NSLayoutConstraint!
@@ -106,7 +109,7 @@ extension BasePageCollectionCell {
     
 }
 
-// MARK: - Control
+// MARK: - Control -
 
 extension BasePageCollectionCell {
     
@@ -118,7 +121,15 @@ extension BasePageCollectionCell {
      - parameter animated: Set to true if the change in selection state is animated.
      */
     public func cellIsOpen(isOpen: Bool, animated: Bool = true) {
+        /// 设置open时frontContainerView的width
+        let openWidth = itemSize.width - open_front_wOffset
+        
         if isOpen == isOpened {
+            /// 设置shadowView的大小
+            let shadowHeight = itemSize.height - (open_front_yOffset + open_front_hOffset) * 2
+            shadowView?.getConstraint(.Width)?.constant = openWidth
+            shadowView?.getConstraint(.Height)?.constant = shadowHeight
+            shadowView?.layer.shadowPath = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: openWidth, height: shadowHeight), cornerRadius: 0).CGPath
             return
         }
         frontConstraintY.constant = isOpen == true ? -open_front_yOffset: 0
@@ -176,19 +187,12 @@ extension BasePageCollectionCell {
                 }
             }
         }
-        
         for info: (attribute: NSLayoutAttribute, offset: CGFloat) in [(NSLayoutAttribute.CenterX, 0), (NSLayoutAttribute.CenterY, 30)] {
             (contentView, shadow, view) >>>- {
                 $0.attribute = info.attribute
                 $0.constant = info.offset
             }
         }
-        
-        // size shadow
-        let width = shadow.getConstraint(.Width)?.constant
-        let height = shadow.getConstraint(.Height)?.constant
-        
-        shadow.layer.shadowPath = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: width!, height: height!), cornerRadius: 0).CGPath
         
         return shadow
     }
