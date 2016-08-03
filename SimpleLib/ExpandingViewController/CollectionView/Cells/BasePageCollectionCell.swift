@@ -3,6 +3,7 @@
 //
 //  Created by Alex K. on 04/05/16.
 //  Copyright © 2016 Alex K. All rights reserved.
+//
 //  Modify by wangkna. on 30/07/16.
 //
 
@@ -99,7 +100,6 @@ extension BasePageCollectionCell {
     }
     private func commonInit() {
         configurationViews()
-        //tempView = CGRect(x: <#T##CGFloat#>, y: <#T##CGFloat#>, width: <#T##CGFloat#>, height: <#T##CGFloat#>)
         shadowView = createShadowViewOnView(frontContainerView)
     }
     
@@ -108,7 +108,7 @@ extension BasePageCollectionCell {
 // MARK: - Control -
 
 extension BasePageCollectionCell {
-
+    
     /**
      Open or close cell.
      frontContainerView.bounds.size.height ?= itemSize
@@ -121,19 +121,18 @@ extension BasePageCollectionCell {
         let openWidth = itemSize.width - open_front_wOffset
         
         if isOpen == isOpened {
-            /// 设置shadowView的大小
+            /// 根据frontView大小设置shadowView的shadowPath
             let shadowHeight = itemSize.height - (open_front_yOffset + open_front_hOffset) * 2
             shadowView?.getConstraint(.Width)?.constant = openWidth
             shadowView?.getConstraint(.Height)?.constant = shadowHeight
             shadowView?.layer.shadowPath = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: openWidth, height: shadowHeight), cornerRadius: 0).CGPath
             return
         }
+        frontConstraintY.constant = isOpen == true ? -open_front_yOffset: 0
+        backConstraintY.constant = isOpen == true ? open_back_yOffset : 0
         frontContainerViewH.constant = isOpen == true ? itemSize.height - open_front_yOffset * 2 + open_front_hOffset : itemSize.height
         frontContainerViewW.constant = isOpen == true ? openWidth : itemSize.width
         
-        frontContainerViewH.constant = isOpen == true ? itemSize.height - (open_front_yOffset - 5) * 2: itemSize.height
-        frontContainerViewW.constant = isOpen == true ? itemSize.width - open_front_wOffset * 2 : itemSize.width
-
         configurationCell()
         
         if animated == true {
@@ -161,6 +160,13 @@ extension BasePageCollectionCell {
         layer.masksToBounds = false
     }
     
+    /**
+     基于xib的size生成frontView的shadowView
+     
+     - parameter view: <#view description#>
+     
+     - returns: <#return value description#>
+     */
     private func createShadowViewOnView(view: UIView?) -> UIView? {
         guard let view = view else { return nil }
         
