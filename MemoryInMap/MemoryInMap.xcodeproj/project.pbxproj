@@ -33,6 +33,7 @@
 		4462509E1D47A64C005D0B5F /* Ext_UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4462509D1D47A64C005D0B5F /* Ext_UIDevice.swift */; };
 		446250A21D47AB08005D0B5F /* PlistUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446250A11D47AB07005D0B5F /* PlistUtil.swift */; };
 		446250A41D47AD12005D0B5F /* AppVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446250A31D47AD12005D0B5F /* AppVar.swift */; };
+		4464B8C41D522C1000CC7404 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4464B8C31D522C1000CC7404 /* Duration.swift */; };
 		446F09621D1FCEB40023FE12 /* Ext_UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446F09611D1FCEB40023FE12 /* Ext_UIColor.swift */; };
 		446F09641D201D4A0023FE12 /* JTSplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446F09631D201D4A0023FE12 /* JTSplashView.swift */; };
 		448942011D2BF43100A043AE /* AnyCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448941FB1D2BF43100A043AE /* AnyCache.swift */; };
@@ -148,6 +149,7 @@
 		4462509F1D47A72A005D0B5F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		446250A11D47AB07005D0B5F /* PlistUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistUtil.swift; sourceTree = "<group>"; };
 		446250A31D47AD12005D0B5F /* AppVar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppVar.swift; sourceTree = "<group>"; };
+		4464B8C31D522C1000CC7404 /* Duration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 		446F09611D1FCEB40023FE12 /* Ext_UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UIColor.swift; sourceTree = "<group>"; };
 		446F09631D201D4A0023FE12 /* JTSplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTSplashView.swift; sourceTree = "<group>"; };
 		448941FB1D2BF43100A043AE /* AnyCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyCache.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 				44B7B0031D0284060030EC8D /* ImageResizingMethods.swift */,
 				446250A11D47AB07005D0B5F /* PlistUtil.swift */,
 				C2816C101D49A77E00738414 /* Public_Func.swift */,
+				4464B8C31D522C1000CC7404 /* Duration.swift */,
 			);
 			name = Utils;
 			path = ../SimpleLib/Utils;
@@ -650,9 +653,11 @@
 				TargetAttributes = {
 					C25E75FE1CBF7EF5000ECACE = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = UR7J67T5FK;
 					};
 					C2CE89D81CC0D21700CDEF77 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = UR7J67T5FK;
 					};
 				};
 			};
@@ -818,6 +823,7 @@
 				C2816C1B1D49DA5600738414 /* Ext_NSData.swift in Sources */,
 				C25E76371CBF800F000ECACE /* PhotosTableView.swift in Sources */,
 				C25E76031CBF7EF6000ECACE /* AppDelegate.swift in Sources */,
+				4464B8C41D522C1000CC7404 /* Duration.swift in Sources */,
 				44587FB41D04676A00A1C0CF /* RainbowColorSource.swift in Sources */,
 				C2C926491D473E710022066B /* ScreenShotHelper.swift in Sources */,
 				44587FB81D04676A00A1C0CF /* RainbowPushAnimator.swift in Sources */,
