@@ -69,7 +69,7 @@ class TableMapViewController: BaseViewController, NavigationBarColorSource {
         super.viewDidLoad()
         initView()
         //		self.interactiveNavigationBarHidden = false
-        setupNavigationBar()
+        //setupNavigationBar()
         title = "Map & Table"
     }
     
@@ -83,7 +83,7 @@ class TableMapViewController: BaseViewController, NavigationBarColorSource {
         super.viewWillAppear(animated)
         // self.interactiveNavigationBarHidden = true
         // self.navigationController?.setNavigationBarHidden(true, animated: animated)
-        self.navigationController?.navigationBar.translucent = true
+        // self.navigationController?.navigationBar.translucent = true
     }
     
     override func viewDidAppear(animated: Bool) {

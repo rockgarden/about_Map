@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window!.backgroundColor = UIColor.clearColor()
-        self.window!.rootViewController = UINavigationController(rootViewController: getViewController())
+        self.window!.rootViewController = UINavigationController(rootViewController: rootVC)
         self.window!.makeKeyAndVisible()
         
         configureStatusBar()
