@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var mask: CALayer?
     var maskBgView: UIView?
-    lazy var rootVC: TableMapViewController = TableMapViewController()
+    lazy var rootVC: MainViewController = MainViewController()
     var photosArr: Array<Photo> = []
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {

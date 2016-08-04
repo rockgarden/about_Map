@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class TableMapViewController: BaseViewController, NavigationBarColorSource {
+class MainViewController: BaseViewController, NavigationBarColorSource {
     
     var navHeight: CGFloat?
     var width: CGFloat?
@@ -23,13 +23,13 @@ class TableMapViewController: BaseViewController, NavigationBarColorSource {
     var bigMap = false
     var detailPhoto: PhotoDetailViewController?
     var newButton: UIBarButtonItem {
-        return UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(TableMapViewController.reverse))
+        return UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(MainViewController.reverse))
     }
     var locationButton: UIBarButtonItem {
-        return UIBarButtonItem(image: UIImage(named: "CurrentLocation"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(TableMapViewController.zoomToCurrentLocation(_:)))
+        return UIBarButtonItem(image: UIImage(named: "CurrentLocation"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(MainViewController.zoomToCurrentLocation(_:)))
     }
     var backButton: UIBarButtonItem {
-        return UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: #selector(TableMapViewController.reverse))
+        return UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: #selector(MainViewController.reverse))
     }
     var currentNavigationBarData: NavigationBarData!
     var nextNavigationBarData: NavigationBarData!
@@ -50,15 +50,15 @@ class TableMapViewController: BaseViewController, NavigationBarColorSource {
         
         mapVC = MapViewController(frame: CGRectMake(0.0, navHeight!, width!, mapHeight!))
         
-        tapFirstView = UITapGestureRecognizer(target: self, action: #selector(TableMapViewController.mapViewTapped))
+        tapFirstView = UITapGestureRecognizer(target: self, action: #selector(MainViewController.mapViewTapped))
         mapVC!.view.addGestureRecognizer(tapFirstView!)
         self.view.addSubview(self.mapVC!.view)
         
         tableController = PhotosTableView(frame: CGRectMake(0.0, mapHeight!, width!, tableHeight!))
         view.addSubview(tableController!.view)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TableMapViewController.navigateToDetail(_:)), name: "navigateToDetail", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TableMapViewController.mapViewTapped), name: "mapViewTapped", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MainViewController.navigateToDetail(_:)), name: "navigateToDetail", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MainViewController.mapViewTapped), name: "mapViewTapped", object: nil)
         
         self.navigationItem.rightBarButtonItem = newButton
         self.navigationItem.leftBarButtonItem = locationButton

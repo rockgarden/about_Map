@@ -89,7 +89,7 @@
 		C25E76351CBF8006000ECACE /* MapPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E76341CBF8006000ECACE /* MapPointAnnotation.swift */; };
 		C25E76371CBF800F000ECACE /* PhotosTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E76361CBF800F000ECACE /* PhotosTableView.swift */; };
 		C25E76391CBF8014000ECACE /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E76381CBF8014000ECACE /* Photo.swift */; };
-		C25E763B1CBF801D000ECACE /* TableMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E763A1CBF801D000ECACE /* TableMapViewController.swift */; };
+		C25E763B1CBF801D000ECACE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E763A1CBF801D000ECACE /* MainViewController.swift */; };
 		C25E763D1CBF8026000ECACE /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E763C1CBF8026000ECACE /* PhotoDetailViewController.swift */; };
 		C2816C111D49A77E00738414 /* Public_Func.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2816C101D49A77E00738414 /* Public_Func.swift */; };
 		C2816C201D49DCCC00738414 /* AppCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2816C1F1D49DCCC00738414 /* AppCommon.swift */; };
@@ -230,7 +230,7 @@
 		C25E76341CBF8006000ECACE /* MapPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPointAnnotation.swift; sourceTree = "<group>"; };
 		C25E76361CBF800F000ECACE /* PhotosTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosTableView.swift; sourceTree = "<group>"; };
 		C25E76381CBF8014000ECACE /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
-		C25E763A1CBF801D000ECACE /* TableMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableMapViewController.swift; sourceTree = "<group>"; };
+		C25E763A1CBF801D000ECACE /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C25E763C1CBF8026000ECACE /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		C2816C101D49A77E00738414 /* Public_Func.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Public_Func.swift; sourceTree = "<group>"; };
 		C2816C1F1D49DCCC00738414 /* AppCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCommon.swift; sourceTree = "<group>"; };
@@ -458,7 +458,8 @@
 			children = (
 				C25E76021CBF7EF6000ECACE /* AppDelegate.swift */,
 				44ABB4D11D119FE500D307B2 /* BaseViewController.swift */,
-				C25E763A1CBF801D000ECACE /* TableMapViewController.swift */,
+				C25E763A1CBF801D000ECACE /* MainViewController.swift */,
+				C25E76081CBF7EF6000ECACE /* Main.storyboard */,
 				4412AC9D1D0DA81A000E0C33 /* GeotificationsViewController.swift */,
 				4412AC9E1D0DA81A000E0C33 /* Geotification.swift */,
 				4412AC9B1D0DA740000E0C33 /* AddPhotoGeotificationViewController.swift */,
@@ -472,7 +473,6 @@
 				C25E763C1CBF8026000ECACE /* PhotoDetailViewController.swift */,
 				C25E76061CBF7EF6000ECACE /* DetailViewController.swift */,
 				4438DD3F1D040E350056967B /* TransparentTableViewController.swift */,
-				C25E76081CBF7EF6000ECACE /* Main.storyboard */,
 				C25E760B1CBF7EF6000ECACE /* Assets.xcassets */,
 				C25E760D1CBF7EF6000ECACE /* LaunchScreen.storyboard */,
 				C25E76101CBF7EF6000ECACE /* Info.plist */,
@@ -930,7 +930,7 @@
 				4464B9051D5383DE00CC7404 /* Ext_CCLocation.swift in Sources */,
 				44587FA71D04626E00A1C0CF /* NavigationBarData.swift in Sources */,
 				4464B8E71D5382AD00CC7404 /* UIButtonExtensions.swift in Sources */,
-				C25E763B1CBF801D000ECACE /* TableMapViewController.swift in Sources */,
+				C25E763B1CBF801D000ECACE /* MainViewController.swift in Sources */,
 				C25E76371CBF800F000ECACE /* PhotosTableView.swift in Sources */,
 				C25E76031CBF7EF6000ECACE /* AppDelegate.swift in Sources */,
 				4464B8EB1D5382AD00CC7404 /* CameraViewController.swift in Sources */,

@@ -910,10 +910,10 @@
             </objects>
             <point key="canvasLocation" x="1198" y="-330"/>
         </scene>
-        <!--Table Map View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="jKp-wa-7Fi">
             <objects>
-                <viewController storyboardIdentifier="TableMapVC" id="07d-ev-UyQ" customClass="TableMapViewController" customModule="MemoryInMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TableMapVC" id="07d-ev-UyQ" customClass="MainViewController" customModule="MemoryInMap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XNl-PE-qGe"/>
                         <viewControllerLayoutGuide type="bottom" id="gdp-wM-rgB"/>
