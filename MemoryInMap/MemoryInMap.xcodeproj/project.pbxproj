@@ -79,6 +79,9 @@
 		44F40ED51D5A0F790015E8E8 /* Ext_UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F40EC51D5A0F790015E8E8 /* Ext_UITableView.swift */; };
 		44F40ED61D5A0F790015E8E8 /* Ext_UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F40EC61D5A0F790015E8E8 /* Ext_UIView.swift */; };
 		44F40ED71D5A0F790015E8E8 /* Ext_UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F40EC71D5A0F790015E8E8 /* Ext_UIViewController.swift */; };
+		44F40EE01D5A11520015E8E8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F40EDF1D5A11520015E8E8 /* MapViewController.swift */; };
+		44F40EE21D5A117D0015E8E8 /* MapPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F40EE11D5A117D0015E8E8 /* MapPointAnnotation.swift */; };
+		44F40EE41D5A11A00015E8E8 /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F40EE31D5A11A00015E8E8 /* MapCell.swift */; };
 		C25E76031CBF7EF6000ECACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E76021CBF7EF6000ECACE /* AppDelegate.swift */; };
 		C25E76071CBF7EF6000ECACE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E76061CBF7EF6000ECACE /* DetailViewController.swift */; };
 		C25E760A1CBF7EF6000ECACE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25E76081CBF7EF6000ECACE /* Main.storyboard */; };
@@ -213,6 +216,9 @@
 		44F40EC51D5A0F790015E8E8 /* Ext_UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UITableView.swift; sourceTree = "<group>"; };
 		44F40EC61D5A0F790015E8E8 /* Ext_UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UIView.swift; sourceTree = "<group>"; };
 		44F40EC71D5A0F790015E8E8 /* Ext_UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UIViewController.swift; sourceTree = "<group>"; };
+		44F40EDF1D5A11520015E8E8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		44F40EE11D5A117D0015E8E8 /* MapPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPointAnnotation.swift; sourceTree = "<group>"; };
+		44F40EE31D5A11A00015E8E8 /* MapCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
 		615774368A2DE55C0131EA91 /* Pods-MemoryInMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryInMap.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-MemoryInMap/Pods-MemoryInMap.debug.xcconfig"; sourceTree = "<group>"; };
 		6FDDE6D72843CB51AB1FCB5E /* Pods_MemoryInMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoryInMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25E75FF1CBF7EF5000ECACE /* MemoryInMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryInMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -440,6 +446,9 @@
 		44F40ED81D5A0F8D0015E8E8 /* MapVIewController */ = {
 			isa = PBXGroup;
 			children = (
+				44F40EDF1D5A11520015E8E8 /* MapViewController.swift */,
+				44F40EE11D5A117D0015E8E8 /* MapPointAnnotation.swift */,
+				44F40EE31D5A11A00015E8E8 /* MapCell.swift */,
 			);
 			path = MapVIewController;
 			sourceTree = "<group>";
@@ -893,6 +902,7 @@
 				44F40ECF1D5A0F790015E8E8 /* Ext_UIDevice.swift in Sources */,
 				C2C926351D473E570022066B /* PageCollectionLayout.swift in Sources */,
 				448942041D2BF43100A043AE /* DiskCache.swift in Sources */,
+				44F40EE01D5A11520015E8E8 /* MapViewController.swift in Sources */,
 				C2C926281D473D400022066B /* Images.swift in Sources */,
 				C2C9264B1D473E710022066B /* TransitionDriver.swift in Sources */,
 				44F40EA71D5A0CC10015E8E8 /* SingleImageFetcher.swift in Sources */,
@@ -915,6 +925,8 @@
 				44F40EA91D5A0CC10015E8E8 /* UIButtonExtensions.swift in Sources */,
 				44F40EAE1D5A0CC10015E8E8 /* CameraViewControllerConstraint.swift in Sources */,
 				44F40ED31D5A0F790015E8E8 /* Ext_UIScreen.swift in Sources */,
+				44F40EE41D5A11A00015E8E8 /* MapCell.swift in Sources */,
+				44F40EE21D5A117D0015E8E8 /* MapPointAnnotation.swift in Sources */,
 				448942021D2BF43100A043AE /* Box.swift in Sources */,
 				441C50A11D295B7D00D120F6 /* KCSelectionDialog.swift in Sources */,
 				4412ACA01D0DA81A000E0C33 /* GeotificationsViewController.swift in Sources */,
