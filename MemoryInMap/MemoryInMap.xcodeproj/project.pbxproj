@@ -63,6 +63,22 @@
 		44F40EB31D5A0CC10015E8E8 /* CropOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F40E9E1D5A0CC10015E8E8 /* CropOverlay.swift */; };
 		44F40EB41D5A0CC10015E8E8 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F40E9F1D5A0CC10015E8E8 /* ImageCell.swift */; };
 		44F40EB51D5A0CC10015E8E8 /* PermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F40EA01D5A0CC10015E8E8 /* PermissionsView.swift */; };
+		44F40EC81D5A0F790015E8E8 /* Ext_CCLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F40EB81D5A0F790015E8E8 /* Ext_CCLocation.swift */; };
+		44F40EC91D5A0F790015E8E8 /* Ext_NSCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F40EB91D5A0F790015E8E8 /* Ext_NSCoding.swift */; };
+		44F40ECA1D5A0F790015E8E8 /* Ext_NSData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F40EBA1D5A0F790015E8E8 /* Ext_NSData.swift */; };
+		44F40ECB1D5A0F790015E8E8 /* Ext_NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F40EBB1D5A0F790015E8E8 /* Ext_NSDate.swift */; };
+		44F40ECC1D5A0F790015E8E8 /* Ext_NSString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F40EBC1D5A0F790015E8E8 /* Ext_NSString.swift */; };
+		44F40ECD1D5A0F790015E8E8 /* Ext_String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F40EBD1D5A0F790015E8E8 /* Ext_String.swift */; };
+		44F40ECE1D5A0F790015E8E8 /* Ext_UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F40EBE1D5A0F790015E8E8 /* Ext_UIColor.swift */; };
+		44F40ECF1D5A0F790015E8E8 /* Ext_UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F40EBF1D5A0F790015E8E8 /* Ext_UIDevice.swift */; };
+		44F40ED01D5A0F790015E8E8 /* Ext_UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F40EC01D5A0F790015E8E8 /* Ext_UIImage.swift */; };
+		44F40ED11D5A0F790015E8E8 /* Ext_UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F40EC11D5A0F790015E8E8 /* Ext_UINavigationBar.swift */; };
+		44F40ED21D5A0F790015E8E8 /* Ext_UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F40EC21D5A0F790015E8E8 /* Ext_UINavigationController.swift */; };
+		44F40ED31D5A0F790015E8E8 /* Ext_UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F40EC31D5A0F790015E8E8 /* Ext_UIScreen.swift */; };
+		44F40ED41D5A0F790015E8E8 /* Ext_UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F40EC41D5A0F790015E8E8 /* Ext_UIStoryboard.swift */; };
+		44F40ED51D5A0F790015E8E8 /* Ext_UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F40EC51D5A0F790015E8E8 /* Ext_UITableView.swift */; };
+		44F40ED61D5A0F790015E8E8 /* Ext_UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F40EC61D5A0F790015E8E8 /* Ext_UIView.swift */; };
+		44F40ED71D5A0F790015E8E8 /* Ext_UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F40EC71D5A0F790015E8E8 /* Ext_UIViewController.swift */; };
 		C25E76031CBF7EF6000ECACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E76021CBF7EF6000ECACE /* AppDelegate.swift */; };
 		C25E76071CBF7EF6000ECACE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E76061CBF7EF6000ECACE /* DetailViewController.swift */; };
 		C25E760A1CBF7EF6000ECACE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25E76081CBF7EF6000ECACE /* Main.storyboard */; };
@@ -181,6 +197,22 @@
 		44F40E9E1D5A0CC10015E8E8 /* CropOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropOverlay.swift; sourceTree = "<group>"; };
 		44F40E9F1D5A0CC10015E8E8 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		44F40EA01D5A0CC10015E8E8 /* PermissionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionsView.swift; sourceTree = "<group>"; };
+		44F40EB81D5A0F790015E8E8 /* Ext_CCLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_CCLocation.swift; sourceTree = "<group>"; };
+		44F40EB91D5A0F790015E8E8 /* Ext_NSCoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_NSCoding.swift; sourceTree = "<group>"; };
+		44F40EBA1D5A0F790015E8E8 /* Ext_NSData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_NSData.swift; sourceTree = "<group>"; };
+		44F40EBB1D5A0F790015E8E8 /* Ext_NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_NSDate.swift; sourceTree = "<group>"; };
+		44F40EBC1D5A0F790015E8E8 /* Ext_NSString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_NSString.swift; sourceTree = "<group>"; };
+		44F40EBD1D5A0F790015E8E8 /* Ext_String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_String.swift; sourceTree = "<group>"; };
+		44F40EBE1D5A0F790015E8E8 /* Ext_UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UIColor.swift; sourceTree = "<group>"; };
+		44F40EBF1D5A0F790015E8E8 /* Ext_UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UIDevice.swift; sourceTree = "<group>"; };
+		44F40EC01D5A0F790015E8E8 /* Ext_UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UIImage.swift; sourceTree = "<group>"; };
+		44F40EC11D5A0F790015E8E8 /* Ext_UINavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UINavigationBar.swift; sourceTree = "<group>"; };
+		44F40EC21D5A0F790015E8E8 /* Ext_UINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UINavigationController.swift; sourceTree = "<group>"; };
+		44F40EC31D5A0F790015E8E8 /* Ext_UIScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UIScreen.swift; sourceTree = "<group>"; };
+		44F40EC41D5A0F790015E8E8 /* Ext_UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UIStoryboard.swift; sourceTree = "<group>"; };
+		44F40EC51D5A0F790015E8E8 /* Ext_UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UITableView.swift; sourceTree = "<group>"; };
+		44F40EC61D5A0F790015E8E8 /* Ext_UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UIView.swift; sourceTree = "<group>"; };
+		44F40EC71D5A0F790015E8E8 /* Ext_UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UIViewController.swift; sourceTree = "<group>"; };
 		615774368A2DE55C0131EA91 /* Pods-MemoryInMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryInMap.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-MemoryInMap/Pods-MemoryInMap.debug.xcconfig"; sourceTree = "<group>"; };
 		6FDDE6D72843CB51AB1FCB5E /* Pods_MemoryInMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoryInMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25E75FF1CBF7EF5000ECACE /* MemoryInMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryInMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -381,6 +413,37 @@
 			name = Module;
 			sourceTree = "<group>";
 		};
+		44F40EB71D5A0F790015E8E8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				44F40EB81D5A0F790015E8E8 /* Ext_CCLocation.swift */,
+				44F40EB91D5A0F790015E8E8 /* Ext_NSCoding.swift */,
+				44F40EBA1D5A0F790015E8E8 /* Ext_NSData.swift */,
+				44F40EBB1D5A0F790015E8E8 /* Ext_NSDate.swift */,
+				44F40EBC1D5A0F790015E8E8 /* Ext_NSString.swift */,
+				44F40EBD1D5A0F790015E8E8 /* Ext_String.swift */,
+				44F40EBE1D5A0F790015E8E8 /* Ext_UIColor.swift */,
+				44F40EBF1D5A0F790015E8E8 /* Ext_UIDevice.swift */,
+				44F40EC01D5A0F790015E8E8 /* Ext_UIImage.swift */,
+				44F40EC11D5A0F790015E8E8 /* Ext_UINavigationBar.swift */,
+				44F40EC21D5A0F790015E8E8 /* Ext_UINavigationController.swift */,
+				44F40EC31D5A0F790015E8E8 /* Ext_UIScreen.swift */,
+				44F40EC41D5A0F790015E8E8 /* Ext_UIStoryboard.swift */,
+				44F40EC51D5A0F790015E8E8 /* Ext_UITableView.swift */,
+				44F40EC61D5A0F790015E8E8 /* Ext_UIView.swift */,
+				44F40EC71D5A0F790015E8E8 /* Ext_UIViewController.swift */,
+			);
+			name = Extension;
+			path = ../SimpleLib/Extension;
+			sourceTree = "<group>";
+		};
+		44F40ED81D5A0F8D0015E8E8 /* MapVIewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MapVIewController;
+			sourceTree = "<group>";
+		};
 		C25E75F61CBF7EF5000ECACE = {
 			isa = PBXGroup;
 			children = (
@@ -405,6 +468,7 @@
 		C25E76011CBF7EF5000ECACE /* MemoryInMap */ = {
 			isa = PBXGroup;
 			children = (
+				44F40ED81D5A0F8D0015E8E8 /* MapVIewController */,
 				C25E76021CBF7EF6000ECACE /* AppDelegate.swift */,
 				44ABB4D11D119FE500D307B2 /* BaseViewController.swift */,
 				C25E763A1CBF801D000ECACE /* MainViewController.swift */,
@@ -450,6 +514,7 @@
 		C2C925FD1D473AC90022066B /* SimpleLib */ = {
 			isa = PBXGroup;
 			children = (
+				44F40EB71D5A0F790015E8E8 /* Extension */,
 				C2816C1F1D49DCCC00738414 /* AppCommon.swift */,
 				C2C9264C1D473EA30022066B /* AnimatingBarButton */,
 				C2C926381D473E710022066B /* Helpers */,
@@ -800,6 +865,7 @@
 				448942061D2BF43100A043AE /* MultiCache.swift in Sources */,
 				44F40EA61D5A0CC10015E8E8 /* PhotoLibraryAuthorizer.swift in Sources */,
 				44F40EAA1D5A0CC10015E8E8 /* UIViewExtensions.swift in Sources */,
+				44F40ED11D5A0F790015E8E8 /* Ext_UINavigationBar.swift in Sources */,
 				44B7B0091D0284060030EC8D /* FoldingCell.swift in Sources */,
 				C2C926361D473E570022066B /* PageCollectionView.swift in Sources */,
 				448942011D2BF43100A043AE /* AnyCache.swift in Sources */,
@@ -812,6 +878,7 @@
 				44F40EB21D5A0CC10015E8E8 /* CameraView.swift in Sources */,
 				C2C926511D473EA30022066B /* Rotatable.swift in Sources */,
 				4462509C1D47A200005D0B5F /* PhotoTableViewControl.swift in Sources */,
+				44F40ECA1D5A0F790015E8E8 /* Ext_NSData.swift in Sources */,
 				44F40EA31D5A0CC10015E8E8 /* CameraGlobals.swift in Sources */,
 				44B7B00E1D0299370030EC8D /* ICanHas.swift in Sources */,
 				44F40EB11D5A0CC10015E8E8 /* PhotoLibraryViewController.swift in Sources */,
@@ -820,13 +887,16 @@
 				446250A41D47AD12005D0B5F /* AppVar.swift in Sources */,
 				C2C926371D473E570022066B /* ExpandingViewController.swift in Sources */,
 				44587FB61D04676A00A1C0CF /* RainbowNavigation.swift in Sources */,
+				44F40ECD1D5A0F790015E8E8 /* Ext_String.swift in Sources */,
 				44EF57F81CDA351700183B47 /* UserDefault.swift in Sources */,
 				44587FB71D04676A00A1C0CF /* RainbowPopAnimator.swift in Sources */,
+				44F40ECF1D5A0F790015E8E8 /* Ext_UIDevice.swift in Sources */,
 				C2C926351D473E570022066B /* PageCollectionLayout.swift in Sources */,
 				448942041D2BF43100A043AE /* DiskCache.swift in Sources */,
 				C2C926281D473D400022066B /* Images.swift in Sources */,
 				C2C9264B1D473E710022066B /* TransitionDriver.swift in Sources */,
 				44F40EA71D5A0CC10015E8E8 /* SingleImageFetcher.swift in Sources */,
+				44F40ED71D5A0F790015E8E8 /* Ext_UIViewController.swift in Sources */,
 				C25E763D1CBF8026000ECACE /* PhotoDetailViewController.swift in Sources */,
 				442337B11D10714E006B2CBD /* Location_Func.swift in Sources */,
 				44B7B00A1D0284060030EC8D /* NavigationBarColorSource.swift in Sources */,
@@ -837,11 +907,14 @@
 				C2C926461D473E710022066B /* CornerAnimatable.swift in Sources */,
 				C2816C111D49A77E00738414 /* Public_Func.swift in Sources */,
 				C2CBD3351D0555B900E594AA /* KDInteractiveNavigationController.swift in Sources */,
+				44F40EC91D5A0F790015E8E8 /* Ext_NSCoding.swift in Sources */,
 				4438DD401D040E350056967B /* TransparentTableViewController.swift in Sources */,
 				C2C925FC1D4739C90022066B /* PhotoViewController.swift in Sources */,
 				C25E76391CBF8014000ECACE /* Photo.swift in Sources */,
+				44F40ED21D5A0F790015E8E8 /* Ext_UINavigationController.swift in Sources */,
 				44F40EA91D5A0CC10015E8E8 /* UIButtonExtensions.swift in Sources */,
 				44F40EAE1D5A0CC10015E8E8 /* CameraViewControllerConstraint.swift in Sources */,
+				44F40ED31D5A0F790015E8E8 /* Ext_UIScreen.swift in Sources */,
 				448942021D2BF43100A043AE /* Box.swift in Sources */,
 				441C50A11D295B7D00D120F6 /* KCSelectionDialog.swift in Sources */,
 				4412ACA01D0DA81A000E0C33 /* GeotificationsViewController.swift in Sources */,
@@ -850,26 +923,34 @@
 				442FAA531D267DDD00BB3569 /* AnimatedSegmentSwitch.swift in Sources */,
 				4412ACA11D0DA81A000E0C33 /* Geotification.swift in Sources */,
 				44F40EB31D5A0CC10015E8E8 /* CropOverlay.swift in Sources */,
+				44F40ECC1D5A0F790015E8E8 /* Ext_NSString.swift in Sources */,
 				446F09641D201D4A0023FE12 /* JTSplashView.swift in Sources */,
 				C2C926341D473E570022066B /* BasePageCollectionCell.swift in Sources */,
 				4412AC9C1D0DA740000E0C33 /* AddPhotoGeotificationViewController.swift in Sources */,
+				44F40ECB1D5A0F790015E8E8 /* Ext_NSDate.swift in Sources */,
 				44F40EA51D5A0CC10015E8E8 /* ImageFetcher.swift in Sources */,
+				44F40ED61D5A0F790015E8E8 /* Ext_UIView.swift in Sources */,
 				C2C9262B1D473E480022066B /* ExpandingTableViewController.swift in Sources */,
 				C2C9264A1D473E710022066B /* SubviewsForEach.swift in Sources */,
 				44ABB4D21D119FE500D307B2 /* BaseViewController.swift in Sources */,
 				44587FA21D04620900A1C0CF /* KMWeakObjectContainer.swift in Sources */,
 				44B7B0081D0284060030EC8D /* ImageResizingMethods.swift in Sources */,
+				44F40ED51D5A0F790015E8E8 /* Ext_UITableView.swift in Sources */,
 				44587FA71D04626E00A1C0CF /* NavigationBarData.swift in Sources */,
 				C25E763B1CBF801D000ECACE /* MainViewController.swift in Sources */,
+				44F40ECE1D5A0F790015E8E8 /* Ext_UIColor.swift in Sources */,
 				44F40EAD1D5A0CC10015E8E8 /* CameraViewController.swift in Sources */,
 				C25E76371CBF800F000ECACE /* PhotosTableView.swift in Sources */,
 				C25E76031CBF7EF6000ECACE /* AppDelegate.swift in Sources */,
 				4464B8C41D522C1000CC7404 /* Duration.swift in Sources */,
+				44F40ED01D5A0F790015E8E8 /* Ext_UIImage.swift in Sources */,
 				44587FB41D04676A00A1C0CF /* RainbowColorSource.swift in Sources */,
 				C2C926491D473E710022066B /* ScreenShotHelper.swift in Sources */,
 				44587FB81D04676A00A1C0CF /* RainbowPushAnimator.swift in Sources */,
+				44F40EC81D5A0F790015E8E8 /* Ext_CCLocation.swift in Sources */,
 				446250A21D47AB08005D0B5F /* PlistUtil.swift in Sources */,
 				44F40EB51D5A0CC10015E8E8 /* PermissionsView.swift in Sources */,
+				44F40ED41D5A0F790015E8E8 /* Ext_UIStoryboard.swift in Sources */,
 				441C50A21D295B7D00D120F6 /* KCSelectionDialogItem.swift in Sources */,
 				C2C926501D473EA30022066B /* AnimationBarButton.swift in Sources */,
 				C2C926481D473E710022066B /* ConstraintsHelper.swift in Sources */,
