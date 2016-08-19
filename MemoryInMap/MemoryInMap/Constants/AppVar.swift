@@ -13,3 +13,4 @@ public var appName = getDictionaryFromInfoPlist("appName") as! String
 public let modelName = UIDevice.currentDevice().modelName
 public let tempDirectory = NSTemporaryDirectory()
 public let FileManager = NSFileManager.defaultManager()
+let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
