@@ -7,6 +7,7 @@
 
 import UIKit
 import MapKit
+import SimpleLib
 
 class MainViewController: BaseViewController, NavigationBarColorSource {
     
@@ -31,8 +32,8 @@ class MainViewController: BaseViewController, NavigationBarColorSource {
     var backButton: UIBarButtonItem {
         return UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: #selector(MainViewController.reverse))
     }
-    var currentNavigationBarData: NavigationBarData!
-    var nextNavigationBarData: NavigationBarData!
+//    var currentNavigationBarData: NavigationBarData!
+//    var nextNavigationBarData: NavigationBarData!
     
     // FIXME:用init方法时无法重置navigationBar的背景
     //	convenience init() {

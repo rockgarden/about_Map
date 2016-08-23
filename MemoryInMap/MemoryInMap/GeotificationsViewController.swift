@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import SimpleLib
 
 let kSavedItemsKey = "savedItems"
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SimpleLib
 
 class TransparentTableViewController: UITableViewController, NavigationBarColorSource {
 

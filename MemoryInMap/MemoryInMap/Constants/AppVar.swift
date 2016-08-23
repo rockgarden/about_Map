@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SimpleLib
 
 public var appID = getDictionaryFromInfoPlist("appID") as! String
 public var appName = getDictionaryFromInfoPlist("appName") as! String

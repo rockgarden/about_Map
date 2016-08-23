@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import SimpleLib
 
 protocol AddGeotificationsViewControllerDelegate {
   func addGeotificationViewController(controller: AddGeotificationViewController, didAddCoordinate coordinate: CLLocationCoordinate2D,

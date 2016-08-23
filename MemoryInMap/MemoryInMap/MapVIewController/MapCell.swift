@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SimpleLib
 
 class MapCell: FoldingCell {
     
